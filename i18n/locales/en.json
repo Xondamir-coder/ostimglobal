@@ -1,0 +1,25 @@
+{
+  "project": "project",
+  "menu": "Menu",
+
+  "header": {
+    "links": ["Home", "About", "For Investors", "News", "Contacts"]
+  },
+
+  "home": {
+    "hero": {
+      "title": "Industrial power in 100 hectar",
+      "label": "Creating the Future",
+      "cards": [
+        {
+          "description": "Deploying robotics and other automation tools",
+          "title": "Industrial zone"
+        },
+        {
+          "description": "Rethinking business models",
+          "title": "Social zone"
+        }
+      ]
+    }
+  }
+}

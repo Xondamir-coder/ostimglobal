@@ -1,0 +1,78 @@
+@use 'sass:string';
+
+// 1. Define uniquely named directions with value
+$directions: (
+  // Left
+  left-20: -20px,
+  left-40: -40px,
+
+  // Right
+  right-20: 20px,
+  right-100: 100px,
+
+  // Top
+  top-20: -20px,
+  top-10: -10px,
+  top-50: -50px,
+
+  // Bottom
+  bottom-10: 10px,
+  bottom-20: 20px,
+  bottom-50: 50px
+);
+
+// 2. Determine axis from direction name
+@function get-axis($direction) {
+  @if string.index($direction, 'top') or string.index($direction, 'bottom') {
+    @return y;
+  }
+  @return x;
+}
+
+// 3. Generate @keyframes with clean names
+@each $direction, $value in $directions {
+  $axis: get-axis($direction);
+
+  @keyframes slide-from-#{$direction} {
+    from {
+      opacity: 0;
+      @if $axis == x {
+        transform: translateX(#{$value});
+      } @else {
+        transform: translateY(#{$value});
+      }
+    }
+    to {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+
+  @keyframes slide-to-#{$direction} {
+    from {
+      opacity: 1;
+      transform: translate(0);
+    }
+    to {
+      opacity: 0;
+      @if $axis == x {
+        transform: translateX(#{$value});
+      } @else {
+        transform: translateY(#{$value});
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    scale: 1.05;
+  }
+}

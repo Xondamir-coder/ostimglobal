@@ -1,0 +1,22 @@
+// Breakpoints
+$bp-xs: 425px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+
+// Fonts
+$font-base: 'Zen Maru Gothic', Helvetica;
+$font-unbounded: 'Unbounded', Helvetica;
+
+// Misc
+$spacing-inline: 12rem;
+
+:root {
+  --spacing-inline: #{$spacing-inline};
+  @media screen and (max-width: $bp-md) {
+    // max(6rem, 16px)
+    --spacing-inline: max(#{$spacing-inline} / 2, 20px);
+  }
+}
