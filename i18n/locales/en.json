@@ -1,6 +1,12 @@
 {
   "project": "project",
   "menu": "Menu",
+  "logistics": "Logistics",
+  "sport-complex": "Sport complex",
+  "college": "College",
+  "clinics": "Clinics",
+  "stations": "Stations",
+  "schools": "Schools",
 
   "header": {
     "links": ["Home", "About", "For Investors", "News", "Contacts"]
@@ -20,6 +26,12 @@
           "title": "Social zone"
         }
       ]
+    },
+    "industrial": {
+      "title": "Industrial development for over 50 years. ",
+      "text-1": "OSTIM Global is the international division of the reputable Turkish industrial zone OSTIM, which has been a flagship of industrial development for over 50 years.",
+      "subtitle": "Meet the Industry power",
+      "text-2": "Today, the company is actively developing the Turkish-Uzbek Industrial Zone, combining managerial expertise and technical know-how."
     }
   }
 }

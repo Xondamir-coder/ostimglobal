@@ -11,7 +11,7 @@ html {
   font-kerning: none;
   text-rendering: optimizeSpeed;
 
-  // adaptive based on 1440px design, upscales till 1920px, downscale infinitely (specific to element)
+  // adaptive based on 1440px design, upscales till 1440px, downscale infinitely (specific to element)
   font-size: min(100vw / (1440 / 10), 1920 / 1440 * 10px);
 }
 body {

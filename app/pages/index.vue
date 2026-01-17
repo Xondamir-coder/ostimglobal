@@ -13,10 +13,143 @@
         />
       </div>
     </section>
+    <section class="industrial">
+      <h2 class="heading-lg">
+        {{ $t('home.industrial.title') }}
+      </h2>
+      <p>
+        {{ $t('home.industrial.text-1') }}
+      </p>
+      <div class="industrial__line" />
+      <ul class="industrial__boxes">
+        <li>
+          <div class="industrial__box">
+            <span>{{ $t('logistics') }}</span>
+            <IconsStar class="industrial__box-icon" />
+          </div>
+        </li>
+        <li>
+          <div class="industrial__box">
+            <span>{{ $t('sport-complex') }}</span>
+            <IconsStar class="industrial__box-icon" />
+          </div>
+          <div class="industrial__box">
+            <span>{{ $t('college') }}</span>
+            <IconsStar class="industrial__box-icon" />
+          </div>
+        </li>
+        <li>
+          <div class="industrial__box">
+            <span>{{ $t('clinics') }}</span>
+            <IconsStar class="industrial__box-icon" />
+          </div>
+          <div class="industrial__box">
+            <span>{{ $t('stations') }}</span>
+            <IconsStar class="industrial__box-icon" />
+          </div>
+          <div class="industrial__box">
+            <span>{{ $t('schools') }}</span>
+            <IconsStar class="industrial__box-icon" />
+          </div>
+        </li>
+      </ul>
+      <div class="industrial__content">
+        <h3 class="industrial__content-title">
+          {{ $t('home.industrial.subtitle') }}
+        </h3>
+        <p>
+          {{ $t('home.industrial.text-2') }}
+        </p>
+      </div>
+    </section>
   </main>
 </template>
 
+<script setup></script>
+
 <style lang="scss" scoped>
+.industrial {
+  display: grid;
+  grid-template-areas:
+    'title text-1'
+    'line line'
+    'boxes content';
+  grid-template-columns: 1fr 1.2fr;
+  margin-inline: var(--spacing-inline);
+  margin-block: 12rem;
+  position: relative;
+  row-gap: 6.2rem;
+  column-gap: 8rem;
+
+  h2 {
+    grid-area: title;
+  }
+  &__line {
+    grid-area: line;
+    background-color: #fff;
+    height: 1px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    &-title {
+      font-size: 3.6rem;
+      font-weight: 400;
+      letter-spacing: -0.18rem;
+    }
+  }
+  &__boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    li {
+      display: flex;
+      gap: 4px;
+      &:first-child > * {
+        width: max(22rem, 19px);
+      }
+      &:nth-child(2) > * {
+        &:first-child {
+          width: max(19.2rem, 18px);
+        }
+        &:last-child {
+          width: 160px;
+        }
+      }
+      &:last-child > * {
+        &:first-child {
+          width: max(17.7rem, 18px);
+        }
+        &:nth-child(2) {
+          width: max(18.7rem);
+        }
+        &:last-child {
+          width: max(12.7rem);
+        }
+      }
+    }
+  }
+  &__box {
+    font-size: 1.6rem;
+    font-weight: 900;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5rem;
+    border: 1px solid #fff;
+    padding-block: 7px;
+    padding-right: 12px;
+    span {
+      flex: 1;
+      text-align: center;
+    }
+    &-icon {
+      width: 13px;
+      fill: #fff;
+    }
+  }
+}
 .hero {
   position: relative;
   border-radius: max(3rem, 20px);
@@ -76,7 +209,12 @@
     font-size: max(5.4rem, 36px);
     font-weight: 300;
     max-width: 15ch;
+    padding-bottom: 4.4rem;
+    padding-left: 2.8rem;
+
     @media screen and (max-width: vars.$bp-md) {
+      padding-left: 0;
+      padding-bottom: 0;
       font-family: vars.$font-base;
       line-height: 123%;
     }
