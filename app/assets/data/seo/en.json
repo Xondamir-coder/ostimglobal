@@ -1,0 +1,62 @@
+{
+  "index": {
+    "title": "Global Banking Innovation & Digital Finance Summit",
+    "description": "Explore the leading platform where global banks and fintech innovators showcase digital finance, future technologies, and industry breakthroughs."
+  },
+  "mission": {
+    "title": "Our Mission | Advancing Global Banking & Digital Finance",
+    "description": "Our mission is to unite banks, fintech leaders, and policymakers to drive digital finance innovation and sustainable global growth."
+  },
+  "venue": {
+    "title": "Summit Venue & Location | Global Banking Innovation Summit",
+    "description": "Discover the official summit venue, including location details, facilities, accessibility, and essential travel information."
+  },
+  "organizer": {
+    "title": "About the Organizer | Global Fintech & Banking Leadership",
+    "description": "Learn about the organizer driving collaboration between global banks, fintech innovators, and financial institutions."
+  },
+  "about": {
+    "title": "About the Global Fintech Experience",
+    "description": "Learn about the event uniting banks, fintech leaders, policymakers, and innovators to shape the future of digital finance worldwide."
+  },
+  "events": {
+    "title": "Events & Fintech Sessions",
+    "description": "Discover expert-led events, keynotes, and panels covering digital payments, AI finance, cybersecurity, sustainability, and financial innovation."
+  },
+  "participants": {
+    "title": "Participants & Global Banking Directory",
+    "description": "Browse international banks, fintech companies, and institutions. Explore profiles, services, and partnership opportunities."
+  },
+  "speakers": {
+    "title": "Speakers & Global Fintech Thought Leaders",
+    "description": "Meet world-class speakers—bank executives, data scientists, innovators, and policymakers sharing insights into modern finance."
+  },
+  "partners": {
+    "title": "Partners & Global Finance Collaborators",
+    "description": "Explore partners from banks to fintech providers supporting innovation, collaboration, and global financial development."
+  },
+  "sponsors": {
+    "title": "Sponsors & Supporters of Financial Innovation",
+    "description": "Meet official sponsors: global fintech companies, institutions, and brands empowering financial innovation and digital transformation."
+  },
+  "media": {
+    "title": "Media & News Updates",
+    "description": "Stay updated with news, articles, highlights, and photo coverage showcasing global fintech trends and industry developments."
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "description": "Review the Terms of Service, including website usage rules, intellectual property rights, liability limits, and governing policies."
+  },
+  "policy": {
+    "title": "Privacy Policy & Data Protection",
+    "description": "Understand how data is collected, stored, and protected. Read details about privacy practices, information use, and user rights."
+  },
+  "not-found": {
+    "title": "Page Not Found",
+    "description": "The page you’re looking for may have moved or no longer exists. Explore other sections to continue your TIFW experience."
+  },
+  "accreditation": {
+    "title": "Media Accreditation for Journalists",
+    "description": "Apply for official media accreditation. Review requirements, deadlines, and access rules for local and international journalists."
+  }
+}

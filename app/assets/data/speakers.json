@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "name": "Elena Marchenko",
+    "role": "Head of Machine Learning, DataCore",
+    "image": "speaker-9.jpg",
+    "partnersCount": "310+",
+    "experience": 14,
+    "quote": "The simplest model is often the most elegant.",
+    "description": "Elena leads DataCore’s machine learning division, building predictive platforms for global payment networks.",
+    "events": [
+      {
+        "date": "2025-04-17T09:30:00Z",
+        "title": "Applied Machine Learning at Scale",
+        "description": "How to design maintainable ML systems in high-demand environments."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Marcus Bennett",
+    "role": "Senior Blockchain Architect",
+    "image": "speaker-6.jpg",
+    "partnersCount": "210+",
+    "experience": 11,
+    "quote": "Trust is engineered, not assumed.",
+    "description": "Marcus architects enterprise-grade blockchain solutions for cross-border settlements and digital identity verification.",
+    "events": [
+      {
+        "date": "2025-05-18T15:30:00Z",
+        "title": "Enterprise Blockchain Patterns",
+        "description": "Design principles behind secure distributed financial systems."
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Sophia Duarte",
+    "role": "Lead Economist, Global Finance Institute",
+    "image": "speaker-10.jpg",
+    "partnersCount": "275+",
+    "experience": 13,
+    "quote": "Economics is the art of understanding incentives.",
+    "description": "Sophia specializes in macroeconomic forecasting and global financial policy with a focus on emerging markets.",
+    "events": [
+      {
+        "date": "2025-06-21T12:00:00Z",
+        "title": "Global Markets Outlook",
+        "description": "A data-driven assessment of economic trends shaping 2025–2026."
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Jonathan Reed",
+    "role": "Chief Technology Officer, FinLabs",
+    "image": "speaker-4.jpg",
+    "partnersCount": "220+",
+    "experience": 15,
+    "quote": "Innovation requires both discipline and chaos.",
+    "description": "Jonathan oversees technology strategy at FinLabs, developing scalable cloud and payment infrastructures.",
+    "events": [
+      {
+        "date": "2025-04-03T08:30:00Z",
+        "title": "Modern Cloud Architecture",
+        "description": "Transitioning legacy financial systems to cloud-native design."
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Ava Sinclair",
+    "role": "Data Scientist, NeuraBank",
+    "image": "speaker-2.jpg",
+    "partnersCount": "190+",
+    "experience": 8,
+    "quote": "Data without context is noise.",
+    "description": "Ava works on risk modeling and customer behavior analytics within NeuraBank’s AI-driven credit platform.",
+    "events": [
+      {
+        "date": "2025-02-12T11:00:00Z",
+        "title": "Behavioral Scoring Models",
+        "description": "Using behavioral patterns to enhance credit scoring accuracy."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Daniel Carter",
+    "role": "AI Research Engineer",
+    "image": "speaker-5.jpg",
+    "partnersCount": "250+",
+    "experience": 10,
+    "quote": "Research is curiosity turned into structure.",
+    "description": "Daniel designs neural architectures for fraud detection and anomaly analysis in real-time transaction systems.",
+    "events": [
+      {
+        "date": "2025-03-30T11:00:00Z",
+        "title": "Deep Learning for Fraud Detection",
+        "description": "Exploring neural models for high-frequency anomaly detection."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Michael Harrington",
+    "role": "Risk Management Analyst",
+    "image": "speaker-7.jpg",
+    "partnersCount": "240+",
+    "experience": 12,
+    "quote": "Risk is uncertainty quantified.",
+    "description": "Michael provides financial risk assessments for regulatory institutions and investment banks across Europe.",
+    "events": [
+      {
+        "date": "2025-03-10T10:00:00Z",
+        "title": "Modern Risk Assessment",
+        "description": "Case studies on portfolio risk evaluation using contemporary models."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Emma Kovalenko",
+    "role": "Director of Innovation, FinTech Alliance",
+    "image": "speaker-11.jpg",
+    "partnersCount": "300+",
+    "experience": 17,
+    "quote": "Innovation serves people, not the other way around.",
+    "description": "Emma leads innovation programs that bridge financial institutions with emerging fintech startups worldwide.",
+    "events": [
+      {
+        "date": "2025-02-22T14:00:00Z",
+        "title": "Innovation Ecosystems",
+        "description": "How financial ecosystems adopt and accelerate new technologies."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Alejandro Ruiz",
+    "role": "Lead AI Engineer",
+    "image": "speaker-1.jpg",
+    "partnersCount": "260+",
+    "experience": 12,
+    "quote": "Good engineering balances creativity with rigor.",
+    "description": "Alejandro develops deep learning systems for automated compliance and high-volume decisioning engines.",
+    "events": [
+      {
+        "date": "2025-03-15T10:00:00Z",
+        "title": "AI Governance Frameworks",
+        "description": "Establishing responsible AI pipelines for regulated industries."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Charlotte Meyer",
+    "role": "Fintech Strategist",
+    "image": "speaker-12.jpg",
+    "partnersCount": "230+",
+    "experience": 9,
+    "quote": "Strategy is a story told through choices.",
+    "description": "Charlotte advises global fintech startups on product strategy, customer acquisition, and innovation roadmaps.",
+    "events": [
+      {
+        "date": "2025-05-05T09:00:00Z",
+        "title": "Scaling Fintech Products",
+        "description": "How to build sustainable and user-centered fintech platforms."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Lucas Weber",
+    "role": "Senior Cloud Infrastructure Engineer",
+    "image": "speaker-8.jpg",
+    "partnersCount": "200+",
+    "experience": 16,
+    "quote": "Infrastructure is invisible until it fails.",
+    "description": "Lucas specializes in building highly available cloud architectures for digital banking and payment systems.",
+    "events": [
+      {
+        "date": "2025-04-03T08:00:00Z",
+        "title": "Scalable Banking Infrastructure",
+        "description": "Ensuring uptime and reliability in modern fintech systems."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Mia Laurent",
+    "role": "Global Financial Analyst",
+    "image": "speaker-3.jpg",
+    "partnersCount": "285+",
+    "experience": 11,
+    "quote": "Numbers reveal the truth hidden in noise.",
+    "description": "Mia provides macroeconomic and investment insights for institutional clients across Europe and Asia.",
+    "events": [
+      {
+        "date": "2025-06-01T11:30:00Z",
+        "title": "Financial Trends 2025",
+        "description": "Analyzing the biggest forces shaping global financial markets."
+      }
+    ]
+  }
+]

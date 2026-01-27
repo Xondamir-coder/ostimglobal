@@ -1,0 +1,10 @@
+.overflow-hidden {
+  overflow: hidden !important;
+}
+.animate-typography {
+  position: relative;
+  & > *:last-child {
+    position: absolute;
+    inset: 0;
+  }
+}

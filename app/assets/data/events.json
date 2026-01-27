@@ -1,0 +1,44 @@
+[
+  {
+    "image": "events-1.jpg",
+    "title": "Bank Expo",
+    "description": "рупный форум, посвящённый будущему финансовых технологий, цифровых платёжных систем и банковских услуг. Здесь собираются представители банков, финтех-компаний и эксперты, чтобы обсудить инновации и обменяться опытом",
+    "date": "2023-07-27T00:00:00.000Z",
+    "location": "Выставочный центр TIFW, павильон №2",
+    "events": [
+      {
+        "date": "2025-04-17T09:30:00Z",
+        "title": "Applied Machine Learning at Scale",
+        "description": "How to design maintainable ML systems in high-demand environments."
+      }
+    ]
+  },
+  {
+    "image": "events-2.jpg",
+    "title": "Insurance Expo",
+    "description": "рупный форум, посвящённый будущему финансовых технологий, цифровых платёжных систем и банковских услуг. Здесь собираются представители банков, финтех-компаний и эксперты, чтобы обсудить инновации и обменяться опытом",
+    "date": "2023-07-27T00:00:00.000Z",
+    "location": "Выставочный центр TIFW, павильон №2",
+    "events": [
+      {
+        "date": "2025-04-17T09:30:00Z",
+        "title": "Applied Machine Learning at Scale",
+        "description": "How to design maintainable ML systems in high-demand environments."
+      }
+    ]
+  },
+  {
+    "image": "events-3.jpg",
+    "title": "Career",
+    "description": "рупный форум, посвящённый будущему финансовых технологий, цифровых платёжных систем и банковских услуг. Здесь собираются представители банков, финтех-компаний и эксперты, чтобы обсудить инновации и обменяться опытом",
+    "date": "2023-07-27T00:00:00.000Z",
+    "location": "Выставочный центр TIFW, павильон №2",
+    "events": [
+      {
+        "date": "2025-04-17T09:30:00Z",
+        "title": "Applied Machine Learning at Scale",
+        "description": "How to design maintainable ML systems in high-demand environments."
+      }
+    ]
+  }
+]

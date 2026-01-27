@@ -6,7 +6,16 @@
   "college": "College",
   "clinics": "Clinics",
   "stations": "Stations",
+  "education": "Education",
   "schools": "Schools",
+  "roads": "Roads",
+  "services": "Services",
+  "healthcare": "Healthcare",
+  "retail": "Retail",
+  "finances": "Finances",
+  "neural-networks": "Neural networks",
+  "contact-us": "Contact us",
+  "industrial-facilities": "Industrial facilities",
 
   "header": {
     "links": ["Home", "About", "For Investors", "News", "Contacts"]
@@ -18,20 +27,48 @@
       "label": "Creating the Future",
       "cards": [
         {
-          "description": "Deploying robotics and other automation tools",
+          "description": "Ready infrastructure for efficient production",
           "title": "Industrial zone"
         },
         {
-          "description": "Rethinking business models",
+          "description": "environment for work and life",
           "title": "Social zone"
         }
       ]
     },
     "industrial": {
-      "title": "Industrial development for over 50 years. ",
-      "text-1": "OSTIM Global is the international division of the reputable Turkish industrial zone OSTIM, which has been a flagship of industrial development for over 50 years.",
-      "subtitle": "Meet the Industry power",
-      "text-2": "Today, the company is actively developing the Turkish-Uzbek Industrial Zone, combining managerial expertise and technical know-how."
+      "title": "50+ years of industrial expertise",
+      "text-1": "OSTIM Global is the international platform of the OSTIM industrial ecosystem, bringing over 50 years of experience in organized industrial zones to Uzbekistan. The project combines proven management models, ready infrastructure and long-term investment vision.",
+      "subtitle": "Meet the industrial ecosystem",
+      "text-2": "Today, OSTIM Global is developing the Turkish–Uzbek Industrial Zone, creating a fully integrated environment for production, investment and sustainable growth."
+    },
+    "revolution": {
+      "title": "Designed for industrial scale",
+      "desc": "Integrated roads and logistics for efficient operations",
+      "download-cat": "Download the catalogue",
+      "retail-title": "Investor Support",
+      "retail-desc": "Centralized project coordination",
+      "healthcare-desc": "On-site healthcare services. Medical facilities",
+      "services-desc": "Administrative & support services. Services supporting daily operations",
+      "roads-desc": "Roads & internal transport. Direct access and efficient internal mobility"
+    },
+    "overview": {
+      "title": "Inside the Uzbek–Turkish Industrial Zone",
+      "labels": ["Advisory", "Facilities", "Manufacturing", "Cooperation"],
+      "texts": [
+        "The Uzbek–Turkish Industrial Zone OSTIM Global is a large-scale industrial project located in Tashkent, developed under the management model of OSTIM — one of Türkiye’s leading organized industrial zones. The project operates based on a decision of the Government of Uzbekistan dated December 15, 2023.",
+        "By transferring more than 50 years of industrial zone expertise to Uzbekistan, OSTIM Global is creating a modern production environment built on integrated infrastructure, sustainable development and long-term investment vision.",
+        "OSTIM Global represents a new stage of industrial development, strengthening cooperation between Türkiye and Uzbekistan and contributing to the country’s industrial transformation."
+      ]
+    },
+    "network": {
+      "coop": "Cooperation with more than 20 countries for implementation",
+      "struc": "Structured industrial models",
+      "integ": "Integrated utilities and engineering networks"
+    },
+    "power": {
+      "title": "Industrial power built on experience",
+      "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
     }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "index": {
+    "title": "Global Bank Innovatsiyalari va Raqamli Moliya Haftaligi",
+    "description": "Banklar va fintech yetakchilari yangi texnologiyalarni taqdim etadigan global platforma. Raqamli moliyaning kelajagini kashf eting."
+  },
+  "about": {
+    "title": "Global Fintech Ekotizimi Haqida",
+    "description": "Banklar, fintech mutaxassislari va innovatorlarni raqamli moliyaning kelajagini muhokama qilish uchun birlashtiruvchi yirik tadbir."
+  },
+  "events": {
+    "title": "Tadbirlar va Fintech Sessiyalari",
+    "description": "Raqamli to‘lovlar, sun’iy intellekt, xavfsizlik va global moliya innovatsiyalari bo‘yicha ma’ruzalar va panel muhokamalari."
+  },
+  "participants": {
+    "title": "Ishtirokchilar va Banklar Katalogi",
+    "description": "Ishtirok etayotgan banklar va fintech kompaniyalarini ko‘ring. Xizmatlar va hamkorlik imkoniyatlari bilan tanishing."
+  },
+  "speakers": {
+    "title": "Spikerlar va Fintech Yetakchilari",
+    "description": "Bank rahbarlari, innovatorlar va ekspertlar raqamli moliyaning rivojlanish yo‘nalishlari bo‘yicha o‘z bilimlarini o‘rtoqlashadi."
+  },
+  "partners": {
+    "title": "Hamkorlar va Moliya Tashkilotlari",
+    "description": "Banklar, fintech kompaniyalari va moliyaviy institutlar bilan tanishing. Ular innovatsiyalarni qo‘llab-quvvatlaydi."
+  },
+  "sponsors": {
+    "title": "Homiylar va Moliya Qo‘llab-quvvatlovchilari",
+    "description": "Global brendlar va kompaniyalar moliyaviy innovatsiyalarni rivojlantirishga hissa qo‘shmoqda."
+  },
+  "media": {
+    "title": "Media va Yangiliklar",
+    "description": "Yangiliklar, maqolalar va fotojamlamalarni kuzating. Global fintech tendensiyalari va tadbir tafsilotlari bilan tanishing."
+  },
+  "terms": {
+    "title": "Foydalanish Shartlari",
+    "description": "Saytdan foydalanish qoidalari, mualliflik huquqlari, mas’uliyat chegaralari va huquqiy siyosat bilan tanishing."
+  },
+  "policy": {
+    "title": "Maxfiylik Siyosati",
+    "description": "Ma’lumotlar qanday yig‘ilishi va himoya qilinishi haqida o‘qing. Maxfiylik tamoyillari va sizning huquqlaringiz bayoni."
+  },
+  "not-found": {
+    "title": "Sahifa topilmadi",
+    "description": "Izlagan sahifangiz ko‘chirilgan yoki o‘chirib tashlangan bo‘lishi mumkin. TIFW bo‘limlarini ko‘rib chiqishni davom eting."
+  },
+  "accreditation": {
+    "title": "OAV akkreditatsiyasi uchun ariza",
+    "description": "Rasmiy OAV akkreditatsiyasiga murojaat qiling. Talablar, muddati va jurnalistlar uchun kirish qoidalari bilan tanishing."
+  }
+}
