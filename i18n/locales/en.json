@@ -18,7 +18,7 @@
   "industrial-facilities": "Industrial facilities",
 
   "header": {
-    "links": ["Home", "About", "For Investors", "News", "Contacts"]
+    "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
   },
 
   "home": {
@@ -70,5 +70,18 @@
       "title": "Industrial power built on experience",
       "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
     }
+  },
+
+  "footer": {
+    "title": "Contact information",
+    "partners": "Hamkorlarimiz",
+    "copyright": "Copyright © 2026 Ostim Global. All rights reserved.",
+    "dev": "Developed by",
+    "office": "Our Office",
+    "navigation": "Navigation",
+    "social-media": "Social Media",
+    "address-1": "Tashkent city, Furqat st. 5A",
+    "address-2": "post office 100 123",
+    "links": ["Privacy Policy", "Terms Of Service", "Cookies Settings"]
   }
 }

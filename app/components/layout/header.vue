@@ -30,17 +30,10 @@
 <script setup>
 const { tm, rt } = useI18n();
 
-const linksMap = {
-  home: '/',
-  about: '/about',
-  'for investors': '/investors',
-  news: '/news',
-  contacts: '/contacts'
-};
 const links = computed(() =>
   tm('header.links').map(el => ({
     label: rt(el),
-    to: linksMap[rt(el).toLowerCase()]
+    to: `/${rt(el).split(' ').join('-').toLowerCase()}`
   }))
 );
 </script>
@@ -49,15 +42,20 @@ const links = computed(() =>
 .header {
   font-size: max(1.6rem, 14px);
   font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-inline: var(--spacing-inline);
   padding-top: 4.2rem;
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  align-items: center;
+  justify-items: center;
   // position: fixed;
   // inset-inline: 0;
   // z-index: 100;
+  @media screen and (max-width: vars.$bp-md) {
+    grid-template-columns: max-content max-content;
+    justify-content: space-between;
+  }
   &__opener {
     @include mix.flex-center;
     border-radius: 5rem;
@@ -73,7 +71,9 @@ const links = computed(() =>
     }
   }
   &__button {
-    transition: background 0.3s, color 0.3s;
+    transition:
+      background 0.3s,
+      color 0.3s;
     background-color: #fff;
     color: #111;
     border-radius: max(5rem, 40px);
@@ -101,7 +101,9 @@ const links = computed(() =>
       border-radius: 50%;
       width: max(4.1rem, 30px);
       height: max(4.1rem, 30px);
-      transition: background 0.3s, color 0.3s;
+      transition:
+        background 0.3s,
+        color 0.3s;
       &:hover {
         background-color: #fff;
         color: #111;

@@ -92,11 +92,11 @@
             {{ $t('home.revolution.healthcare-desc') }}
           </p>
         </div>
-        <div class="revolution__card revolution__card--big">
+        <div class="revolution__card">
           <span class="revolution__label">
             {{ $t('retail') }}
           </span>
-          <div class="revolution__card--big__content">
+          <div class="revolution__card-content">
             <h3>
               {{ $t('home.revolution.retail-title') }}
             </h3>
@@ -184,11 +184,15 @@
 .power {
   display: flex;
   align-items: flex-start;
-  gap: 5.4rem;
-  margin-top: 15rem;
-  padding-bottom: 6rem;
+  gap: max(5.4rem, 22px);
+  padding-bottom: max(6rem, 20px);
   margin-inline: var(--spacing-inline);
   border-bottom: 2px solid #fff;
+  flex-wrap: wrap;
+  @media screen and (max-width: vars.$bp-sm) {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
   h2 {
     max-width: 16ch;
   }
@@ -197,13 +201,16 @@
   }
   &__button {
     margin-left: auto;
-    border-radius: 5rem;
+    border-radius: 50px;
     background: #fff;
-    font-size: 1.4rem;
+    font-size: 16px;
     font-weight: 900;
     color: #000;
-    padding-block: 1.4rem;
-    padding-inline: 2.4rem;
+    padding-block: max(1.4rem, 10px);
+    padding-inline: max(2.4rem, 20px);
+    @media screen and (max-width: vars.$bp-md) {
+      margin-left: initial;
+    }
   }
 }
 .network {
@@ -212,8 +219,22 @@
     'card-1 card-1 card-2 card-2'
     '. card-3 card-3 card-4';
   grid-auto-columns: 4.2fr 1fr 4.2fr 3.1fr; // 1fr = 11.5rem
-  grid-auto-rows: 54.3rem 23.1rem;
+  grid-auto-rows: max(54.3rem, 220px) max(23.1rem, 220px);
   gap: 5px;
+  @media screen and (max-width: vars.$bp-lg) {
+    grid-auto-columns: 1fr;
+    grid-template-areas:
+      'card-1 card-1 card-2 card-2'
+      'card-3 card-3 card-4 card-4';
+  }
+  @media screen and (max-width: vars.$bp-md) {
+    grid-auto-rows: 224px;
+    grid-template-areas:
+      'card-2'
+      'card-1'
+      'card-3'
+      'card-4';
+  }
   &__card {
     display: flex;
     flex-direction: column;
@@ -232,6 +253,12 @@
       color: #fff;
       align-self: flex-end;
       height: 58%;
+      @media screen and (max-width: vars.$bp-lg) {
+        height: 80%;
+      }
+      @media screen and (max-width: vars.$bp-md) {
+        height: 100%;
+      }
     }
     &:nth-child(2) {
       grid-area: card-2;
@@ -247,6 +274,7 @@
       background-color: #ffc700;
     }
     &-icon {
+      flex-shrink: 0;
       width: auto;
     }
     &-banner {
@@ -273,6 +301,9 @@
       gap: 1rem;
       border-radius: 5rem;
       border: 1px solid #fff;
+      @media screen and (max-width: vars.$bp-md) {
+        display: none;
+      }
       span {
         margin-bottom: 0.3em;
       }
@@ -287,8 +318,6 @@
   flex-direction: column;
   gap: 11rem;
   padding-inline: var(--spacing-inline);
-  margin-bottom: 15.1rem;
-  margin-top: max(12.2rem, 42px);
   position: relative;
   @media screen and (max-width: vars.$bp-lg) {
     gap: max(5rem, 41px);
@@ -331,6 +360,9 @@
     fill: #fff;
     border-radius: max(10rem, 50px);
     border: 1px solid #fff;
+    @media screen and (max-width: vars.$bp-sm) {
+      flex: 1;
+    }
     span {
       margin-bottom: 0.25em;
     }
@@ -380,8 +412,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-size: 18px;
     @media screen and (max-width: vars.$bp-md) {
       min-height: 250px;
+      font-size: 20px;
       &:not(:first-child) {
         margin-top: -46px;
       }
@@ -389,26 +423,30 @@
         padding-bottom: 65px;
       }
     }
-    &--big {
-      &__content {
-        display: flex;
-        align-items: flex-end;
-        padding-inline: calc((4 - 1.5) * 1rem);
-        padding-bottom: calc((4 - 1.5) * 1rem);
-        gap: max(3rem, 15px);
-        font-weight: 500;
-        @media screen and (max-width: vars.$bp-lg) {
-          flex-wrap: wrap;
-          flex-direction: column;
-          align-items: flex-start;
-          padding: 0;
-        }
-        h3 {
-          font-size: 35px;
-          font-weight: 400;
+    & > *:last-child {
+      padding-inline: calc(4rem - 1.5rem);
+      padding-bottom: calc(4rem - 1.5rem);
+    }
+    &-content {
+      display: flex;
+      align-items: flex-end;
+      gap: max(3rem, 15px);
+      font-weight: 500;
+      @media screen and (max-width: vars.$bp-lg) {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+      }
+      h3 {
+        font-size: 35px;
+        font-weight: 400;
+        @media screen and (min-width: vars.$bp-lg) {
           max-width: 10ch;
         }
-        p {
+      }
+      p {
+        @media screen and (min-width: vars.$bp-lg) {
           max-width: 20ch;
         }
       }
@@ -438,7 +476,7 @@
       background-color: #fff;
 
       p {
-        color: #e3007b;
+        color: #000;
       }
       .revolution__label {
         --bg-clr: #111;
@@ -448,7 +486,7 @@
       background-color: #fc0;
 
       p {
-        color: #6155f5;
+        color: #000;
       }
       .revolution__label {
         --bg-clr: #111;
@@ -579,7 +617,6 @@
     'boxes content';
   grid-auto-columns: 1fr 1.2fr;
   margin-inline: var(--spacing-inline);
-  margin-block: 12rem;
   position: relative;
   row-gap: max(6.2rem, 20px);
   column-gap: 8rem;
@@ -603,14 +640,12 @@
   &__content {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    @media screen and (max-width: vars.$bp-md) {
-      display: none;
-    }
+    gap: 20px;
     &-title {
-      font-size: 3.6rem;
+      font-size: 36px;
       font-weight: 400;
-      letter-spacing: -0.18rem;
+      letter-spacing: -1.8px;
+      line-height: 122.2%;
     }
   }
   &__boxes {
@@ -764,5 +799,10 @@
       line-height: 123%;
     }
   }
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: max(14rem, 100px);
 }
 </style>
