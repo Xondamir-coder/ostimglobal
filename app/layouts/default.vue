@@ -1,8 +1,10 @@
 <template>
   <div class="default">
     <LayoutHeader />
+    <LayoutMenu />
     <slot />
     <LayoutFooter />
+    <UiFormPopup />
   </div>
 </template>
 

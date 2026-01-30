@@ -124,6 +124,7 @@
       </div>
     </section>
     <section class="overview">
+      <UiPicture class="overview__ball" src="ball.png" alt="ball" />
       <h2 class="heading-lg">
         {{ $t('home.overview.title') }}
       </h2>
@@ -166,22 +167,37 @@
         <p>{{ $t('home.network.integ') }}</p>
       </div>
     </section>
-    <section class="power">
+    <section class="cta">
       <h2 class="heading-lg">
-        {{ $t('home.power.title') }}
+        {{ $t('home.cta.title') }}
       </h2>
-      <p>{{ $t('home.power.text') }}</p>
-      <NuxtLink :to="$localePath('/contacts')" class="power__button">
+      <p>{{ $t('home.cta.text') }}</p>
+      <button class="cta__button" @click="showFormPopup = true">
         {{ $t('contact-us') }}
-      </NuxtLink>
+      </button>
+      <a href="tel:+998 77 124 10 10" class="cta__button">
+        {{ $t('call-us') }}
+      </a>
     </section>
+    <button class="home__up" @click="goUp">
+      <IconsArrowUpShort />
+    </button>
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+const showFormPopup = useState('showFormPopup');
+
+const goUp = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
+</script>
 
 <style lang="scss" scoped>
-.power {
+.cta {
   display: flex;
   align-items: flex-start;
   gap: max(5.4rem, 22px);
@@ -208,12 +224,23 @@
     color: #000;
     padding-block: max(1.4rem, 10px);
     padding-inline: max(2.4rem, 20px);
+    &:nth-child(3) {
+      @media screen and (max-width: vars.$bp-lg) {
+        display: none;
+      }
+    }
+    &:last-child {
+      @media screen and (min-width: vars.$bp-lg) {
+        display: none;
+      }
+    }
     @media screen and (max-width: vars.$bp-md) {
       margin-left: initial;
     }
   }
 }
 .network {
+  z-index: 2;
   display: grid;
   grid-template-areas:
     'card-1 card-1 card-2 card-2'
@@ -327,9 +354,12 @@
   }
   &__ball {
     position: absolute;
-    width: 130%;
     right: 0;
-    top: 0;
+    top: -70%;
+    width: 95%;
+    @media screen and (max-width: vars.$bp-md) {
+      display: none;
+    }
   }
   &__labels {
     display: flex;
@@ -387,6 +417,7 @@
   }
 }
 .revolution {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -715,7 +746,6 @@
   justify-content: space-between;
   align-items: flex-end;
   padding-inline: max(2.4rem, 20px);
-  margin-top: 26px;
   padding-bottom: 18px;
   aspect-ratio: 144/67.9;
   @media screen and (max-width: vars.$bp-md) {
@@ -804,5 +834,21 @@
   display: flex;
   flex-direction: column;
   gap: max(14rem, 100px);
+  &__up {
+    @include mix.flex-center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background: #fc0;
+    align-self: flex-end;
+    margin-right: var(--spacing-inline);
+    transition: opacity 0.4s;
+    margin-top: calc((max(14rem, 100px) - 57px) * -1);
+    margin-bottom: calc((max(9.4rem, 94px) - 37px) * -1);
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 </style>

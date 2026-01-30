@@ -1,5 +1,104 @@
 {
+  "project": "Loyiha",
+  "menu": "Menyu",
+  "logistics": "Logistika",
+  "sport-complex": "Sport majmuasi",
+  "college": "Kollej",
+  "clinics": "Klinikalar",
+  "stations": "Stansiyalar",
+  "education": "Ta'lim",
+  "schools": "Maktablar",
+  "roads": "Yo‘llar",
+  "services": "Xizmatlar",
+  "healthcare": "Sog‘liqni saqlash",
+  "retail": "Chakana savdo",
+  "finances": "Moliyaviy xizmatlar",
+  "neural-networks": "Neyron tarmoqlar",
+  "contact-us": "Biz bilan bog‘laning",
+  "industrial-facilities": "Sanoat obyektlari",
+  "send": "Yuborish",
+  "call-us": "Bizga qo‘ng‘iroq qiling",
+
   "header": {
-    "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
+    "links": [
+      "Bosh sahifa",
+      "Biz haqimizda",
+      "Investorlar uchun",
+      "FAQ",
+      "Yangiliklar",
+      "Kontaktlar"
+    ]
+  },
+
+  "home": {
+    "hero": {
+      "title": "100 gektar hududdagi sanoat qudrati",
+      "label": "Kelajakni yaratamiz",
+      "cards": [
+        {
+          "description": "Samarali ishlab chiqarish uchun tayyor infratuzilma",
+          "title": "Sanoat zonasi"
+        },
+        {
+          "description": "Ishlash va yashash uchun qulay muhit",
+          "title": "Ijtimoiy zona"
+        }
+      ]
+    },
+    "industrial": {
+      "title": "50+ yillik sanoat tajribasi",
+      "text-1": "OSTIM Global — bu OSTIM sanoat ekotizimining xalqaro platformasi bo‘lib, tashkil etilgan sanoat zonalarini rivojlantirish bo‘yicha 50 yildan ortiq tajribani O‘zbekistonga olib kiradi. Loyiha sinovdan o‘tgan boshqaruv modellari, tayyor infratuzilma va uzoq muddatli investitsiya qarashlarini birlashtiradi.",
+      "subtitle": "Sanoat ekotizimi bilan tanishing",
+      "text-2": "Bugungi kunda OSTIM Global Turkiya–O‘zbekiston sanoat zonasini rivojlantirib, ishlab chiqarish, investitsiya va barqaror o‘sish uchun to‘liq integratsiyalashgan muhitni yaratmoqda."
+    },
+    "revolution": {
+      "title": "Sanoat miqyosida loyihalashtirilgan",
+      "desc": "Samarali faoliyat uchun integratsiyalashgan yo‘llar va logistika",
+      "download-cat": "Katalogni yuklab olish",
+      "retail-title": "Investorlarni qo‘llab-quvvatlash",
+      "retail-desc": "Loyihalarni markazlashgan tarzda muvofiqlashtirish",
+      "healthcare-desc": "Hududdagi tibbiy xizmatlar. Tibbiyot muassasalari",
+      "services-desc": "Ma'muriy va yordamchi xizmatlar. Kundalik faoliyatni qo‘llab-quvvatlovchi xizmatlar",
+      "roads-desc": "Yo‘llar va ichki transport. To‘g‘ridan-to‘g‘ri kirish va samarali ichki harakatlanish"
+    },
+    "overview": {
+      "title": "O‘zbekiston–Turkiya sanoat zonasi ichida",
+      "labels": ["Konsalting", "Inshootlar", "Ishlab chiqarish", "Hamkorlik"],
+      "texts": [
+        "OSTIM Global O‘zbekiston–Turkiya sanoat zonasi — Toshkentda joylashgan yirik sanoat loyihasi bo‘lib, Turkiyaning yetakchi tashkil etilgan sanoat zonalaridan biri bo‘lgan OSTIM boshqaruv modeli asosida rivojlantirilmoqda. Loyiha O‘zbekiston Respublikasi Hukumatining 2023-yil 15-dekabrdagi qaroriga muvofiq faoliyat yuritadi.",
+        "50 yildan ortiq sanoat zonalarini rivojlantirish tajribasini O‘zbekistonga olib kirgan holda, OSTIM Global integratsiyalashgan infratuzilma, barqaror rivojlanish va uzoq muddatli investitsiya qarashlariga asoslangan zamonaviy ishlab chiqarish muhitini yaratmoqda.",
+        "OSTIM Global sanoat rivojlanishining yangi bosqichini ifodalaydi, Turkiya va O‘zbekiston o‘rtasidagi hamkorlikni mustahkamlaydi hamda mamlakatning sanoat transformatsiyasiga hissa qo‘shadi."
+      ]
+    },
+    "network": {
+      "coop": "Loyihani amalga oshirish uchun 20 dan ortiq davlat bilan hamkorlik",
+      "struc": "Tuzilgan sanoat modellari",
+      "integ": "Integratsiyalashgan kommunal va muhandislik tarmoqlari"
+    },
+    "cta": {
+      "title": "Tajriba asosida yaratilgan sanoat qudrati",
+      "text": "OSTIM Global infratuzilma, boshqaruv va xalqaro hamkorlik orqali samarali ishlab chiqarish hamda barqaror o‘sishni ta’minlaydigan integratsiyalashgan sanoat muhitini yaratadi."
+    }
+  },
+
+  "footer": {
+    "title": "Aloqa ma'lumotlari",
+    "partners": "Hamkorlarimiz",
+    "copyright": "Mualliflik huquqi © 2026 Ostim Global. Barcha huquqlar himoyalangan.",
+    "dev": "Ishlab chiqdi",
+    "office": "Bizning ofis",
+    "navigation": "Navigatsiya",
+    "social-media": "Ijtimoiy tarmoqlar",
+    "address-1": "Toshkent shahri, Furqat ko‘chasi, 5A",
+    "address-2": "pochta indeksi 100123",
+    "links": ["Maxfiylik siyosati", "Foydalanish shartlari", "Cookie sozlamalari"]
+  },
+
+  "form-popup": {
+    "title": "Ariza qoldiring",
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "rights-1": "“Yuborish” tugmasini bosish orqali",
+    "rights-2": "Shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz"
   }
 }

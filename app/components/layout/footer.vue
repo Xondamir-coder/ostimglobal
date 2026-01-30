@@ -131,7 +131,7 @@ const boxes = computed(() => [
 <style lang="scss" scoped>
 .footer {
   position: relative;
-  margin-top: max(14rem, 100px);
+  margin-top: max(9.4rem, 94px);
   padding-top: max(3.7rem, 17px);
   display: grid;
   grid-auto-columns: 1fr;
@@ -165,7 +165,7 @@ const boxes = computed(() => [
       top: auto;
       bottom: 0;
       width: 100%;
-      height: 76%;
+      height: 67%;
     }
   }
   &__box {
@@ -212,8 +212,9 @@ const boxes = computed(() => [
     gap: max(30rem, 40px);
     padding-top: calc(7.9rem - 20px);
     @media screen and (max-width: vars.$bp-md) {
-      padding-bottom: calc(127px - 25px);
+      gap: 57px;
       padding-top: calc(44px - 25px);
+      padding-bottom: 100px;
     }
   }
   &__left,
@@ -291,18 +292,20 @@ const boxes = computed(() => [
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: max(3.7rem, 16px);
-
-    @media screen and (max-width: vars.$bp-md) {
-      display: none;
+    gap: max(3.7rem, 10px);
+    flex-wrap: wrap;
+    @media screen and (max-width: vars.$bp-sm) {
+      flex-direction: column;
+      align-items: flex-start;
     }
+
     &-list {
       display: flex;
       align-items: center;
       gap: 10px;
     }
     &-image {
-      width: max(5.6rem, 40px);
+      width: 56px;
       &:first-child {
         filter: brightness(7.5);
       }

@@ -23,6 +23,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: 'en',
+    baseUrl: 'https://www.ostimglobal.com/',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
@@ -30,8 +31,9 @@ export default defineNuxtConfig({
     },
     locales: [
       { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+      { code: 'uz', language: 'uz-UZ', name: "O'zbek", file: 'uz.json' },
       { code: 'ru', language: 'ru-RU', name: 'Русский', file: 'ru.json' },
-      { code: 'uz', language: 'uz-UZ', name: "O'zbek", file: 'uz.json' }
+      { code: 'tr', language: 'tr-TR', name: 'Türk', file: 'tr.json' }
     ]
   },
   googleFonts: {
