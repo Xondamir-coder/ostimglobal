@@ -1,6 +1,6 @@
 <template>
   <header class="header" :class="{ 'menu-shown': showMenu }">
-    <NuxtLink :to="$localePath('/')">
+    <NuxtLink :to="$localePath('/home')">
       <SvgLogo class="header__logo" />
     </NuxtLink>
     <nav class="header__nav">
@@ -8,6 +8,7 @@
         v-for="link in links"
         :key="link.to"
         :to="$localePath(link.to)"
+        active-class="active"
         class="header__nav-link"
       >
         <span>{{ link.label }}</span>
@@ -29,7 +30,7 @@
           </button>
         </div>
       </div>
-      <NuxtLink class="header__button" :to="$localePath('/project')">
+      <NuxtLink class="header__button" :to="$localePath('/')">
         <span>{{ $t('project') }}</span>
       </NuxtLink>
       <button class="header__opener" @click="showMenu = !showMenu">
@@ -208,14 +209,12 @@ onMounted(() => {
       display: none;
     }
 
-    // &-link {
-    // }
-    // @media screen and (min-width: 1100px) {
-    //   position: absolute;
-    //   top: 70%;
-    //   left: 50%;
-    //   translate: -50% -50%;
-    // }
+    &-link {
+      transition: color 0.3s;
+      &.active {
+        color: #fc0;
+      }
+    }
   }
   &__logo {
     width: 106px;

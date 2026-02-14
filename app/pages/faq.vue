@@ -1,5 +1,5 @@
 <template>
-  <div>Project</div>
+  <div>FAQ</div>
 </template>
 
 <script setup></script>

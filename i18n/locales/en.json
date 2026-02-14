@@ -20,6 +20,7 @@
   "call-us": "Call us",
   "day-times": "Mon — Sat: 9:00–18:00",
   "close": "Close",
+  "social": "Social",
 
   "header": {
     "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
@@ -69,10 +70,84 @@
       "coop": "Cooperation with more than 20 countries for implementation",
       "struc": "Structured industrial models",
       "integ": "Integrated utilities and engineering networks"
+    }
+  },
+
+  "about": {
+    "hero": {
+      "title": "Inside the Uzbek–Turkish Industrial Zone",
+      "texts": [
+        "OSTIM GLOBAL /endline/ Cooperation and innovative solutions in industry. OSTIM Global is the international organization representing the OSTIM Organized Industrial Zone, one of the most reputable industrial zones in Türkiye. With more than 50 years of experience, OSTIM has built a leading industrial and manufacturing ecosystem and established strong business relationships with both local and international investors.",
+        "Turkish–Uzbek Industrial Zone “OSTIM GLOBAL” /endline/ OSTIM Global plays an active role in the development of the Turkish–Uzbek Industrial Zone, providing technical expertise, investment support, and industrial management to ensure the successful implementation of the project. Aiming to create a long-term and sustainable production hub for industrial investors, OSTIM Global will make a significant contribution to Uzbekistan’s industrial transformation."
+      ]
     },
-    "cta": {
-      "title": "Industrial power built on experience",
-      "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
+    "social": {
+      "card-1": {
+        "text": "Uzbekistan is a trade hub of Central Asia and a strategic logistics center with access to regional and international markets.",
+        "title": "Strategic Location"
+      },
+      "card-2": {
+        "text": "Infrastructure built to international standards ensures uninterrupted production, reliable power supply, water, and high-speed internet.",
+        "title": "Modern Infrastructure"
+      },
+      "card-3": {
+        "text": "The OSTIM Global cluster model enables cooperation with leading companies, joint R&D projects, and increased competitiveness.",
+        "title": "Cluster Synergy"
+      }
+    },
+    "partners": {
+      "title": "Our Partners",
+      "text": "Government institutions, industrial organizations, and strategic partners supporting the OSTIM Global ecosystem."
+    },
+    "info": {
+      "title": "Innovative AI projects",
+      "text": "Our solutions help investors optimize operations, improve productivity, and accelerate industrial growth.",
+      "cards": [
+        {
+          "label": "Service",
+          "title": "One-Stop Service",
+          "text": "OSTIM Global simplifies the process of obtaining permits and licenses, accelerating the launch of investment projects."
+        },
+        {
+          "label": "Social",
+          "title": "Social Environment",
+          "text": "Residential, medical, educational, and sports facilities create comfortable conditions for both living and working."
+        },
+        {
+          "label": "Logistics",
+          "title": "Logistics and Supply Chain",
+          "text": "Developed logistics and efficient supply chain management reduce costs and accelerate product delivery."
+        },
+        {
+          "label": "Education",
+          "title": "Skilled Workforce",
+          "text": "Partnerships with universities and technical colleges provide access to a young and well-trained workforce."
+        }
+      ]
+    }
+  },
+
+  "investors": {
+    "hero": {
+      "big": {
+        "label": "For investors",
+        "title": "Industrial Advantage",
+        "subtitle": "Building Industry with Flexible Infrastructure"
+      },
+      "cards": [
+        "Flexible Industrial Spaces",
+        "Modern Engineering Infrastructure",
+        "Turkey Infrastructure",
+        "Full Project Cycle"
+      ]
+    },
+    "future": {
+      "title": "Building the Industrial Future Together",
+      "labels": ["Experience", "Ecosystem", "Sustainability"],
+      "texts": [
+        "The Uzbek–Turkish Industrial Zone is built on the principles of sustainability, innovation, and long-term industrial growth. OSTIM Global brings over 50 years of Türkiye’s industrial zone experience to Uzbekistan, creating a new generation of organized industrial development in Central Asia. ",
+        "Investors are invited to become part of a managed industrial ecosystem that combines ready infrastructure, cluster-based development, education–industry cooperation, and a one-stop support model—enabling seamless integration into regional and global markets."
+      ]
     }
   },
 
@@ -95,5 +170,10 @@
     "phone": "Номер телефона",
     "rights-1": "Нажимая кнопку «Отправить»,",
     "rights-2": "Вы подтверждаете свое согласие на обработку персональных данных"
+  },
+
+  "section-cta": {
+    "title": "Industrial power built on experience",
+    "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
   }
 }
