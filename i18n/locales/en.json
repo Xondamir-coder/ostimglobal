@@ -180,6 +180,48 @@
     }
   },
 
+  "faq": {
+    "see-all": "See All FAQs",
+    "hero": {
+      "title": "Innovative AI Developer Team",
+      "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. "
+    },
+    "accordions": [
+      {
+        "question": "What is OSTIM Global?",
+        "answer": "OSTIM Global is a modern industrial and business zone designed for investors and entrepreneurs, offering full facilities for manufacturing, logistics, and services."
+      },
+      {
+        "question": "What is the total area of OSTIM Global?",
+        "answer": "The total area of the project is approximately [insert total area] hectares, providing large-scale space for industrial, commercial, and logistics development."
+      },
+      {
+        "question": "Project end date",
+        "answer": "The project is being developed in phases, with the final completion scheduled for [insert year or quarter]."
+      },
+      {
+        "question": "Who can buy or lease property?",
+        "answer": "Industrial companies, manufacturers, logistics providers, investors, and service-oriented businesses can buy or lease units within the project."
+      },
+      {
+        "question": "Is installment payment available?",
+        "answer": "Yes, flexible installment plans are available. The payment schedule and terms may vary depending on the property type and agreement."
+      },
+      {
+        "question": "How can I get a consultation?",
+        "answer": "You can request a consultation by leaving your contact details in the inquiry form, calling our sales office, or contacting our official representatives."
+      },
+      {
+        "question": "How does the purchase process work?",
+        "answer": "The process includes selecting a suitable unit, agreeing on commercial terms, signing the contract, and completing the payment according to the chosen plan."
+      },
+      {
+        "question": "What infrastructure is available?",
+        "answer": "The project offers fully developed infrastructure including internal roads, utilities, power supply, water, sewage systems, high-speed internet, security, parking areas, and logistics access."
+      }
+    ]
+  },
+
   "footer": {
     "title": "Contact information",
     "partners": "Hamkorlarimiz",
