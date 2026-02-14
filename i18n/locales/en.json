@@ -131,8 +131,8 @@
     "hero": {
       "big": {
         "label": "For investors",
-        "title": "Industrial Advantage",
-        "subtitle": "Building Industry with Flexible Infrastructure"
+        "text": "Industrial Advantage",
+        "title": "Building Industry with Flexible Infrastructure"
       },
       "cards": [
         "Flexible Industrial Spaces",
@@ -148,6 +148,35 @@
         "The Uzbek–Turkish Industrial Zone is built on the principles of sustainability, innovation, and long-term industrial growth. OSTIM Global brings over 50 years of Türkiye’s industrial zone experience to Uzbekistan, creating a new generation of organized industrial development in Central Asia. ",
         "Investors are invited to become part of a managed industrial ecosystem that combines ready infrastructure, cluster-based development, education–industry cooperation, and a one-stop support model—enabling seamless integration into regional and global markets."
       ]
+    },
+    "numbers": {
+      "card-1": {
+        "title": "100 ha",
+        "text": "A master-planned area designed for industrial, administrative, and social facilities."
+      },
+      "card-2": {
+        "label": "Numbers",
+        "text": "Turkey infrastructure, centralized management, international cooperation.",
+        "title": "OSTIM Global in Numbers"
+      },
+      "card-3": {
+        "text": "The majority of the territory is allocated for manufacturing and industrial facilities.",
+        "title": "70%"
+      },
+      "card-4": {
+        "subtitle": "Internal Roads",
+        "text": "An extensive road network ensuring efficient internal logistics and accessibility across the zone.",
+        "title": "155,000 m²"
+      }
+    },
+    "overview": {
+      "title": "The Uzbek–Turkish Industrial Zone: OSTIM Global",
+      "texts": [
+        "OSTIM Global is an Uzbek–Turkish industrial zone in Tashkent, developed under the management of OSTIM—one of Türkiye’s leading organized industrial zones with over 50 years of experience.",
+        "Built on a turkey infrastructure model, the zone offers ready engineering networks, centralized management, and a cluster-based ecosystem that enables efficient production and long-term industrial growth.",
+        "With over 70% of the territory dedicated to manufacturing and integrated administrative and social facilities, OSTIM Global functions as a complete industrial campus."
+      ],
+      "labels": ["Infrastructure", "Clusters", "Ecosystem", "Management"]
     }
   },
 
