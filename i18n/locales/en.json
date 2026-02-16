@@ -21,6 +21,7 @@
   "day-times": "Mon — Sat: 9:00–18:00",
   "close": "Close",
   "social": "Social",
+  "office": "Office",
 
   "header": {
     "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
@@ -100,7 +101,7 @@
       "text": "Government institutions, industrial organizations, and strategic partners supporting the OSTIM Global ecosystem."
     },
     "info": {
-      "title": "Innovative AI projects",
+      "title": "Business Launch and Logistics Network",
       "text": "Our solutions help investors optimize operations, improve productivity, and accelerate industrial growth.",
       "cards": [
         {
@@ -222,6 +223,42 @@
     ]
   },
 
+  "contacts": {
+    "title": "Innovative AI Developer Team",
+    "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. ",
+    "address-1": "Our Office /endline/ Ostim Global /endline/ Tashkent city, Furqat st. 5A",
+    "address-2": "post office 100 123"
+  },
+
+  "news": {
+    "label": "новости компании",
+    "other": "Еще интересные новости компании",
+    "header": {
+      "title": "Today’s Headlines: Stay Informed",
+      "text": "Explore the latest news from around the world. We bring you up-to the minute updates on the most significant events, trends, and stories."
+    },
+    "items": [
+      {
+        "date": "2026-02-16T13:02:45.150Z",
+        "id": 1,
+        "labels": ["promotion", "industrial zone"],
+        "title": "Special Partnership Conditions from Ostim Global"
+      },
+      {
+        "date": "2026-02-16T13:02:45.150Z",
+        "id": 2,
+        "labels": ["social zone"],
+        "title": "Ostim Global Expands Its International Presence"
+      },
+      {
+        "date": "2026-02-16T13:02:45.150Z",
+        "id": 3,
+        "labels": ["industrial zone"],
+        "title": "Priority Support Program for Investment Projects"
+      }
+    ]
+  },
+
   "footer": {
     "title": "Contact information",
     "partners": "Hamkorlarimiz",
@@ -230,9 +267,9 @@
     "office": "Our Office",
     "navigation": "Navigation",
     "social-media": "Social Media",
-    "address-1": "Tashkent city, Furqat st. 5A",
+    "address-1": "Zangiota District, Bagzor Street, Dostlik Street, Building 2, Tashkent, Uzbekistan",
     "address-2": "post office 100 123",
-    "links": ["Privacy Policy", "Terms Of Service", "Cookies Settings"]
+    "links": ["Privacy Policy", "Terms Of Service"]
   },
 
   "form-popup": {

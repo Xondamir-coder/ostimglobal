@@ -167,10 +167,10 @@ onBeforeUnmount(() => {
   }
 }
 .faq {
-  padding-top: max(9.4rem, 54px);
+  padding-top: max(9.4rem, 30px);
   display: flex;
   flex-direction: column;
-  gap: max(10rem, 100px);
+  gap: max(10rem, 50px);
   &__button {
     border-radius: 4px;
     background: rgba(255, 255, 255, 0.03);

@@ -25,20 +25,10 @@
         <h4 class="footer__box-title">{{ $t('footer.office') }}</h4>
         <ul class="footer__box-list">
           <li class="footer__box-item">
-            <a
-              class="footer__box-link"
-              href="https://spacelabs.studio"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Spacelabs
-            </a>
-          </li>
-          <li class="footer__box-item">
             {{ $t('footer.address-1') }}
           </li>
           <li class="footer__box-item">
-            <a class="footer__box-link" href="tel:+998 99 123 45 67">+998 99 123 45 67 </a>
+            <a class="footer__box-link" href="tel:+998 55 055 10 10">+998 55 055 10 10 </a>
           </li>
           <li class="footer__box-item">
             {{ $t('footer.address-2') }}
@@ -58,7 +48,7 @@
             >
               {{ link.label }}
             </a>
-            <NuxtLink v-else class="footer__box-link" :to="link.link">
+            <NuxtLink v-else class="footer__box-link" :to="link.link" active-class="active">
               {{ link.label }}
             </NuxtLink>
           </div>
@@ -182,9 +172,15 @@ const boxes = computed(() => [
     &-link[href*='spacelabs'] {
       font-weight: 700;
     }
+    &-link.active {
+      font-weight: 700;
+    }
     &-title {
       font-size: max(2rem, 17px);
       font-weight: 400;
+    }
+    &-item {
+      max-width: 17ch;
     }
   }
   &__content {

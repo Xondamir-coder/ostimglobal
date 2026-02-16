@@ -10,6 +10,7 @@
         :to="$localePath(link.to)"
         active-class="active"
         class="header__nav-link"
+        :class="{ active: $route.name.includes(link.label.toLowerCase()) }"
       >
         <span>{{ link.label }}</span>
       </NuxtLink>

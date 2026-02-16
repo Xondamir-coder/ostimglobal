@@ -321,6 +321,9 @@
       padding-bottom: 0;
       border-bottom: none;
     }
+    h2 {
+      max-width: 20ch;
+    }
     p {
       max-width: 40ch;
     }

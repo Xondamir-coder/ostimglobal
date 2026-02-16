@@ -503,6 +503,6 @@ const heroCards = computed(() =>
   display: flex;
   flex-direction: column;
   gap: max(12rem, 100px);
-  padding-top: max(9.4rem, 54px);
+  padding-top: max(9.4rem, 30px);
 }
 </style>
