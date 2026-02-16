@@ -56,7 +56,7 @@
       </div>
     </div>
     <p class="footer__bottom-text">
-      {{ $t('footer.copyright') }}
+      {{ $t('footer.copyright', { year: new Date().getFullYear() }) }}
     </p>
     <div class="footer__bottom">
       <nav class="footer__bottom-nav">

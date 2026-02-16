@@ -262,7 +262,7 @@
   "footer": {
     "title": "Contact information",
     "partners": "Hamkorlarimiz",
-    "copyright": "Copyright © 2026 Ostim Global. All rights reserved.",
+    "copyright": "Copyright © {year} Ostim Global. All rights reserved.",
     "dev": "Developed by",
     "office": "Our Office",
     "navigation": "Navigation",
@@ -270,6 +270,11 @@
     "address-1": "Zangiota District, Bagzor Street, Dostlik Street, Building 2, Tashkent, Uzbekistan",
     "address-2": "post office 100 123",
     "links": ["Privacy Policy", "Terms Of Service"]
+  },
+
+  "error": {
+    "subtitle": "Oops, We can't seem to find the page you are looking for.",
+    "text": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
   },
 
   "form-popup": {
