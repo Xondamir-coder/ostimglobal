@@ -779,6 +779,7 @@ const goUp = () => {
   display: flex;
   flex-direction: column;
   gap: max(14rem, 100px);
+  overflow: hidden;
   &__up {
     @include mix.flex-center;
     width: 55px;

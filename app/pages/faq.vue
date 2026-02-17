@@ -51,7 +51,7 @@ const allAccordions = useMapRt('faq.accordions');
 const accordions = computed(() => allAccordions.slice(0, sliceIndex.value));
 
 const showAllAccordions = () => {
-  sliceIndex.value = 8;
+  sliceIndex.value = allAccordions.length;
 };
 const hideAnswers = () => {
   document.querySelectorAll('.accordions__item-answer').forEach(el => {

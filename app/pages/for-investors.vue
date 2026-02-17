@@ -22,6 +22,7 @@
       </div>
     </section>
     <section class="future">
+      <UiPicture src="ball.png" alt="ball" class="future__ball" />
       <h2 class="heading-lg">
         {{ $t('investors.future.title') }}
       </h2>
@@ -336,6 +337,7 @@ const heroCards = computed(() =>
   grid-auto-columns: 1fr;
   row-gap: 9.6rem;
   position: relative;
+
   @media screen and (max-width: vars.$bp-xl) {
     row-gap: 25px;
     grid-template-areas:
@@ -343,6 +345,19 @@ const heroCards = computed(() =>
       'labels'
       'text-1'
       'text-2';
+  }
+  & > *:not(.future__ball) {
+    z-index: 1;
+  }
+  &__ball {
+    position: absolute;
+    width: 100%;
+    right: -5%;
+    top: 50%;
+    translate: 0 -50%;
+    @media screen and (max-width: vars.$bp-md) {
+      display: none;
+    }
   }
   &__label {
     border-radius: 50px;
@@ -500,9 +515,13 @@ const heroCards = computed(() =>
   }
 }
 .investors {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: max(12rem, 100px);
   padding-top: max(9.4rem, 30px);
+  & > *:not(.future) {
+    z-index: 1;
+  }
 }
 </style>

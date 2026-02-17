@@ -56,6 +56,7 @@
           reiciendis cum expedita quia? Sit, sunt distinctio! Tempora cumque itaque sed cum.
         </p>
       </div>
+      <UiPicture src="ball.png" alt="ball" class="container__ball" />
     </div>
     <section class="other">
       <h3 class="other__label">
@@ -81,6 +82,7 @@ const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id
   display: flex;
   flex-direction: column;
   gap: max(4rem, 14px);
+
   &__label {
     font-size: max(3rem, 18px);
     font-weight: 400;
@@ -113,8 +115,23 @@ const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id
   display: flex;
   flex-direction: column;
   gap: max(4rem, 30px);
+  position: relative;
+
   @media screen and (max-width: vars.$bp-md) {
     padding-inline: 0;
+  }
+  & > *:not(.other__ball) {
+    z-index: 1;
+  }
+
+  &__ball {
+    position: absolute;
+    right: -5%;
+    top: 45%;
+    width: 100%;
+    @media screen and (max-width: vars.$bp-md) {
+      display: none;
+    }
   }
   &__box {
     padding-inline: 15.3rem;
@@ -150,7 +167,7 @@ const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id
   gap: max(3rem, 10px);
   &__labels {
     display: flex;
-    font-size: max(1.4rem, 9px);
+    font-size: max(1.4rem, 14px);
     column-gap: max(1.4rem, 14px);
     row-gap: 5px;
     font-weight: 500;
@@ -173,7 +190,7 @@ const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id
   }
   &__title {
     text-align: center;
-    font-size: max(5.6rem, 20px);
+    font-size: max(5.6rem, 28px);
     font-weight: 400;
     line-height: 101%;
     letter-spacing: -2.24px;
@@ -184,5 +201,9 @@ const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id
   display: flex;
   flex-direction: column;
   gap: max(10rem, 50px);
+  overflow: hidden;
+  & > *:not(.container) {
+    z-index: 1;
+  }
 }
 </style>

@@ -194,31 +194,39 @@
       },
       {
         "question": "What is the total area of OSTIM Global?",
-        "answer": "The total area of the project is approximately [insert total area] hectares, providing large-scale space for industrial, commercial, and logistics development."
+        "answer": "The total area of the project is 100 hectares"
       },
       {
         "question": "Project end date",
-        "answer": "The project is being developed in phases, with the final completion scheduled for [insert year or quarter]."
+        "answer": "The project is planned for 5 years and will be implemented in stages over 3 years after 2026."
       },
       {
         "question": "Who can buy or lease property?",
-        "answer": "Industrial companies, manufacturers, logistics providers, investors, and service-oriented businesses can buy or lease units within the project."
+        "answer": "Only legal entities are allowed to purchase or lease property and land plots in OSTIM Global."
       },
       {
         "question": "Is installment payment available?",
-        "answer": "Yes, flexible installment plans are available. The payment schedule and terms may vary depending on the property type and agreement."
+        "answer": "Yes, installment payment options are available."
       },
       {
         "question": "How can I get a consultation?",
-        "answer": "You can request a consultation by leaving your contact details in the inquiry form, calling our sales office, or contacting our official representatives."
+        "answer": "You can call the hotline or visit our office."
       },
       {
         "question": "How does the purchase process work?",
-        "answer": "The process includes selecting a suitable unit, agreeing on commercial terms, signing the contract, and completing the payment according to the chosen plan."
+        "answer": "You visit our office and provide information about your business. The project is reviewed by the Board, and after approval, you receive an official response."
       },
       {
         "question": "What infrastructure is available?",
-        "answer": "The project offers fully developed infrastructure including internal roads, utilities, power supply, water, sewage systems, high-speed internet, security, parking areas, and logistics access."
+        "answer": "Electricity, Natural gas, Drinking and technical water, Sewage system and High-speed internet"
+      },
+      {
+        "question": "Does OSTIM Global assist with construction?",
+        "answer": "Yes, assistance is provided for: Project development and Construction management Supply of construction materials"
+      },
+      {
+        "question": "What is the OSTIM Global Eco System?",
+        "answer": "A complete ecosystem for investors and employees, including schools, kindergartens, universities, clinics, hotels, business centers, laboratories, exhibition and shopping centers."
       }
     ]
   },

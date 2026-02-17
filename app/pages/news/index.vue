@@ -9,6 +9,7 @@
       </p>
     </section>
     <section class="news__container">
+      <UiPicture src="ball.png" alt="ball" class="news__ball" />
       <h3 class="news__container-label">
         {{ $t('news.label') }}
       </h3>
@@ -33,12 +34,27 @@
   display: flex;
   flex-direction: column;
   gap: max(10rem, 50px);
-
+  position: relative;
+  & > *:not(.news__container) {
+    z-index: 1;
+  }
+  &__ball {
+    position: absolute;
+    right: -30%;
+    top: 75%;
+    width: 100%;
+    @media screen and (max-width: vars.$bp-md) {
+      display: none;
+    }
+  }
   &__container {
     display: flex;
     flex-direction: column;
     gap: max(3rem, 20px);
     padding-inline: var(--spacing-inline);
+    & > *:not(.news__ball) {
+      z-index: 1;
+    }
     &-label {
       text-transform: uppercase;
       font-size: max(3rem, 25px);

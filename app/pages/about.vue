@@ -13,6 +13,7 @@
       </div>
     </section>
     <section class="social">
+      <UiPicture src="ball.png" alt="ball" class="social__ball" />
       <div class="social__row">
         <UiPicture src="footer-banner.jpg" alt="banner" class="social__banner" />
         <div class="social__card">
@@ -371,6 +372,19 @@
   flex-direction: column;
   gap: 5px;
   margin-top: max(10rem, 40px);
+  position: relative;
+  & > *:not(.social__ball) {
+    z-index: 1;
+  }
+  &__ball {
+    position: absolute;
+    right: -5%;
+    top: 25%;
+    width: 100%;
+    @media screen and (max-width: vars.$bp-md) {
+      display: none;
+    }
+  }
   &__row {
     display: grid;
     grid-auto-flow: column;
@@ -380,7 +394,7 @@
       grid-auto-rows: 350px;
     }
     @media screen and (min-width: vars.$bp-md) {
-      &:first-child {
+      &:first-of-type {
         grid-auto-columns: 1fr 1.2fr;
         max-width: max(92%, 1200px);
         .social__banner {
@@ -391,7 +405,7 @@
           min-height: 73.3%;
         }
       }
-      &:nth-child(2) {
+      &:nth-of-type(2) {
         grid-auto-columns: 1fr 1.27fr;
         align-self: flex-end;
         max-width: max(75.5%, 1000px);
@@ -399,7 +413,7 @@
           aspect-ratio: 60.5/46.6;
         }
       }
-      &:last-child {
+      &:last-of-type {
         grid-auto-columns: 1fr 1.01fr;
         align-self: flex-end;
         max-width: max(83.5%, 1100px);
@@ -412,18 +426,18 @@
         }
       }
     }
-    &:first-child {
+    &:first-of-type {
       .social__card {
         background-color: #142751;
       }
     }
-    &:nth-child(2) {
+    &:nth-of-type(2) {
       .social__card {
         background-color: #222;
-        order: 1;
+        order: -1;
       }
     }
-    &:last-child {
+    &:last-of-type {
       .social__card {
         background-color: #fc0;
         color: #000;
@@ -518,5 +532,11 @@
   }
 }
 .about {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  & > *:not(.social) {
+    z-index: 2;
+  }
 }
 </style>
