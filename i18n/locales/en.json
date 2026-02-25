@@ -22,6 +22,9 @@
   "close": "Close",
   "social": "Social",
   "office": "Office",
+  "search": "Search",
+  "about-hangars": "About Hangars",
+  "hangars": "Hangars",
 
   "header": {
     "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
@@ -296,5 +299,23 @@
   "section-cta": {
     "title": "Industrial power built on experience",
     "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
+  },
+
+  "hangar": {
+    "title": "Hangars",
+    "text": "Ready-made hangars, fully equipped with engineering utilities and infrastructure. Concrete structure: reinforced concrete. Roof: sandwich panels. Wall partitions: sandwich panels. Floor: screed.",
+    "subtitle": "Infrastructure and Utilities:",
+    "utils": [
+      "Roads for vehicles",
+      "Water",
+      "Pedestrian sidewalks",
+      "Electricity",
+      "Green area",
+      "Gas",
+      "Outdoor lighting",
+      "Sewage",
+      "Internet"
+    ],
+    "info": ["Size: 18 × 30 = 540 m²", "Height: H = 8.6 m"]
   }
 }

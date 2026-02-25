@@ -61,11 +61,14 @@
     <div class="footer__bottom">
       <nav class="footer__bottom-nav">
         <NuxtLink
-          v-for="(link, i) in tm('footer.links')"
+          v-for="(link, i) in useMapRt('footer.links')?.map((el, i) => ({
+            label: el,
+            to: stPaths[i]
+          }))"
           :key="i"
-          :to="`/${rt(link).split(' ').join('-').toLowerCase()}`"
+          :to="link.to"
         >
-          {{ rt(link) }}
+          {{ link.label }}
         </NuxtLink>
       </nav>
       <div class="footer__dev">
@@ -84,14 +87,17 @@
 </template>
 
 <script setup>
-const { t, tm, rt } = useI18n();
+const { t } = useI18n();
+
+const paths = ['/home', '/about', '/for-investors', '/faq', '/news', '/contacts'];
+const stPaths = ['/privacy-policy', '/terms-of-service'];
 
 const boxes = computed(() => [
   {
     title: t('footer.navigation'),
-    links: tm('header.links').map(el => ({
-      label: rt(el),
-      link: `/${rt(el).split(' ').join('-').toLowerCase()}`
+    links: useMapRt('header.links').map((el, i) => ({
+      label: el,
+      link: paths[i]
     }))
   },
   {

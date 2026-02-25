@@ -43,12 +43,14 @@
 </template>
 
 <script setup>
-const { tm, rt, availableLocales, setLocale } = useI18n();
+const { availableLocales, setLocale } = useI18n();
+
+const paths = ['/home', '/about', '/for-investors', '/faq', '/news', '/contacts'];
 
 const links = computed(() =>
-  tm('header.links').map(el => ({
-    label: rt(el),
-    to: `/${rt(el).split(' ').join('-').toLowerCase()}`
+  useMapRt('header.links').map((el, i) => ({
+    label: el,
+    to: paths[i]
   }))
 );
 
