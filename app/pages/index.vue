@@ -1,7 +1,7 @@
 <template>
   <div class="project">
     <LayoutHeader class="project__header" />
-    <UiOverlayMap />
+    <UiOverlayMap :zone="selectedZoneID" />
     <div class="project__action">
       <form class="project__search" @submit.prevent="">
         <button class="project__search-iconbox">
@@ -9,15 +9,18 @@
         </button>
         <input type="text" class="project__search-input" :placeholder="$t('search')" />
       </form>
-      <button class="project__button">
+      <button class="project__button" @click="showActions = !showActions">
         <IconsThreeLines class="project__button-icon" />
       </button>
-      <div class="project__items">
-        <button class="project__item">
-          <span>Industrial zone</span>
-        </button>
-        <button class="project__item active">
-          <span>Social zone</span>
+      <div class="project__items" :class="{ hidden: !showActions }">
+        <button
+          v-for="(zone, i) in useMapRt('genplan.zones')"
+          :key="zone"
+          class="project__item"
+          :class="{ active: i === selectedZoneID }"
+          @click="selectedZoneID = i"
+        >
+          <span>{{ zone }}</span>
         </button>
       </div>
     </div>
@@ -29,11 +32,16 @@
       </div>
     </button>
     <UiHangarModal v-model="showHangarsModal" />
+    <UiSocialModal v-model="showSocialModal" />
   </div>
 </template>
 
 <script setup>
 const showHangarsModal = ref(false);
+const showSocialModal = ref(false);
+const selectedZoneID = ref(null);
+const showActions = ref(true);
+
 definePageMeta({
   layout: false
 });
@@ -45,6 +53,10 @@ definePageMeta({
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+  &__spotlight {
+    position: absolute;
+    inset: 0;
+  }
   &__hangar {
     position: absolute;
     right: 2.5rem;
@@ -105,6 +117,11 @@ definePageMeta({
     width: calc(100% - max(1.1rem, 8px) - max(6.3rem, 50px));
     display: flex;
     flex-direction: column;
+    transition: all 0.4s;
+    &.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
   &__item {
     @include mix.flex-center;
@@ -114,8 +131,10 @@ definePageMeta({
     letter-spacing: -1.5px;
     border-radius: 15px;
     height: max(7.1rem, 57px);
+    transition: all 0.4s;
+    border: 1px solid transparent;
     &.active {
-      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-color: rgba(255, 255, 255, 0.15);
     }
   }
   &__button {

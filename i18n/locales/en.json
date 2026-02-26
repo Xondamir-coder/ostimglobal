@@ -25,6 +25,7 @@
   "search": "Search",
   "about-hangars": "About Hangars",
   "hangars": "Hangars",
+  "book": "Book",
 
   "header": {
     "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
@@ -299,6 +300,10 @@
   "section-cta": {
     "title": "Industrial power built on experience",
     "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
+  },
+
+  "genplan": {
+    "zones": ["Industrial zone", "Social zone"]
   },
 
   "hangar": {

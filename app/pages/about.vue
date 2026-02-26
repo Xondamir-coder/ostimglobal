@@ -67,7 +67,7 @@
         <UiPicture src="school.jpg" alt="banner" class="social__banner" />
       </div>
       <div class="social__row">
-        <UiPicture src="sports-complex.jpg" alt="banner" class="social__banner" />
+        <UiPicture src="sports.jpg" alt="banner" class="social__banner" />
         <div class="social__card">
           <svg
             class="social__card-icon"
