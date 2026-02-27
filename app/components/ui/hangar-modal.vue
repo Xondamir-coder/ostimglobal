@@ -1,10 +1,10 @@
 <template>
   <Transition name="slide">
-    <div v-if="model" class="container" @click.self="model = false">
+    <div v-if="showHangarModal" class="container" @click.self="showHangarModal = false">
       <div class="modal">
         <div class="modal__top">
           <UiPicture src="hangars.jpg" alt="hangars" class="modal__top-banner" />
-          <UiModalCloseButton class="modal__top-button" @click="model = false" />
+          <UiModalCloseButton class="modal__top-button" @click="showHangarModal = false" />
         </div>
         <div class="modal__content">
           <div class="modal__content-header">
@@ -51,9 +51,7 @@
 <script setup>
 import { IconsBulb, IconsFlame, IconsMagnet, IconsPipe, IconsWifi } from '#components';
 
-const model = defineModel({
-  type: Boolean
-});
+const showHangarModal = useState('showHangarModal', () => false);
 
 const icons = [IconsFlame, IconsBulb, IconsMagnet, IconsWifi, IconsPipe];
 </script>

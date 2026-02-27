@@ -1,21 +1,22 @@
 <template>
   <Transition name="slide">
-    <div v-if="model" class="container" @click.self="model = false">
+    <div v-if="showSocialModal" class="container" @click.self="showSocialModal = false">
       <div class="modal">
         <div class="modal__top">
-          <UiPicture src="sport.jpg" alt="sports complex" class="modal__top-banner" />
-          <UiModalCloseButton class="modal__top-button" @click="model = false" />
+          <UiPicture :src="currentPlace.image" alt="sports complex" class="modal__top-banner" />
+          <UiModalCloseButton class="modal__top-button" @click="showSocialModal = false" />
         </div>
         <div class="modal__content">
-          <h2 class="modal__content-title">Sport complex</h2>
+          <h2 class="modal__content-title">
+            {{ currentPlace.title }}
+          </h2>
           <p class="modal__content-text">
-            The Sport Complex serves as a modern multi-functional facility designed. Dynamic working
-            environment within the OSTIM Global zone.
+            {{ currentPlace.text }}
           </p>
           <ul class="modal__content-list">
-            <li v-for="item in items" :key="item.label" class="modal__content-item">
-              <strong>{{ item.label }}</strong>
-              <span>{{ item.text }}</span>
+            <li v-for="area in currentPlace.areas" :key="area.label" class="modal__content-item">
+              <strong>{{ area.label }}</strong>
+              <span>{{ area.text }}</span>
             </li>
           </ul>
           <button class="modal__content-button">
@@ -28,23 +29,17 @@
 </template>
 
 <script setup>
-const items = [
-  {
-    label: 'Area:',
-    text: '5000 m2'
-  },
-  {
-    label: 'Capacity:',
-    text: '1000 people'
-  },
-  {
-    label: 'Location:',
-    text: 'Tashkent'
+const showSocialModal = useState('showSocialModal');
+const selectedSocialID = useState('selectedSocialID');
+
+const { places } = defineProps({
+  places: {
+    required: true,
+    type: Array
   }
-];
-const model = defineModel({
-  type: Boolean
 });
+
+const currentPlace = computed(() => places.find(el => el.id === selectedSocialID.value));
 </script>
 
 <style lang="scss" scoped>
@@ -94,14 +89,19 @@ const model = defineModel({
       background: #34c759;
       font-size: 16px;
       font-weight: 900;
+      transition: all 0.4s;
       @media screen and (max-width: vars.$bp-sm) {
         place-self: center;
+      }
+      &:hover {
+        opacity: 0.6;
       }
       span {
         margin-bottom: 0.25em;
       }
     }
     &-text {
+      padding-bottom: 3rem;
       grid-area: text;
     }
     &-item {
@@ -109,6 +109,7 @@ const model = defineModel({
       flex-direction: column;
     }
     &-list {
+      padding-bottom: 3rem;
       grid-area: list;
       display: flex;
       flex-direction: column;

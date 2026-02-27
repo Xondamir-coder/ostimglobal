@@ -12,20 +12,23 @@
           <path
             v-for="(item, index) in genplanData"
             :key="index"
-            :d="item"
+            :d="item.path"
+            :data-zone="item.zone"
             class="overlay__container-path"
+            :class="{ active: item.id === selectedSocialID && item.zone === selectedZoneID }"
+            @click="handlePathClick(item)"
           />
         </svg>
         <svg
           v-for="(spotlight, i) in spotlights"
           :key="spotlight"
           class="overlay__spotlight"
-          :class="{ active: i === zone }"
+          :class="{ active: i === selectedZoneID }"
           viewBox="0 0 1440 812"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path :d="spotlight" fill="black" fill-opacity="0.5" />
+          <path :d="spotlight" fill="black" fill-opacity="0.6" />
         </svg>
       </div>
     </div>
@@ -42,10 +45,19 @@ const spotlights = [
 
 const props = defineProps({
   overscale: { type: Number, default: 1.1 },
-  breakpoint: { type: Number, default: 1280 },
-  zone: { type: Number, default: -1 }
+  breakpoint: { type: Number, default: 1280 }
 });
-// const emit = defineEmits(['select-path', 'hover-path', 'leave-path']);
+
+const selectedZoneID = useState('selectedZoneID');
+const selectedSocialID = useState('selectedSocialID');
+const showSocialModal = useState('showSocialModal', () => false);
+
+const handlePathClick = item => {
+  if (item.zone === 1) {
+    selectedSocialID.value = item.id;
+    showSocialModal.value = true;
+  }
+};
 
 /* refs */
 const root = ref(null);
@@ -70,11 +82,6 @@ const state = reactive({
 
 /* exposed for template binding */
 const layerStyle = ref({ width: `${ASPECT_W}px`, height: `${ASPECT_H}px` });
-
-/* helpers */
-// const emitSelect = path => emit('select-path', path);
-// const emitHover = path => emit('hover-path', path);
-// const emitLeave = () => emit('leave-path', null);
 
 const applyScrollMode = () => {
   if (state.desktop) {
@@ -309,6 +316,15 @@ onUnmounted(() => {
       margin: 0 auto;
     }
   }
+  &__picture {
+    &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.2);
+      pointer-events: none;
+    }
+  }
 
   &__spotlight,
   &__picture,
@@ -344,6 +360,12 @@ onUnmounted(() => {
       transition: fill 160ms ease;
       fill: transparent;
       pointer-events: auto;
+      &[data-zone] {
+        cursor: pointer;
+        &:hover {
+          fill: rgba(255, 255, 255, 0.25);
+        }
+      }
       &.active {
         fill: rgba(255, 255, 255, 0.25);
       }
