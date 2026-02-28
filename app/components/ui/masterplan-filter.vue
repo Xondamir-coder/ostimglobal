@@ -11,28 +11,54 @@
     </button>
     <div class="filter__container" :class="{ hidden: !showContainer }">
       <!-- Show zones -->
-      <div v-if="selectedZoneID < 0" class="filter__items">
+      <div v-if="!selectedZoneID" class="filter__items">
         <button
-          v-for="(zone, i) in useMapRt('genplan.zones')"
-          :key="zone"
+          v-for="zone in zones"
+          :key="zone.id"
           class="filter__item"
-          :class="{ active: i === selectedZoneID }"
-          @click="selectedZoneID = i"
+          :class="{ active: selectedZoneID === zone.id }"
+          @click="selectedZoneID = zone.id"
         >
-          <span>{{ zone }}</span>
+          <span>{{ zone.label }}</span>
         </button>
       </div>
 
-      <!-- Show social places -->
-      <div v-if="selectedZoneID === 1" class="filter__items">
+      <!-- Show social zone labels -->
+      <div v-else-if="selectedZoneID === 'social'" class="filter__items">
         <button
           v-for="place in socialPlaces"
           :key="place.id"
           class="filter__item"
-          :class="{ active: place.id === selectedSocialID }"
+          :class="{ active: place.id === selectedPathID }"
           @click="selectSocial(place.id)"
         >
           <span>{{ place.title }}</span>
+        </button>
+      </div>
+
+      <!-- Show industrial zone blocks -->
+      <div v-if="selectedZoneID === 'industrial'" class="filter__items">
+        <button
+          v-for="block in industrialBlocks"
+          :key="block.id"
+          class="filter__item"
+          :class="{ active: block.id === selectedPathID }"
+          @click="selectBlock(block.id)"
+        >
+          <span>{{ block.id }}</span>
+        </button>
+      </div>
+
+      <!-- Show industrial zone hangars -->
+      <div v-if="selectedZoneID === 'industrial-hangars'" class="filter__items">
+        <button
+          v-for="hangar in industrialHangars"
+          :key="hangar.id"
+          class="filter__item"
+          :class="{ active: hangar.id === selectedPathID }"
+          @click="selectHangar(hangar.id)"
+        >
+          <span>{{ hangar.id }}</span>
         </button>
       </div>
     </div>
@@ -40,21 +66,45 @@
 </template>
 
 <script setup>
-defineProps({
-  socialPlaces: {
-    required: true,
-    type: Array
-  }
-});
+const zonesID = ['industrial', 'social'];
+
+const zones = computed(() =>
+  useMapRt('genplan.zones')?.map((el, i) => ({
+    label: el,
+    id: zonesID[i]
+  }))
+);
+const socialPlaces = computed(() => useMapRt('genplan.social-places'));
+const industrialBlocks = genplanData
+  .filter(el => el.zone === 'industrial' && !el.block)
+  .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+const industrialHangars = computed(() =>
+  genplanData
+    .filter(el => el.zone === 'industrial-hangars' && el.block === selectedBlockID.value)
+    .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
+);
 
 const showContainer = ref(true);
+
+const selectedBlockID = useState('selectedBlockID');
 const selectedZoneID = useState('selectedZoneID');
-const selectedSocialID = useState('selectedSocialID');
+const selectedPathID = useState('selectedPathID');
 const showSocialModal = useState('showSocialModal');
 
+const selectPath = id => {
+  selectedPathID.value = id;
+};
 const selectSocial = id => {
-  selectedSocialID.value = id;
+  selectPath(id);
   showSocialModal.value = true;
+};
+const selectBlock = id => {
+  selectPath(id);
+  selectedBlockID.value = id;
+  selectedZoneID.value = 'industrial-hangars';
+};
+const selectHangar = id => {
+  selectPath(id);
 };
 </script>
 

@@ -3,7 +3,11 @@
     <div v-if="showSocialModal" class="container" @click.self="showSocialModal = false">
       <div class="modal">
         <div class="modal__top">
-          <UiPicture :src="currentPlace.image" alt="sports complex" class="modal__top-banner" />
+          <UiPicture
+            :src="`${currentPlace.id}.jpg`"
+            alt="sports complex"
+            class="modal__top-banner"
+          />
           <UiModalCloseButton class="modal__top-button" @click="showSocialModal = false" />
         </div>
         <div class="modal__content">
@@ -30,16 +34,10 @@
 
 <script setup>
 const showSocialModal = useState('showSocialModal');
-const selectedSocialID = useState('selectedSocialID');
+const selectedPathID = useState('selectedPathID');
 
-const { places } = defineProps({
-  places: {
-    required: true,
-    type: Array
-  }
-});
-
-const currentPlace = computed(() => places.find(el => el.id === selectedSocialID.value));
+const socialPlaces = computed(() => useMapRt('genplan.social-places'));
+const currentPlace = computed(() => socialPlaces.value.find(el => el.id === selectedPathID.value));
 </script>
 
 <style lang="scss" scoped>
@@ -53,10 +51,10 @@ const currentPlace = computed(() => places.find(el => el.id === selectedSocialID
   flex-direction: column;
   padding: 12px;
   padding-bottom: 20px;
-  transition: all 1s;
   align-self: flex-end;
   gap: 30px;
   margin: max(1rem, 5px);
+  transition: all 0.7s;
   @media screen and (max-width: vars.$bp-sm) {
     margin: 0;
   }

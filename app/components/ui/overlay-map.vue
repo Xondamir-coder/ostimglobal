@@ -8,27 +8,29 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 812"
           preserveAspectRatio="xMidYMid slice"
+          :class="selectedZoneID"
         >
           <path
             v-for="(item, index) in genplanData"
             :key="index"
             :d="item.path"
             :data-zone="item.zone"
+            :data-block="item.block"
             class="overlay__container-path"
-            :class="{ active: item.id === selectedSocialID && item.zone === selectedZoneID }"
+            :class="{ active: item.id === selectedPathID || item.id === selectedBlockID }"
             @click="handlePathClick(item)"
           />
         </svg>
         <svg
-          v-for="(spotlight, i) in spotlights"
-          :key="spotlight"
+          v-for="spotlight in spotlights"
+          :key="spotlight.id"
           class="overlay__spotlight"
-          :class="{ active: i === selectedZoneID }"
+          :class="{ active: selectedZoneID.includes(spotlight.id) }"
           viewBox="0 0 1440 812"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path :d="spotlight" fill="black" fill-opacity="0.6" />
+          <path :d="spotlight.path" fill="black" fill-opacity="0.6" />
         </svg>
       </div>
     </div>
@@ -39,8 +41,14 @@
 import gsap from 'gsap';
 
 const spotlights = [
-  'M1440 812H0V0H1440V812ZM70.5 130L361 691L525 666L626 633L563 494L1010 362.5L1154 509L1311 451L1136.5 309.5L881.5 62L70.5 130Z',
-  'M1440 812H0V0H1440V812ZM562.5 515L670.5 681.5L1145.5 515L1008.5 365.5L562.5 515Z'
+  {
+    path: 'M1440 812H0V0H1440V812ZM70.5 130L361 691L525 666L626 633L563 494L1010 362.5L1154 509L1311 451L1136.5 309.5L881.5 62L70.5 130Z',
+    id: 'industrial'
+  },
+  {
+    path: 'M1440 812H0V0H1440V812ZM562.5 515L670.5 681.5L1145.5 515L1008.5 365.5L562.5 515Z',
+    id: 'social'
+  }
 ];
 
 const props = defineProps({
@@ -48,15 +56,21 @@ const props = defineProps({
   breakpoint: { type: Number, default: 1280 }
 });
 
+const selectedPathID = useState('selectedPathID');
 const selectedZoneID = useState('selectedZoneID');
-const selectedSocialID = useState('selectedSocialID');
+const selectedBlockID = useState('selectedBlockID');
 const showSocialModal = useState('showSocialModal', () => false);
 
 const handlePathClick = item => {
-  if (item.zone === 1) {
-    selectedSocialID.value = item.id;
+  if (item.zone === 'social') {
     showSocialModal.value = true;
+  } else if (item.zone === 'industrial') {
+    selectedBlockID.value = item.id;
+    selectedZoneID.value = 'industrial-hangars';
+  } else {
+    selectedBlockID.value = item.block;
   }
+  selectedPathID.value = item.id;
 };
 
 /* refs */
@@ -339,8 +353,10 @@ onUnmounted(() => {
   &__spotlight {
     opacity: 0;
     transition: opacity 0.5s;
+    pointer-events: none;
     &.active {
       opacity: 1;
+      pointer-events: all;
     }
   }
 
@@ -355,19 +371,26 @@ onUnmounted(() => {
     z-index: 20;
     pointer-events: auto;
 
+    &.social > *[data-zone='social'],
+    &.industrial > *[data-zone='industrial'],
+    &.industrial-hangars > *[data-zone='industrial-hangars'] {
+      cursor: pointer;
+      pointer-events: auto;
+    }
     &-path {
-      // cursor: pointer;
+      --fill-opacity: 0.25;
       transition: fill 160ms ease;
       fill: transparent;
-      pointer-events: auto;
-      &[data-zone] {
-        cursor: pointer;
-        &:hover {
-          fill: rgba(255, 255, 255, 0.25);
-        }
-      }
+      pointer-events: none;
+      &:hover,
       &.active {
-        fill: rgba(255, 255, 255, 0.25);
+        fill: rgba(255, 255, 255, var(--fill-opacity));
+      }
+      &[data-zone='industrial'] {
+        --fill-opacity: 0.5;
+      }
+      &[data-zone='industrial-hangars'] {
+        --fill-opacity: 1;
       }
     }
   }

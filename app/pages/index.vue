@@ -2,7 +2,7 @@
   <div class="project">
     <LayoutHeader class="project__header" />
     <UiOverlayMap />
-    <UiMasterplanFilter :social-places="socialPlaces" />
+    <UiMasterplanFilter />
     <button class="project__hangar" @click="showHangarModal = true">
       <span>{{ $t('about-hangars') }}</span>
       <span>{{ $t('hangars') }}</span>
@@ -10,7 +10,7 @@
         <IconsPlus class="project__hangar-icon" />
       </div>
     </button>
-    <UiSocialModal :places="socialPlaces" />
+    <UiSocialModal />
     <UiHangarModal />
   </div>
 </template>
@@ -18,25 +18,9 @@
 <script setup>
 const showHangarModal = useState('showHangarModal', () => false);
 useState('showSocialModal', () => false);
-useState('selectedZoneID', () => -1);
-useState('selectedSocialID', () => -1);
-
-const socialImages = [
-  'sport.jpg',
-  'admin.jpg',
-  'hotel.jpg',
-  'mall.jpg',
-  'expo.jpg',
-  'kindergarten.jpg',
-  'school.jpg'
-];
-const socialPlaces = computed(() =>
-  useMapRt('genplan.social-places')?.map((el, i) => ({
-    id: i,
-    image: socialImages[i],
-    ...el
-  }))
-);
+useState('selectedZoneID', () => '');
+useState('selectedPathID', () => '');
+useState('selectedBlockID', () => '');
 
 definePageMeta({
   layout: false

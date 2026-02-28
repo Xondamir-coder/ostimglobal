@@ -306,6 +306,7 @@
     "zones": ["Industrial zone", "Social zone"],
     "social-places": [
       {
+        "id": "sport",
         "title": "Sport complex",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
@@ -324,6 +325,7 @@
         ]
       },
       {
+        "id": "admin",
         "title": "Administrative office",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
@@ -342,6 +344,7 @@
         ]
       },
       {
+        "id": "hotel",
         "title": "Hotel",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
@@ -360,6 +363,7 @@
         ]
       },
       {
+        "id": "mall",
         "title": "The mall",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
@@ -378,6 +382,7 @@
         ]
       },
       {
+        "id": "expo",
         "title": "Expo center",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
@@ -396,6 +401,7 @@
         ]
       },
       {
+        "id": "kindergarten",
         "title": "Kindergarten",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
@@ -414,7 +420,65 @@
         ]
       },
       {
+        "id": "school",
         "title": "School",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "Buildable area",
+            "text": "1,538 m²"
+          },
+          {
+            "label": "Usable area",
+            "text": "6,115 m²"
+          }
+        ]
+      },
+      {
+        "id": "university",
+        "title": "University",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "Buildable area",
+            "text": "1,538 m²"
+          },
+          {
+            "label": "Usable area",
+            "text": "6,115 m²"
+          }
+        ]
+      },
+      {
+        "id": "clinic",
+        "title": "Clinic",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "Buildable area",
+            "text": "1,538 m²"
+          },
+          {
+            "label": "Usable area",
+            "text": "6,115 m²"
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "title": "Business",
         "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
