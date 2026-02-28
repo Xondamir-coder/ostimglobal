@@ -28,7 +28,7 @@
   "book": "Book",
 
   "header": {
-    "links": ["Йер", "About", "For Investors", "FAQ", "News", "Contacts"]
+    "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
   },
 
   "home": {
@@ -306,128 +306,192 @@
     "zones": ["Industrial zone", "Social zone"],
     "social-places": [
       {
-        "title": "Спортивный комплекс",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "sport",
+        "title": "Sport complex",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       },
       {
-        "title": "Админ здание",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "admin",
+        "title": "Administrative office",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       },
       {
-        "title": "Отель",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "hotel",
+        "title": "Hotel",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       },
       {
-        "title": "Торговый центр",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "mall",
+        "title": "The mall",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       },
       {
-        "title": "Экспоцентр",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "expo",
+        "title": "Expo center",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       },
       {
-        "title": "Детский сад",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "kindergarten",
+        "title": "Kindergarten",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       },
       {
-        "title": "Школа",
-        "text": "Спортивный комплекс представляет собой современный многофункциональный объект. Динамичная рабочая среда в зоне OSTIM Global.",
+        "id": "school",
+        "title": "School",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
         "areas": [
           {
-            "label": "Общая площадь",
-            "text": "7 653 м²"
+            "label": "Total area",
+            "text": "7,653 m²"
           },
           {
-            "label": "Площадь застройки",
-            "text": "1 538 м²"
+            "label": "Buildable area",
+            "text": "1,538 m²"
           },
           {
-            "label": "Полезная площадь",
-            "text": "6 115 м²"
+            "label": "Usable area",
+            "text": "6,115 m²"
+          }
+        ]
+      },
+      {
+        "id": "university",
+        "title": "University",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "Buildable area",
+            "text": "1,538 m²"
+          },
+          {
+            "label": "Usable area",
+            "text": "6,115 m²"
+          }
+        ]
+      },
+      {
+        "id": "clinic",
+        "title": "Clinic",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "Buildable area",
+            "text": "1,538 m²"
+          },
+          {
+            "label": "Usable area",
+            "text": "6,115 m²"
+          }
+        ]
+      },
+      {
+        "id": "business",
+        "title": "Business",
+        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "Buildable area",
+            "text": "1,538 m²"
+          },
+          {
+            "label": "Usable area",
+            "text": "6,115 m²"
           }
         ]
       }
