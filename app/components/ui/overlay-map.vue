@@ -60,6 +60,7 @@ const selectedPathID = useState('selectedPathID');
 const selectedZoneID = useState('selectedZoneID');
 const selectedBlockID = useState('selectedBlockID');
 const showSocialModal = useState('showSocialModal', () => false);
+const showHangarModal = useState('showHangarModal', () => false);
 
 const handlePathClick = item => {
   if (item.zone === 'social') {
@@ -69,6 +70,7 @@ const handlePathClick = item => {
     selectedZoneID.value = 'industrial-hangars';
   } else {
     selectedBlockID.value = item.block;
+    showHangarModal.value = true;
   }
   selectedPathID.value = item.id;
 };

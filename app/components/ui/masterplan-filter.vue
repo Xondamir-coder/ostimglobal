@@ -4,14 +4,33 @@
       <button class="filter__search-iconbox">
         <IconsSearch class="filter__search-icon" />
       </button>
-      <input type="text" class="filter__search-input" :placeholder="$t('search')" />
+      <input v-model="query" type="text" class="filter__search-input" :placeholder="$t('search')" />
     </form>
     <button class="filter__button" @click="showContainer = !showContainer">
       <IconsThreeLines class="filter__button-icon" />
     </button>
     <div class="filter__container" :class="{ hidden: !showContainer }">
+      <!-- Show search results -->
+      <div v-if="query && searchResults.length" class="filter__items">
+        <button
+          v-for="result in searchResults"
+          :key="result.id"
+          class="filter__item"
+          @click="selectResult(result)"
+        >
+          <span>{{ result.id }}</span>
+        </button>
+      </div>
+
+      <!-- Show no answer if no results -->
+      <div v-else-if="query && !searchResults.length" class="filter__items">
+        <button class="filter__item">
+          <span>no result</span>
+        </button>
+      </div>
+
       <!-- Show zones -->
-      <div v-if="!selectedZoneID" class="filter__items">
+      <div v-else-if="!selectedZoneID" class="filter__items">
         <button
           v-for="zone in zones"
           :key="zone.id"
@@ -37,7 +56,7 @@
       </div>
 
       <!-- Show industrial zone blocks -->
-      <div v-if="selectedZoneID === 'industrial'" class="filter__items">
+      <div v-else-if="selectedZoneID === 'industrial'" class="filter__items">
         <button
           v-for="block in industrialBlocks"
           :key="block.id"
@@ -50,7 +69,7 @@
       </div>
 
       <!-- Show industrial zone hangars -->
-      <div v-if="selectedZoneID === 'industrial-hangars'" class="filter__items">
+      <div v-else class="filter__items">
         <button
           v-for="hangar in industrialHangars"
           :key="hangar.id"
@@ -67,6 +86,7 @@
 
 <script setup>
 const zonesID = ['industrial', 'social'];
+const searchItems = genplanData.filter(el => el.zone.includes('industrial'));
 
 const zones = computed(() =>
   useMapRt('genplan.zones')?.map((el, i) => ({
@@ -83,14 +103,29 @@ const industrialHangars = computed(() =>
     .filter(el => el.zone === 'industrial-hangars' && el.block === selectedBlockID.value)
     .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
 );
+const searchResults = computed(() =>
+  searchItems
+    .filter(s => s.id.includes(query.value.toUpperCase()))
+    .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
+);
 
 const showContainer = ref(true);
+const query = ref('');
 
 const selectedBlockID = useState('selectedBlockID');
 const selectedZoneID = useState('selectedZoneID');
 const selectedPathID = useState('selectedPathID');
 const showSocialModal = useState('showSocialModal');
+const showHangarModal = useState('showHangarModal');
 
+const selectResult = res => {
+  selectedPathID.value = res.id;
+  selectedZoneID.value = res.zone;
+  if (res.block) {
+    selectedBlockID.value = res.block;
+    showHangarModal.value = true;
+  }
+};
 const selectPath = id => {
   selectedPathID.value = id;
 };
@@ -105,6 +140,7 @@ const selectBlock = id => {
 };
 const selectHangar = id => {
   selectPath(id);
+  showHangarModal.value = true;
 };
 </script>
 

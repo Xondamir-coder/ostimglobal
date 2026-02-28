@@ -51,7 +51,7 @@
 <script setup>
 import { IconsBulb, IconsFlame, IconsMagnet, IconsPipe, IconsWifi } from '#components';
 
-const showHangarModal = useState('showHangarModal', () => false);
+const showHangarModal = useState('showHangarModal');
 
 const icons = [IconsFlame, IconsBulb, IconsMagnet, IconsWifi, IconsPipe];
 </script>
