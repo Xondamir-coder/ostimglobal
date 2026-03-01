@@ -1,21 +1,17 @@
 <template>
   <div class="glossy-card">
-    <button class="glossy-card__button">
+    <NuxtLink :to="$localePath(`/?zone=${card.query}`)" class="glossy-card__button">
       <IconsArrowUpright class="glossy-card__button-icon" />
-    </button>
-    <p class="glossy-card__text">{{ description }}</p>
-    <h3 class="glossy-card__title">{{ title }}</h3>
+    </NuxtLink>
+    <p class="glossy-card__text">{{ card.description }}</p>
+    <h3 class="glossy-card__title">{{ card.title }}</h3>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  description: {
-    type: String,
-    required: true
-  },
-  title: {
-    type: String,
+  card: {
+    type: Object,
     required: true
   }
 });

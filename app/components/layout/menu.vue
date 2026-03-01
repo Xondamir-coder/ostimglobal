@@ -24,12 +24,12 @@
 </template>
 
 <script setup>
-const { tm, rt } = useI18n();
+const linkTos = ['/home', '/about', '/for-investors', '/faq', '/news', '/contacts'];
 
 const links = computed(() =>
-  tm('header.links').map(el => ({
-    label: rt(el),
-    to: `/${rt(el).split(' ').join('-').toLowerCase()}`
+  useMapRt('header.links')?.map((el, i) => ({
+    label: el,
+    to: linkTos[i]
   }))
 );
 
@@ -40,15 +40,15 @@ const showMenu = useState('showMenu', () => false);
 .menu {
   position: fixed;
   z-index: 20;
-  inset-inline: 0;
-  bottom: 0;
-  height: calc(100vh - 111px);
+  inset: 0;
+  margin-top: 110px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-inline: 29px;
   padding-bottom: 34px;
   background-color: #cf2025;
+  color: #fff;
   &__ball {
     position: absolute;
     right: 0;

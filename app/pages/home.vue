@@ -4,12 +4,7 @@
       <UiPicture src="hero-banner.jpg" class="hero__banner" />
       <h1 class="hero__title">{{ $t('home.hero.title') }}</h1>
       <div class="hero__cards">
-        <UiGlossyCard
-          v-for="card in $tm('home.hero.cards')"
-          :key="$rt(card.title)"
-          :title="$rt(card.title)"
-          :description="$rt(card.description)"
-        />
+        <UiGlossyCard v-for="card in cards" :key="card.title" :card />
       </div>
     </section>
     <section class="industrial">
@@ -131,17 +126,17 @@
       <div class="overview__container">
         <ul class="overview__labels">
           <li
-            v-for="label in $tm('home.overview.labels')"
-            :key="$rt(label)"
+            v-for="label in useMapRt('home.overview.labels')"
+            :key="label"
             class="overview__label"
           >
-            <span>{{ $rt(label) }}</span>
+            <span>{{ label }}</span>
             <IconsStar class="overview__label-icon" />
           </li>
         </ul>
         <div class="overview__texts">
-          <p v-for="text in $tm('home.overview.texts')" :key="$rt(text)">
-            {{ $rt(text) }}
+          <p v-for="text in useMapRt('home.overview.texts')" :key="text">
+            {{ text }}
           </p>
         </div>
       </div>
@@ -175,6 +170,13 @@
 </template>
 
 <script setup>
+const queries = ['industrial', 'social'];
+const cards = computed(() =>
+  useMapRt('home.hero.cards')?.map((el, i) => ({
+    ...el,
+    query: queries[i]
+  }))
+);
 const goUp = () => {
   window.scrollTo({
     top: 0,

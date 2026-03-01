@@ -1,6 +1,7 @@
 <template>
   <div class="project">
     <LayoutHeader class="project__header" />
+    <LayoutMenu />
     <UiOverlayMap />
     <UiMasterplanFilter />
     <button class="project__hangar" @click="showHangarModal = true">
@@ -18,9 +19,14 @@
 <script setup>
 const showHangarModal = useState('showHangarModal', () => false);
 useState('showSocialModal', () => false);
-useState('selectedZoneID', () => '');
+const selectedZoneID = useState('selectedZoneID', () => '');
 useState('selectedPathID', () => '');
 useState('selectedBlockID', () => '');
+
+const { query } = useRoute();
+if (query.zone) {
+  selectedZoneID.value = query.zone;
+}
 
 definePageMeta({
   layout: false
@@ -33,6 +39,7 @@ definePageMeta({
   overflow: hidden;
   width: 100vw;
   height: 100vh;
+
   &__hangar {
     position: absolute;
     right: 2.5rem;
@@ -92,7 +99,6 @@ definePageMeta({
     color: #fff;
     background-color: transparent;
     backdrop-filter: none;
-    padding-bottom: 2.6rem;
   }
 }
 </style>
