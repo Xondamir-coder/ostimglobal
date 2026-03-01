@@ -23,7 +23,7 @@
               <span>{{ area.text }}</span>
             </li>
           </ul>
-          <button class="modal__content-button">
+          <button class="modal__content-button" @click="handleBook">
             <span>{{ $t('book') }}</span>
           </button>
         </div>
@@ -34,10 +34,19 @@
 
 <script setup>
 const showSocialModal = useState('showSocialModal');
-const selectedPathID = useState('selectedPathID');
+const showFormPopup = useState('showFormPopup');
 
+const route = useRoute();
+
+const place = computed(() => route.query?.place);
 const socialPlaces = computed(() => useMapRt('genplan.social-places'));
-const currentPlace = computed(() => socialPlaces.value.find(el => el.id === selectedPathID.value));
+const currentPlace = computed(() => socialPlaces.value.find(el => el.id === place.value));
+
+const handleBook = () => {
+  showSocialModal.value = false;
+  showFormPopup.value = true;
+  replacePath({ zone: 'social', place: currentPlace.value.id });
+};
 </script>
 
 <style lang="scss" scoped>

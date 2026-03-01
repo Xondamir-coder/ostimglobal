@@ -170,6 +170,8 @@
 </template>
 
 <script setup>
+const { $lenis } = useNuxtApp();
+
 const queries = ['industrial', 'social'];
 const cards = computed(() =>
   useMapRt('home.hero.cards')?.map((el, i) => ({
@@ -177,11 +179,9 @@ const cards = computed(() =>
     query: queries[i]
   }))
 );
+
 const goUp = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  $lenis.scrollTo(0);
 };
 </script>
 
@@ -793,7 +793,8 @@ const goUp = () => {
     margin-right: var(--spacing-inline);
     transition: opacity 0.4s;
     margin-top: calc((max(14rem, 100px) - 57px) * -1);
-    margin-bottom: calc((max(9.4rem, 94px) - 37px) * -1);
+    margin-bottom: calc((max(3.4rem, 34px) - 37px) * -1);
+    fill: none;
     &:hover {
       opacity: 0.5;
     }

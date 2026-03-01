@@ -16,7 +16,7 @@
   "neural-networks": "Neural networks",
   "contact-us": "Contact us",
   "industrial-facilities": "Industrial facilities",
-  "send": "Отправить",
+  "send": "Send",
   "call-us": "Call us",
   "day-times": "Mon — Sat: 9:00–18:00",
   "close": "Close",
@@ -26,6 +26,8 @@
   "about-hangars": "About Hangars",
   "hangars": "Hangars",
   "book": "Book",
+  "sent": "Sent",
+  "back": "back",
 
   "header": {
     "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
@@ -243,8 +245,8 @@
   },
 
   "news": {
-    "label": "новости компании",
-    "other": "Еще интересные новости компании",
+    "label": "company news",
+    "other": "More interesting company news",
     "header": {
       "title": "Today’s Headlines: Stay Informed",
       "text": "Explore the latest news from around the world. We bring you up-to the minute updates on the most significant events, trends, and stories."
@@ -290,11 +292,11 @@
   },
 
   "form-popup": {
-    "title": "Оставьте заявку",
-    "name": "Ваше имя",
-    "phone": "Номер телефона",
-    "rights-1": "Нажимая кнопку «Отправить»,",
-    "rights-2": "Вы подтверждаете свое согласие на обработку персональных данных"
+    "title": "Leave a request",
+    "name": "Your name",
+    "phone": "Phone number",
+    "rights-1": "By clicking “Send”,",
+    "rights-2": "You consent to personal data processing"
   },
 
   "section-cta": {

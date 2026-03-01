@@ -1647,3 +1647,11 @@ export const genplanData = [
     id: 'A4-1'
   }
 ];
+
+export const replacePath = query => {
+  const router = useRouter();
+  router.replace({
+    path: router.currentRoute.value.path,
+    query
+  });
+};

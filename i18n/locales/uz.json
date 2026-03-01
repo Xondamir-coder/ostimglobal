@@ -1,132 +1,141 @@
 {
-  "project": "project",
-  "menu": "Menu",
-  "logistics": "Logistics",
-  "sport-complex": "Sport complex",
-  "college": "College",
-  "clinics": "Clinics",
-  "stations": "Stations",
-  "education": "Education",
-  "schools": "Schools",
-  "roads": "Roads",
-  "services": "Services",
-  "healthcare": "Healthcare",
-  "retail": "Retail",
-  "finances": "Finances",
-  "neural-networks": "Neural networks",
-  "contact-us": "Contact us",
-  "industrial-facilities": "Industrial facilities",
-  "send": "Отправить",
-  "call-us": "Call us",
-  "day-times": "Mon — Sat: 9:00–18:00",
-  "close": "Close",
-  "social": "Social",
-  "office": "Office",
-  "search": "Search",
-  "about-hangars": "About Hangars",
-  "hangars": "Hangars",
-  "book": "Book",
+  "project": "Loyiha",
+  "menu": "Menyu",
+  "logistics": "Logistika",
+  "sport-complex": "Sport majmuasi",
+  "college": "Kollej",
+  "clinics": "Klinikalar",
+  "stations": "Stansiyalar",
+  "education": "Ta’lim",
+  "schools": "Maktablar",
+  "roads": "Yo‘llar",
+  "services": "Xizmatlar",
+  "healthcare": "Sog‘liqni saqlash",
+  "retail": "Chakana savdo",
+  "finances": "Moliya",
+  "neural-networks": "Neyron tarmoqlar",
+  "contact-us": "Biz bilan bog‘laning",
+  "industrial-facilities": "Sanoat obyektlari",
+  "send": "Yuborish",
+  "call-us": "Qo‘ng‘iroq qiling",
+  "day-times": "Du — Sha: 9:00–18:00",
+  "close": "Yopish",
+  "social": "Ijtimoiy",
+  "office": "Ofis",
+  "search": "Qidirish",
+  "about-hangars": "Angarlar haqida",
+  "hangars": "Angarlar",
+  "book": "Bron qilish",
+  "sent": "Yuborildi",
+  "back": "orqaga",
 
   "header": {
-    "links": ["Home", "About", "For Investors", "FAQ", "News", "Contacts"]
+    "links": [
+      "Bosh sahifa",
+      "Biz haqimizda",
+      "Investorlar uchun",
+      "FAQ",
+      "Yangiliklar",
+      "Kontaktlar"
+    ]
   },
 
   "home": {
     "hero": {
-      "title": "Industrial power in 100 hectar",
-      "label": "Creating the Future",
+      "title": "100 gektarlik sanoat salohiyati",
+      "label": "Kelajakni yaratamiz",
       "cards": [
         {
-          "description": "Ready infrastructure for efficient production",
-          "title": "Industrial zone"
+          "description": "Samarali ishlab chiqarish uchun tayyor infratuzilma",
+          "title": "Sanoat hududi"
         },
         {
-          "description": "environment for work and life",
-          "title": "Social zone"
+          "description": "Ish va yashash uchun qulay muhit",
+          "title": "Ijtimoiy hudud"
         }
       ]
     },
     "industrial": {
-      "title": "50+ years of industrial expertise",
-      "text-1": "OSTIM Global is the international platform of the OSTIM industrial ecosystem, bringing over 50 years of experience in organized industrial zones to Uzbekistan. The project combines proven management models, ready infrastructure and long-term investment vision.",
-      "subtitle": "Meet the industrial ecosystem",
-      "text-2": "Today, OSTIM Global is developing the Turkish–Uzbek Industrial Zone, creating a fully integrated environment for production, investment and sustainable growth."
+      "title": "50+ yillik sanoat tajribasi",
+      "text-1": "OSTIM Global — OSTIM sanoat ekotizimining xalqaro platformasi bo‘lib, tashkil etilgan sanoat zonalarini rivojlantirish bo‘yicha 50 yildan ortiq tajribani O‘zbekistonga olib kiradi. Loyiha sinovdan o‘tgan boshqaruv modeli, tayyor infratuzilma va uzoq muddatli investitsiya strategiyasini birlashtiradi.",
+      "subtitle": "Sanoat ekotizimi bilan tanishing",
+      "text-2": "Bugungi kunda OSTIM Global Turkiya–O‘zbekiston sanoat zonasini rivojlantirib, ishlab chiqarish, investitsiya va barqaror o‘sish uchun to‘liq integratsiyalashgan muhit yaratmoqda."
     },
     "revolution": {
-      "title": "Designed for industrial scale",
-      "desc": "Integrated roads and logistics for efficient operations",
-      "download-cat": "Download the catalogue",
-      "retail-title": "Investor Support",
-      "retail-desc": "Centralized project coordination",
-      "healthcare-desc": "On-site healthcare services. Medical facilities",
-      "services-desc": "Administrative & support services. Services supporting daily operations",
-      "roads-desc": "Roads & internal transport. Direct access and efficient internal mobility"
+      "title": "Sanoat miqyosi uchun yaratilgan",
+      "desc": "Samarali faoliyat uchun integratsiyalashgan yo‘llar va logistika",
+      "download-cat": "Katalogni yuklab olish",
+      "retail-title": "Investorlarni qo‘llab-quvvatlash",
+      "retail-desc": "Markazlashtirilgan loyiha boshqaruvi",
+      "healthcare-desc": "Hududdagi tibbiy xizmatlar va tibbiyot muassasalari",
+      "services-desc": "Ma’muriy va qo‘llab-quvvatlovchi xizmatlar. Kundalik faoliyatni ta’minlovchi servislar",
+      "roads-desc": "Yo‘llar va ichki transport. To‘g‘ridan-to‘g‘ri kirish va samarali ichki harakat"
     },
     "overview": {
-      "title": "Inside the Uzbek–Turkish Industrial Zone",
-      "labels": ["Advisory", "Facilities", "Manufacturing", "Cooperation"],
+      "title": "O‘zbek–Turk sanoat zonasi ichida",
+      "labels": ["Maslahat", "Inshootlar", "Ishlab chiqarish", "Hamkorlik"],
       "texts": [
-        "The Uzbek–Turkish Industrial Zone OSTIM Global is a large-scale industrial project located in Tashkent, developed under the management model of OSTIM — one of Türkiye’s leading organized industrial zones. The project operates based on a decision of the Government of Uzbekistan dated December 15, 2023.",
-        "By transferring more than 50 years of industrial zone expertise to Uzbekistan, OSTIM Global is creating a modern production environment built on integrated infrastructure, sustainable development and long-term investment vision.",
-        "OSTIM Global represents a new stage of industrial development, strengthening cooperation between Türkiye and Uzbekistan and contributing to the country’s industrial transformation."
+        "OSTIM Global O‘zbek–Turk sanoat zonasi — Toshkentda joylashgan yirik sanoat loyihasi bo‘lib, Turkiyaning yetakchi tashkil etilgan sanoat zonalaridan biri bo‘lgan OSTIM boshqaruv modeli asosida rivojlantirilmoqda. Loyiha O‘zbekiston Respublikasi Hukumatining 2023-yil 15-dekabrdagi qaroriga muvofiq faoliyat yuritadi.",
+        "50 yildan ortiq sanoat zonasi tajribasini O‘zbekistonga olib kirgan holda, OSTIM Global integratsiyalashgan infratuzilma, barqaror rivojlanish va uzoq muddatli investitsiya strategiyasiga asoslangan zamonaviy ishlab chiqarish muhitini yaratmoqda.",
+        "OSTIM Global sanoat rivojlanishining yangi bosqichini ifodalaydi, Turkiya va O‘zbekiston o‘rtasidagi hamkorlikni mustahkamlaydi hamda mamlakatning sanoat transformatsiyasiga hissa qo‘shadi."
       ]
     },
     "network": {
-      "coop": "Cooperation with more than 20 countries for implementation",
-      "struc": "Structured industrial models",
-      "integ": "Integrated utilities and engineering networks"
+      "coop": "20 dan ortiq mamlakat bilan hamkorlik",
+      "struc": "Tuzilgan sanoat modellari",
+      "integ": "Integratsiyalashgan muhandislik va kommunal tarmoqlar"
     }
   },
 
   "about": {
     "hero": {
-      "title": "Inside the Uzbek–Turkish Industrial Zone",
+      "title": "O‘zbek–Turk sanoat zonasi ichida",
       "texts": [
-        "OSTIM GLOBAL /endline/ Cooperation and innovative solutions in industry. OSTIM Global is the international organization representing the OSTIM Organized Industrial Zone, one of the most reputable industrial zones in Türkiye. With more than 50 years of experience, OSTIM has built a leading industrial and manufacturing ecosystem and established strong business relationships with both local and international investors.",
-        "Turkish–Uzbek Industrial Zone “OSTIM GLOBAL” /endline/ OSTIM Global plays an active role in the development of the Turkish–Uzbek Industrial Zone, providing technical expertise, investment support, and industrial management to ensure the successful implementation of the project. Aiming to create a long-term and sustainable production hub for industrial investors, OSTIM Global will make a significant contribution to Uzbekistan’s industrial transformation."
+        "OSTIM GLOBAL /endline/ Sanoatda hamkorlik va innovatsion yechimlar. OSTIM Global — Turkiyaning eng nufuzli tashkil etilgan sanoat zonalaridan biri bo‘lgan OSTIMni xalqaro miqyosda taqdim etuvchi tashkilotdir. 50 yildan ortiq tajribaga ega OSTIM yetakchi sanoat va ishlab chiqarish ekotizimini shakllantirib, mahalliy hamda xalqaro investorlar bilan mustahkam biznes aloqalarini yo‘lga qo‘ygan.",
+        "Turkiya–O‘zbekiston sanoat zonasi “OSTIM GLOBAL” /endline/ OSTIM Global Turkiya–O‘zbekiston sanoat zonasini rivojlantirishda faol ishtirok etib, loyihaning muvaffaqiyatli amalga oshirilishi uchun texnik ekspertiza, investitsion qo‘llab-quvvatlash va sanoat boshqaruvini taqdim etadi. Sanoat investorlar uchun uzoq muddatli va barqaror ishlab chiqarish markazini yaratishni maqsad qilgan OSTIM Global O‘zbekistonning sanoat transformatsiyasiga katta hissa qo‘shadi."
       ]
     },
     "social": {
       "card-1": {
-        "text": "Uzbekistan is a trade hub of Central Asia and a strategic logistics center with access to regional and international markets.",
-        "title": "Strategic Location"
+        "text": "O‘zbekiston Markaziy Osiyoning savdo markazi va mintaqaviy hamda xalqaro bozorlarga chiqish imkoniga ega strategik logistika hubidir.",
+        "title": "Strategik joylashuv"
       },
       "card-2": {
-        "text": "Infrastructure built to international standards ensures uninterrupted production, reliable power supply, water, and high-speed internet.",
-        "title": "Modern Infrastructure"
+        "text": "Xalqaro standartlar asosida qurilgan infratuzilma uzluksiz ishlab chiqarish, ishonchli elektr ta’minoti, suv va yuqori tezlikdagi internetni kafolatlaydi.",
+        "title": "Zamonaviy infratuzilma"
       },
       "card-3": {
-        "text": "The OSTIM Global cluster model enables cooperation with leading companies, joint R&D projects, and increased competitiveness.",
-        "title": "Cluster Synergy"
+        "text": "OSTIM Global klaster modeli yetakchi kompaniyalar bilan hamkorlik, qo‘shma R&D loyihalari va raqobatbardoshlikni oshirish imkonini beradi.",
+        "title": "Klaster sinergiyasi"
       }
     },
     "partners": {
-      "title": "Our Partners",
-      "text": "Government institutions, industrial organizations, and strategic partners supporting the OSTIM Global ecosystem."
+      "title": "Hamkorlarimiz",
+      "text": "OSTIM Global ekotizimini qo‘llab-quvvatlovchi davlat muassasalari, sanoat tashkilotlari va strategik hamkorlar."
     },
     "info": {
-      "title": "Business Launch and Logistics Network",
-      "text": "Our solutions help investors optimize operations, improve productivity, and accelerate industrial growth.",
+      "title": "Biznesni yo‘lga qo‘yish va logistika tarmog‘i",
+      "text": "Bizning yechimlarimiz investorlar uchun operatsion jarayonlarni optimallashtirish, samaradorlikni oshirish va sanoat o‘sishini tezlashtirishga yordam beradi.",
       "cards": [
         {
-          "label": "Service",
-          "title": "One-Stop Service",
-          "text": "OSTIM Global simplifies the process of obtaining permits and licenses, accelerating the launch of investment projects."
+          "label": "Xizmat",
+          "title": "Yagona darcha xizmati",
+          "text": "OSTIM Global ruxsatnomalar va litsenziyalarni olish jarayonini soddalashtirib, investitsiya loyihalarini ishga tushirishni tezlashtiradi."
         },
         {
-          "label": "Social",
-          "title": "Social Environment",
-          "text": "Residential, medical, educational, and sports facilities create comfortable conditions for both living and working."
+          "label": "Ijtimoiy",
+          "title": "Ijtimoiy muhit",
+          "text": "Turar joy, tibbiyot, ta’lim va sport obyektlari yashash va ishlash uchun qulay sharoit yaratadi."
         },
         {
-          "label": "Logistics",
-          "title": "Logistics and Supply Chain",
-          "text": "Developed logistics and efficient supply chain management reduce costs and accelerate product delivery."
+          "label": "Logistika",
+          "title": "Logistika va yetkazib berish zanjiri",
+          "text": "Rivojlangan logistika va samarali ta’minot zanjiri boshqaruvi xarajatlarni kamaytirib, mahsulot yetkazib berishni tezlashtiradi."
         },
         {
-          "label": "Education",
-          "title": "Skilled Workforce",
-          "text": "Partnerships with universities and technical colleges provide access to a young and well-trained workforce."
+          "label": "Ta’lim",
+          "title": "Malakali ishchi kuchi",
+          "text": "Universitetlar va texnik kollejlar bilan hamkorlik yosh va yaxshi tayyorlangan kadrlar bazasiga kirishni ta’minlaydi."
         }
       ]
     }
@@ -135,384 +144,294 @@
   "investors": {
     "hero": {
       "big": {
-        "label": "For investors",
-        "text": "Industrial Advantage",
-        "title": "Building Industry with Flexible Infrastructure"
+        "label": "Investorlar uchun",
+        "text": "Sanoat ustunligi",
+        "title": "Moslashuvchan infratuzilma bilan sanoatni barpo etish"
       },
       "cards": [
-        "Flexible Industrial Spaces",
-        "Modern Engineering Infrastructure",
-        "Turkey Infrastructure",
-        "Full Project Cycle"
+        "Moslashuvchan sanoat maydonlari",
+        "Zamonaviy muhandislik infratuzilmasi",
+        "Turkiya infratuzilma modeli",
+        "Loyihaning to‘liq sikli"
       ]
     },
     "future": {
-      "title": "Building the Industrial Future Together",
-      "labels": ["Experience", "Ecosystem", "Sustainability"],
+      "title": "Sanoat kelajagini birgalikda quramiz",
+      "labels": ["Tajriba", "Ekotizim", "Barqarorlik"],
       "texts": [
-        "The Uzbek–Turkish Industrial Zone is built on the principles of sustainability, innovation, and long-term industrial growth. OSTIM Global brings over 50 years of Türkiye’s industrial zone experience to Uzbekistan, creating a new generation of organized industrial development in Central Asia. ",
-        "Investors are invited to become part of a managed industrial ecosystem that combines ready infrastructure, cluster-based development, education–industry cooperation, and a one-stop support model—enabling seamless integration into regional and global markets."
+        "O‘zbek–Turk sanoat zonasi barqarorlik, innovatsiya va uzoq muddatli sanoat o‘sishi tamoyillari asosida barpo etilgan. OSTIM Global Turkiyaning 50 yildan ortiq sanoat zonalari tajribasini O‘zbekistonga olib kirib, Markaziy Osiyoda tashkil etilgan sanoat rivojlanishining yangi avlodini yaratmoqda.",
+        "Investorlar tayyor infratuzilma, klaster asosidagi rivojlanish, ta’lim va sanoat hamkorligi hamda yagona darcha qo‘llab-quvvatlash modelini birlashtirgan boshqariladigan sanoat ekotizimining bir qismiga aylanishga taklif etiladi — bu esa mintaqaviy va global bozorlarga uzluksiz integratsiyani ta’minlaydi."
       ]
     },
     "numbers": {
       "card-1": {
-        "title": "100 ha",
-        "text": "A master-planned area designed for industrial, administrative, and social facilities."
+        "title": "100 ga",
+        "text": "Sanoat, ma’muriy va ijtimoiy obyektlar uchun mo‘ljallangan bosh reja asosidagi hudud."
       },
       "card-2": {
-        "label": "Numbers",
-        "text": "Turkey infrastructure, centralized management, international cooperation.",
-        "title": "OSTIM Global in Numbers"
+        "label": "Raqamlar",
+        "text": "Turkiya infratuzilma modeli, markazlashtirilgan boshqaruv, xalqaro hamkorlik.",
+        "title": "OSTIM Global raqamlarda"
       },
       "card-3": {
-        "text": "The majority of the territory is allocated for manufacturing and industrial facilities.",
+        "text": "Hududning asosiy qismi ishlab chiqarish va sanoat obyektlari uchun ajratilgan.",
         "title": "70%"
       },
       "card-4": {
-        "subtitle": "Internal Roads",
-        "text": "An extensive road network ensuring efficient internal logistics and accessibility across the zone.",
-        "title": "155,000 m²"
+        "subtitle": "Ichki yo‘llar",
+        "text": "Hudud bo‘ylab samarali ichki logistika va qulay harakatlanishni ta’minlovchi keng yo‘l tarmog‘i.",
+        "title": "155 000 m²"
       }
     },
     "overview": {
-      "title": "The Uzbek–Turkish Industrial Zone: OSTIM Global",
+      "title": "O‘zbek–Turk sanoat zonasi: OSTIM Global",
       "texts": [
-        "OSTIM Global is an Uzbek–Turkish industrial zone in Tashkent, developed under the management of OSTIM—one of Türkiye’s leading organized industrial zones with over 50 years of experience.",
-        "Built on a turkey infrastructure model, the zone offers ready engineering networks, centralized management, and a cluster-based ecosystem that enables efficient production and long-term industrial growth.",
-        "With over 70% of the territory dedicated to manufacturing and integrated administrative and social facilities, OSTIM Global functions as a complete industrial campus."
+        "OSTIM Global — Toshkentda joylashgan O‘zbek–Turk sanoat zonasi bo‘lib, Turkiyaning 50 yildan ortiq tajribaga ega yetakchi tashkil etilgan sanoat zonalaridan biri — OSTIM boshqaruvi asosida rivojlantirilmoqda.",
+        "Turkiya infratuzilma modeli asosida qurilgan hudud tayyor muhandislik tarmoqlari, markazlashtirilgan boshqaruv va samarali ishlab chiqarish hamda uzoq muddatli sanoat o‘sishini ta’minlovchi klaster ekotizimini taklif etadi.",
+        "Hududning 70% dan ortig‘i ishlab chiqarish uchun ajratilgan bo‘lib, integratsiyalashgan ma’muriy va ijtimoiy obyektlar bilan birgalikda OSTIM Global to‘liq sanoat kampusi sifatida faoliyat yuritadi."
       ],
-      "labels": ["Infrastructure", "Clusters", "Ecosystem", "Management"]
+      "labels": ["Infratuzilma", "Klasterlar", "Ekotizim", "Boshqaruv"]
     }
   },
 
   "faq": {
-    "see-all": "See All FAQs",
+    "see-all": "Barcha savollarni ko‘rish",
     "hero": {
-      "title": "Innovative AI Developer Team",
-      "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. "
+      "title": "Innovatsion AI dasturchilar jamoasi",
+      "text": "Bizning tajribali dasturchi va muhandislar jamoamiz mashinaviy o‘rganish, tabiiy tilni qayta ishlash, kompyuter ko‘rishi va robototexnika kabi ilg‘or texnologiyalar bo‘yicha chuqur bilimga ega."
     },
     "accordions": [
       {
-        "question": "What is OSTIM Global?",
-        "answer": "OSTIM Global is a modern industrial and business zone designed for investors and entrepreneurs, offering full facilities for manufacturing, logistics, and services."
+        "question": "OSTIM Global nima?",
+        "answer": "OSTIM Global — investorlar va tadbirkorlar uchun mo‘ljallangan zamonaviy sanoat va biznes zonasi bo‘lib, ishlab chiqarish, logistika va xizmatlar uchun to‘liq infratuzilmani taqdim etadi."
       },
       {
-        "question": "What is the total area of OSTIM Global?",
-        "answer": "The total area of the project is 100 hectares"
+        "question": "OSTIM Globalning umumiy maydoni qancha?",
+        "answer": "Loyihaning umumiy maydoni 100 gektarni tashkil etadi."
       },
       {
-        "question": "Project end date",
-        "answer": "The project is planned for 5 years and will be implemented in stages over 3 years after 2026."
+        "question": "Loyiha qachon yakunlanadi?",
+        "answer": "Loyiha 5 yilga mo‘ljallangan bo‘lib, 2026-yildan keyin 3 yil davomida bosqichma-bosqich amalga oshiriladi."
       },
       {
-        "question": "Who can buy or lease property?",
-        "answer": "Only legal entities are allowed to purchase or lease property and land plots in OSTIM Global."
+        "question": "Kimlar mulk sotib olishi yoki ijaraga olishi mumkin?",
+        "answer": "OSTIM Global hududida mulk va yer maydonlarini faqat yuridik shaxslar sotib olishi yoki ijaraga olishi mumkin."
       },
       {
-        "question": "Is installment payment available?",
-        "answer": "Yes, installment payment options are available."
+        "question": "Bo‘lib to‘lash imkoniyati bormi?",
+        "answer": "Ha, bo‘lib to‘lash imkoniyati mavjud."
       },
       {
-        "question": "How can I get a consultation?",
-        "answer": "You can call the hotline or visit our office."
+        "question": "Qanday qilib konsultatsiya olish mumkin?",
+        "answer": "Ishonch telefonimizga qo‘ng‘iroq qilishingiz yoki ofisimizga tashrif buyurishingiz mumkin."
       },
       {
-        "question": "How does the purchase process work?",
-        "answer": "You visit our office and provide information about your business. The project is reviewed by the Board, and after approval, you receive an official response."
+        "question": "Xarid jarayoni qanday amalga oshiriladi?",
+        "answer": "Siz ofisimizga tashrif buyurib, biznesingiz haqida ma’lumot berasiz. Loyiha Kengash tomonidan ko‘rib chiqiladi va tasdiqlangandan so‘ng sizga rasmiy javob taqdim etiladi."
       },
       {
-        "question": "What infrastructure is available?",
-        "answer": "Electricity, Natural gas, Drinking and technical water, Sewage system and High-speed internet"
+        "question": "Qanday infratuzilma mavjud?",
+        "answer": "Elektr energiyasi, tabiiy gaz, ichimlik va texnik suv, kanalizatsiya tizimi hamda yuqori tezlikdagi internet."
       },
       {
-        "question": "Does OSTIM Global assist with construction?",
-        "answer": "Yes, assistance is provided for: Project development and Construction management Supply of construction materials"
+        "question": "OSTIM Global qurilishda yordam beradimi?",
+        "answer": "Ha, quyidagi yo‘nalishlarda yordam ko‘rsatiladi: loyiha ishlab chiqish, qurilish boshqaruvi va qurilish materiallari bilan ta’minlash."
       },
       {
-        "question": "What is the OSTIM Global Eco System?",
-        "answer": "A complete ecosystem for investors and employees, including schools, kindergartens, universities, clinics, hotels, business centers, laboratories, exhibition and shopping centers."
+        "question": "OSTIM Global ekotizimi nimani o‘z ichiga oladi?",
+        "answer": "Investorlar va xodimlar uchun to‘liq ekotizim: maktablar, bog‘chalar, universitetlar, klinikalar, mehmonxonalar, biznes markazlar, laboratoriyalar, ko‘rgazma va savdo markazlari."
       }
     ]
   },
 
   "contacts": {
-    "title": "Innovative AI Developer Team",
-    "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. ",
-    "address-1": "Our Office /endline/ Ostim Global /endline/ Tashkent city, Furqat st. 5A",
-    "address-2": "post office 100 123"
+    "title": "Innovatsion AI dasturchilar jamoasi",
+    "text": "Bizning tajribali dasturchi va muhandislar jamoamiz mashinaviy o‘rganish, tabiiy tilni qayta ishlash, kompyuter ko‘rishi va robototexnika kabi ilg‘or texnologiyalar bo‘yicha chuqur bilimga ega.",
+    "address-1": "Bizning ofis /endline/ Ostim Global /endline/ Toshkent shahri, Furqat ko‘chasi 5A",
+    "address-2": "pochta indeksi 100 123"
   },
 
   "news": {
-    "label": "новости компании",
-    "other": "Еще интересные новости компании",
+    "label": "Kompaniya yangiliklari",
+    "other": "Boshqa qiziqarli kompaniya yangiliklari",
     "header": {
-      "title": "Today’s Headlines: Stay Informed",
-      "text": "Explore the latest news from around the world. We bring you up-to the minute updates on the most significant events, trends, and stories."
+      "title": "Bugungi yangiliklar: Xabardor bo‘lib boring",
+      "text": "Dunyo bo‘ylab eng so‘nggi yangiliklarni kuzating. Eng muhim voqealar, trendlar va hikoyalar haqida tezkor ma’lumotlarni taqdim etamiz."
     },
     "items": [
       {
         "date": "2026-02-16T13:02:45.150Z",
         "id": 1,
-        "labels": ["promotion", "industrial zone"],
-        "title": "Special Partnership Conditions from Ostim Global"
+        "labels": ["aksiya", "sanoat zonasi"],
+        "title": "OSTIM Global’dan maxsus hamkorlik shartlari"
       },
       {
         "date": "2026-02-16T13:02:45.150Z",
         "id": 2,
-        "labels": ["social zone"],
-        "title": "Ostim Global Expands Its International Presence"
+        "labels": ["ijtimoiy zona"],
+        "title": "OSTIM Global xalqaro faoliyatini kengaytirmoqda"
       },
       {
         "date": "2026-02-16T13:02:45.150Z",
         "id": 3,
-        "labels": ["industrial zone"],
-        "title": "Priority Support Program for Investment Projects"
+        "labels": ["sanoat zonasi"],
+        "title": "Investitsiya loyihalari uchun ustuvor qo‘llab-quvvatlash dasturi"
       }
     ]
   },
 
   "footer": {
-    "title": "Contact information",
+    "title": "Aloqa ma’lumotlari",
     "partners": "Hamkorlarimiz",
-    "copyright": "Copyright © {year} Ostim Global. All rights reserved.",
-    "dev": "Developed by",
-    "office": "Our Office",
-    "navigation": "Navigation",
-    "social-media": "Social Media",
-    "address-1": "Zangiota District, Bagzor Street, Dostlik Street, Building 2, Tashkent, Uzbekistan",
-    "address-2": "post office 100 123",
-    "links": ["Privacy Policy", "Terms Of Service"]
+    "copyright": "Copyright © {year} Ostim Global. Barcha huquqlar himoyalangan.",
+    "dev": "Ishlab chiquvchi",
+    "office": "Bizning ofis",
+    "navigation": "Navigatsiya",
+    "social-media": "Ijtimoiy tarmoqlar",
+    "address-1": "Zangiota tumani, Bag‘zor ko‘chasi, Do‘stlik ko‘chasi, 2-bino, Toshkent, O‘zbekiston",
+    "address-2": "pochta indeksi 100 123",
+    "links": ["Maxfiylik siyosati", "Foydalanish shartlari"]
   },
 
   "error": {
-    "subtitle": "Oops, We can't seem to find the page you are looking for.",
-    "text": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+    "subtitle": "Kechirasiz, siz izlayotgan sahifa topilmadi.",
+    "text": "Siz izlayotgan sahifa o‘chirilgan, nomi o‘zgartirilgan yoki vaqtincha mavjud emas bo‘lishi mumkin."
   },
 
   "form-popup": {
-    "title": "Оставьте заявку",
-    "name": "Ваше имя",
-    "phone": "Номер телефона",
-    "rights-1": "Нажимая кнопку «Отправить»,",
-    "rights-2": "Вы подтверждаете свое согласие на обработку персональных данных"
+    "title": "Ariza qoldiring",
+    "name": "Ismingiz",
+    "phone": "Telefon raqamingiz",
+    "rights-1": "«Yuborish» tugmasini bosish orqali,",
+    "rights-2": "siz shaxsiy ma’lumotlaringizni qayta ishlashga rozilik bildirasiz"
   },
 
   "section-cta": {
-    "title": "Industrial power built on experience",
-    "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
+    "title": "Tajriba asosida yaratilgan sanoat qudrati",
+    "text": "OSTIM Global infratuzilma, boshqaruv va xalqaro hamkorlik orqali samarali ishlab chiqarish va barqaror o‘sishni ta’minlovchi integratsiyalashgan sanoat muhitini yaratadi."
   },
 
   "genplan": {
-    "zones": ["Industrial zone", "Social zone"],
+    "zones": ["Sanoat zonasi", "Ijtimoiy zona"],
     "social-places": [
       {
         "id": "sport",
-        "title": "Sport complex",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Sport majmuasi",
+        "text": "Sport majmuasi OSTIM Global hududida zamonaviy va ko‘p funksiyali obyekt sifatida loyihalashtirilgan bo‘lib, faol ish va dam olish muhiti yaratadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "admin",
-        "title": "Administrative office",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Ma’muriy ofis",
+        "text": "Zamonaviy boshqaruv va biznes jarayonlari uchun mo‘ljallangan ma’muriy bino OSTIM Global hududida samarali ish muhiti yaratadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "hotel",
-        "title": "Hotel",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Mehmonxona",
+        "text": "Mehmonxona investorlar va tashrif buyuruvchilar uchun qulay joylashuv va zamonaviy xizmatlarni taqdim etadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "mall",
-        "title": "The mall",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Savdo markazi",
+        "text": "Savdo markazi hudud rezidentlari va mehmonlari uchun savdo va xizmatlar infratuzilmasini ta’minlaydi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "expo",
-        "title": "Expo center",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Ko‘rgazma markazi",
+        "text": "Ko‘rgazma markazi sanoat yutuqlari, forumlar va biznes tadbirlarini o‘tkazish uchun mo‘ljallangan.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "kindergarten",
-        "title": "Kindergarten",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Bolalar bog‘chasi",
+        "text": "Bolalar bog‘chasi hudud xodimlarining farzandlari uchun zamonaviy ta’lim va tarbiya muhitini yaratadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "school",
-        "title": "School",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Maktab",
+        "text": "Maktab hudud rezidentlari uchun zamonaviy va sifatli ta’lim imkoniyatlarini taqdim etadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "university",
-        "title": "University",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Universitet",
+        "text": "Universitet sanoat va ta’lim integratsiyasini ta’minlab, malakali kadrlar tayyorlaydi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "clinic",
-        "title": "Clinic",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Klinika",
+        "text": "Klinika hudud rezidentlari uchun zamonaviy tibbiy xizmatlarni taqdim etadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       },
       {
         "id": "business",
-        "title": "Business",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "title": "Biznes markazi",
+        "text": "Biznes markazi kompaniyalar uchun zamonaviy ofis maydonlari va ishbilarmonlik muhitini taqdim etadi.",
         "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
+          { "label": "Umumiy maydon", "text": "7,653 m²" },
+          { "label": "Qurilish maydoni", "text": "1,538 m²" },
+          { "label": "Foydali maydon", "text": "6,115 m²" }
         ]
       }
     ]
   },
 
   "hangar": {
-    "title": "Hangars",
-    "text": "Ready-made hangars, fully equipped with engineering utilities and infrastructure. Concrete structure: reinforced concrete. Roof: sandwich panels. Wall partitions: sandwich panels. Floor: screed.",
-    "subtitle": "Infrastructure and Utilities:",
+    "title": "Angarlar",
+    "text": "Tayyor angarlar muhandislik kommunikatsiyalari va infratuzilma bilan to‘liq jihozlangan. Beton konstruksiya: temir-beton. Tom: sendvich panellar. Devor to‘siqlari: sendvich panellar. Pol: beton stiajka.",
+    "subtitle": "Infratuzilma va kommunikatsiyalar:",
     "utils": [
-      "Roads for vehicles",
-      "Water",
-      "Pedestrian sidewalks",
-      "Electricity",
-      "Green area",
-      "Gas",
-      "Outdoor lighting",
-      "Sewage",
+      "Avtomobillar uchun yo‘llar",
+      "Suv",
+      "Piyodalar yo‘laklari",
+      "Elektr energiyasi",
+      "Yashil hudud",
+      "Gaz",
+      "Tashqi yoritish",
+      "Kanalizatsiya",
       "Internet"
     ],
-    "info": ["Size: 18 × 30 = 540 m²", "Height: H = 8.6 m"]
+    "info": ["O‘lchami: 18 × 30 = 540 m²", "Balandligi: H = 8.6 m"]
   }
 }

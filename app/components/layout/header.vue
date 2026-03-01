@@ -1,6 +1,6 @@
 <template>
   <header class="header" :class="{ 'menu-shown': showMenu }">
-    <NuxtLink :to="$localePath('/home')">
+    <NuxtLink :to="$localePath('/home')" class="header__logo-container">
       <SvgLogo class="header__logo" />
     </NuxtLink>
     <nav class="header__nav">
@@ -222,6 +222,9 @@ onMounted(() => {
   &__logo {
     width: 106px;
     fill: none;
+    &-container {
+      justify-self: flex-start;
+    }
   }
 }
 </style>

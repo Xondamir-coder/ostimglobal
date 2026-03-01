@@ -17,7 +17,14 @@
             :data-zone="item.zone"
             :data-block="item.block"
             class="overlay__container-path"
-            :class="{ active: item.id === selectedPathID || item.id === selectedBlockID }"
+            :class="{
+              active:
+                item.zone === 'social'
+                  ? item.id === selectedPlaceID
+                  : item.block
+                    ? item.id === selectedHangarID
+                    : item.id === selectedBlockID
+            }"
             @click="handlePathClick(item)"
           />
         </svg>
@@ -25,7 +32,7 @@
           v-for="spotlight in spotlights"
           :key="spotlight.id"
           class="overlay__spotlight"
-          :class="{ active: selectedZoneID.includes(spotlight.id) }"
+          :class="{ active: selectedZoneID?.includes(spotlight.id) }"
           viewBox="0 0 1440 812"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -51,28 +58,29 @@ const spotlights = [
   }
 ];
 
+const route = useRoute();
+
 const props = defineProps({
   overscale: { type: Number, default: 1.1 },
   breakpoint: { type: Number, default: 1280 }
 });
 
-const selectedPathID = useState('selectedPathID');
-const selectedZoneID = useState('selectedZoneID');
-const selectedBlockID = useState('selectedBlockID');
 const showSocialModal = useState('showSocialModal', () => false);
-const showHangarModal = useState('showHangarModal', () => false);
+
+const selectedPlaceID = computed(() => route.query?.place);
+const selectedHangarID = computed(() => route.query?.hangar);
+const selectedZoneID = computed(() => route.query?.zone);
+const selectedBlockID = computed(() => route.query?.block);
 
 const handlePathClick = item => {
   if (item.zone === 'social') {
     showSocialModal.value = true;
+    replacePath({ zone: 'social', place: item.id });
   } else if (item.zone === 'industrial') {
-    selectedBlockID.value = item.id;
-    selectedZoneID.value = 'industrial-hangars';
+    replacePath({ zone: 'industrial-hangars', block: item.id });
   } else {
-    selectedBlockID.value = item.block;
-    showHangarModal.value = true;
+    replacePath({ zone: 'industrial-hangars', block: item.block, hangar: item.id });
   }
-  selectedPathID.value = item.id;
 };
 
 /* refs */

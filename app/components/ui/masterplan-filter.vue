@@ -9,9 +9,9 @@
     <button class="filter__button" @click="showContainer = !showContainer">
       <IconsThreeLines class="filter__button-icon" />
     </button>
-    <div class="filter__container" :class="{ hidden: !showContainer }">
+    <div ref="containerRef" class="filter__container" :class="{ hidden: !showContainer }">
       <!-- Show search results -->
-      <div v-if="query && searchResults.length" class="filter__items">
+      <div v-if="query && searchResults.length" class="filter__items" data-lenis-prevent>
         <button
           v-for="result in searchResults"
           :key="result.id"
@@ -23,32 +23,32 @@
       </div>
 
       <!-- Show no answer if no results -->
-      <div v-else-if="query && !searchResults.length" class="filter__items">
+      <div v-else-if="query && !searchResults.length" class="filter__items" data-lenis-prevent>
         <button class="filter__item">
           <span>no result</span>
         </button>
       </div>
 
       <!-- Show zones -->
-      <div v-else-if="!selectedZoneID" class="filter__items">
+      <div v-else-if="!selectedZoneID" class="filter__items" data-lenis-prevent>
         <button
           v-for="zone in zones"
           :key="zone.id"
           class="filter__item"
           :class="{ active: selectedZoneID === zone.id }"
-          @click="selectedZoneID = zone.id"
+          @click="replacePath({ zone: zone.id })"
         >
           <span>{{ zone.label }}</span>
         </button>
       </div>
 
       <!-- Show social zone labels -->
-      <div v-else-if="selectedZoneID === 'social'" class="filter__items">
+      <div v-else-if="selectedZoneID === 'social'" class="filter__items" data-lenis-prevent>
         <button
           v-for="place in socialPlaces"
           :key="place.id"
           class="filter__item"
-          :class="{ active: place.id === selectedPathID }"
+          :class="{ active: place.id === selectedPlaceID }"
           @click="selectSocial(place.id)"
         >
           <span>{{ place.title }}</span>
@@ -56,12 +56,12 @@
       </div>
 
       <!-- Show industrial zone blocks -->
-      <div v-else-if="selectedZoneID === 'industrial'" class="filter__items">
+      <div v-else-if="selectedZoneID === 'industrial'" class="filter__items" data-lenis-prevent>
         <button
           v-for="block in industrialBlocks"
           :key="block.id"
           class="filter__item"
-          :class="{ active: block.id === selectedPathID }"
+          :class="{ active: block.id === selectedBlockID }"
           @click="selectBlock(block.id)"
         >
           <span>{{ block.id }}</span>
@@ -69,13 +69,13 @@
       </div>
 
       <!-- Show industrial zone hangars -->
-      <div v-else class="filter__items">
+      <div v-else class="filter__items" data-lenis-prevent>
         <button
           v-for="hangar in industrialHangars"
           :key="hangar.id"
           class="filter__item"
-          :class="{ active: hangar.id === selectedPathID }"
-          @click="selectHangar(hangar.id)"
+          :class="{ active: hangar.id === selectedHangarID }"
+          @click="selectHangar(hangar)"
         >
           <span>{{ hangar.id }}</span>
         </button>
@@ -85,6 +85,8 @@
 </template>
 
 <script setup>
+const route = useRoute();
+
 const zonesID = ['industrial', 'social'];
 const searchItems = genplanData.filter(el => el.zone.includes('industrial'));
 
@@ -100,7 +102,7 @@ const industrialBlocks = genplanData
   .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
 const industrialHangars = computed(() =>
   genplanData
-    .filter(el => el.zone === 'industrial-hangars' && el.block === selectedBlockID.value)
+    .filter(el => el.zone === 'industrial-hangars' && el.block === route.query?.block)
     .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
 );
 const searchResults = computed(() =>
@@ -108,40 +110,50 @@ const searchResults = computed(() =>
     .filter(s => s.id.includes(query.value.toUpperCase()))
     .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
 );
+const selectedPlaceID = computed(() => route.query?.place);
+const selectedHangarID = computed(() => route.query?.hangar);
+const selectedZoneID = computed(() => route.query?.zone);
+const selectedBlockID = computed(() => route.query?.block);
 
+const containerRef = ref();
 const showContainer = ref(true);
 const query = ref('');
 
-const selectedBlockID = useState('selectedBlockID');
-const selectedZoneID = useState('selectedZoneID');
-const selectedPathID = useState('selectedPathID');
 const showSocialModal = useState('showSocialModal');
-const showHangarModal = useState('showHangarModal');
 
 const selectResult = res => {
-  selectedPathID.value = res.id;
-  selectedZoneID.value = res.zone;
-  if (res.block) {
-    selectedBlockID.value = res.block;
-    showHangarModal.value = true;
-  }
-};
-const selectPath = id => {
-  selectedPathID.value = id;
+  replacePath({
+    zone: res.zone,
+    ...(res.block && { block: res.block, hangar: res.id }),
+    ...(!res.block && { block: res.id })
+  });
 };
 const selectSocial = id => {
-  selectPath(id);
+  replacePath({ zone: 'social', place: id });
   showSocialModal.value = true;
 };
 const selectBlock = id => {
-  selectPath(id);
-  selectedBlockID.value = id;
-  selectedZoneID.value = 'industrial-hangars';
+  replacePath({ zone: 'industrial-hangars', block: id });
 };
-const selectHangar = id => {
-  selectPath(id);
-  showHangarModal.value = true;
+const selectHangar = hangar => {
+  replacePath({ zone: 'industrial-hangars', block: hangar.block, hangar: hangar.id });
 };
+
+watch(
+  [selectedZoneID, selectedBlockID, selectedHangarID, selectedPlaceID],
+  () => {
+    if (!showContainer.value) return;
+
+    const el = containerRef.value?.querySelector('.filter__item.active');
+
+    el?.scrollIntoView({
+      block: 'start',
+      inline: 'nearest',
+      behavior: 'smooth'
+    });
+  },
+  { flush: 'post' }
+);
 </script>
 
 <style lang="scss" scoped>
@@ -151,12 +163,17 @@ const selectHangar = id => {
   height: max(7.1rem, 57px);
   position: absolute;
   bottom: max(2.9rem, 8px);
-  left: 50%;
-  translate: -50%;
   display: flex;
   gap: max(1.1rem, 8px);
+  left: max(2.5rem, 25px);
+
+  @media screen and (max-width: vars.$bp-lg) {
+    left: 50%;
+    translate: -50%;
+  }
 
   & > * {
+    transition: all 0.4s;
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.15);
     background: rgba(255, 255, 255, 0.05);

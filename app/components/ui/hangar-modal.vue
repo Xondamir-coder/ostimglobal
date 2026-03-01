@@ -1,7 +1,7 @@
 <template>
   <Transition name="slide">
     <div v-if="showHangarModal" class="container" @click.self="showHangarModal = false">
-      <div class="modal">
+      <div class="modal" data-lenis-prevent>
         <div class="modal__top">
           <UiPicture src="hangars.jpg" alt="hangars" class="modal__top-banner" />
           <UiModalCloseButton class="modal__top-button" @click="showHangarModal = false" />

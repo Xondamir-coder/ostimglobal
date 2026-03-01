@@ -11,22 +11,43 @@
         <IconsPlus class="project__hangar-icon" />
       </div>
     </button>
+    <button class="project__back" :class="{ hidden: !route.query?.zone }" @click="handleBack">
+      <div class="project__back-iconbox">
+        <IconsLongArrowLeft class="project__back-icon" />
+      </div>
+      <span>{{ $t('back') }}</span>
+    </button>
+    <UiMasterplanTooltip />
     <UiSocialModal />
     <UiHangarModal />
+    <UiFormPopup />
   </div>
 </template>
 
 <script setup>
+const route = useRoute();
+
 const showHangarModal = useState('showHangarModal', () => false);
 useState('showSocialModal', () => false);
-const selectedZoneID = useState('selectedZoneID', () => '');
-useState('selectedPathID', () => '');
-useState('selectedBlockID', () => '');
 
-const { query } = useRoute();
-if (query.zone) {
-  selectedZoneID.value = query.zone;
-}
+const handleBack = () => {
+  if (route.query?.hangar) {
+    replacePath({
+      zone: 'industrial',
+      block: route.query.block
+    });
+  } else if (route.query?.block) {
+    replacePath({
+      zone: 'industrial'
+    });
+  } else if (route.query?.place) {
+    replacePath({
+      zone: 'social'
+    });
+  } else {
+    replacePath();
+  }
+};
 
 definePageMeta({
   layout: false
@@ -39,7 +60,50 @@ definePageMeta({
   overflow: hidden;
   width: 100vw;
   height: 100vh;
-
+  &:has(path:hover) > *:nth-child(3) > * {
+    backdrop-filter: blur(15px) opacity(0);
+    pointer-events: none;
+  }
+  &__back {
+    position: absolute;
+    left: var(--spacing-inline);
+    top: max(15.2rem, 104px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: max(13.7rem, 100px);
+    height: max(4.4rem, 35px);
+    padding-inline: 11px;
+    border-radius: 30px;
+    transition: opacity 0.3s;
+    &.hidden {
+      opacity: 0;
+    }
+    @media screen and (max-width: vars.$bp-md) {
+      top: 104px;
+      left: max(2rem, 20px);
+    }
+    span {
+      margin-inline: auto;
+      margin-bottom: 0.2em;
+      font-size: max(1.5rem, 14px);
+      font-weight: 500;
+      color: #fff;
+    }
+    &-iconbox {
+      @include mix.flex-center;
+      width: max(2.6rem, 20px);
+      height: max(2.6rem, 20px);
+      border-radius: 50%;
+      background-color: #ffcd01;
+    }
+    &-icon {
+      width: 58%;
+    }
+  }
   &__hangar {
     position: absolute;
     right: 2.5rem;
