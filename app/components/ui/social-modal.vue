@@ -3,11 +3,32 @@
     <div v-if="showSocialModal" class="container" @click.self="showSocialModal = false">
       <div class="modal">
         <div class="modal__top">
-          <UiPicture
-            :src="`${currentPlace.id}.jpg`"
-            alt="sports complex"
-            class="modal__top-banner"
-          />
+          <div class="modal__top-container">
+            <button
+              v-for="label in ['prev', 'next']"
+              :key="label"
+              :disabled="
+                (label === 'prev' && currentSlide === 1) ||
+                (label === 'next' && currentSlide === imagesLength)
+              "
+              class="modal__top-arrow"
+              @click="handleSlide(label)"
+            >
+              <IconsArrowRight class="modal__top-arrow-icon" />
+            </button>
+            <UiPicture
+              v-for="i in imagesLength"
+              :key="i"
+              :class="{
+                current: i === currentSlide,
+                next: i > currentSlide,
+                prev: i < currentSlide
+              }"
+              :src="`${currentPlace.id}.jpg`"
+              alt="sports complex"
+              class="modal__top-banner"
+            />
+          </div>
           <UiModalCloseButton class="modal__top-button" @click="showSocialModal = false" />
         </div>
         <div class="modal__content">
@@ -38,10 +59,29 @@ const showFormPopup = useState('showFormPopup');
 
 const route = useRoute();
 
+const imagesLength = 3;
+const currentSlide = ref(1);
+const isAnimating = ref(false);
+
 const place = computed(() => route.query?.place);
 const socialPlaces = computed(() => useMapRt('genplan.social-places'));
 const currentPlace = computed(() => socialPlaces.value.find(el => el.id === place.value));
 
+const handleSlide = dir => {
+  if (isAnimating.value) return;
+
+  if (dir === 'prev' && currentSlide.value > 1) {
+    currentSlide.value--;
+  } else if (dir === 'next' && currentSlide.value < imagesLength) {
+    currentSlide.value++;
+  }
+
+  isAnimating.value = true;
+
+  setTimeout(() => {
+    isAnimating.value = false;
+  }, 700);
+};
 const handleBook = () => {
   showSocialModal.value = false;
   showFormPopup.value = true;
@@ -132,10 +172,58 @@ const handleBook = () => {
     position: relative;
     overflow: hidden;
     display: flex;
+    &-arrow {
+      @include mix.flex-center;
+      border-radius: 50%;
+      position: absolute;
+      width: max(4rem, 35px);
+      height: max(4rem, 35px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      z-index: 2;
+      top: 50%;
+      translate: 0 -50%;
+      &:disabled {
+        opacity: 0.75;
+      }
+      &:first-of-type {
+        left: max(2.1rem, 10px);
+        & > * {
+          rotate: 180deg;
+        }
+      }
+      &:last-of-type {
+        right: max(2.1rem, 10px);
+      }
+      &-icon {
+        width: 50%;
+        fill: #fff;
+      }
+    }
+    &-container {
+      position: relative;
+      display: grid;
+    }
     &-banner {
+      --gap: max(1.4rem, 10px);
+      grid-area: 1/1/2/2;
       aspect-ratio: 68.6/36.1;
+      transition: translate 0.8s;
+      &.prev {
+        translate: calc(-100% - var(--gap));
+      }
+      &.next {
+        translate: calc(100% + var(--gap));
+      }
       @media screen and (max-width: vars.$bp-sm) {
         aspect-ratio: 35.1/19.7;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.1);
       }
     }
     &-button {

@@ -73,9 +73,7 @@
         </div>
         <div class="revolution__download">
           <h3 class="revolution__download-title">{{ $t('home.revolution.download-cat') }}</h3>
-          <div class="revolution__download-circle">
-            <span>↓</span>
-          </div>
+          <UiDownloadDropdown />
         </div>
       </div>
       <div class="revolution__bottom">
@@ -394,9 +392,7 @@ const goUp = () => {
     @media screen and (max-width: vars.$bp-md) {
       min-height: 250px;
       font-size: 20px;
-      &:not(:first-child) {
-        margin-top: -46px;
-      }
+      margin-top: -46px;
       &:not(:last-child) {
         padding-bottom: 65px;
       }
@@ -502,6 +498,7 @@ const goUp = () => {
     background-color: #222;
     border-radius: max(3rem, 15px);
     display: flex;
+    gap: 20px;
     flex-direction: column;
     justify-content: space-between;
     padding: max(4rem, 15px);
@@ -509,11 +506,13 @@ const goUp = () => {
       height: 77%;
     }
     @media screen and (max-width: vars.$bp-md) {
-      flex-direction: row;
-      align-items: center;
+      padding-bottom: calc(46px + 20px);
     }
     &-title {
-      color: #ffc700;
+      color: #fff;
+      font-size: max(3.5rem, 35px);
+      font-weight: 400;
+      letter-spacing: -1.75px;
     }
     &-circle {
       @include mix.flex-center;
