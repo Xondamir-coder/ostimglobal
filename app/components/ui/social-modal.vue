@@ -45,7 +45,6 @@ const currentPlace = computed(() => socialPlaces.value.find(el => el.id === plac
 const handleBook = () => {
   showSocialModal.value = false;
   showFormPopup.value = true;
-  replacePath({ zone: 'social', place: currentPlace.value.id });
 };
 </script>
 
