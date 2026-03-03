@@ -119,6 +119,8 @@ const heroCards = computed(() =>
     logo: heroLogos[i]
   }))
 );
+
+usePageSEO('investors');
 </script>
 
 <style lang="scss" scoped>

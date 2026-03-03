@@ -1,62 +1,38 @@
 {
-  "index": {
-    "title": "Global Banking Innovation & Digital Finance Summit",
-    "description": "Explore the leading platform where global banks and fintech innovators showcase digital finance, future technologies, and industry breakthroughs."
-  },
-  "mission": {
-    "title": "Our Mission | Advancing Global Banking & Digital Finance",
-    "description": "Our mission is to unite banks, fintech leaders, and policymakers to drive digital finance innovation and sustainable global growth."
-  },
-  "venue": {
-    "title": "Summit Venue & Location | Global Banking Innovation Summit",
-    "description": "Discover the official summit venue, including location details, facilities, accessibility, and essential travel information."
-  },
-  "organizer": {
-    "title": "About the Organizer | Global Fintech & Banking Leadership",
-    "description": "Learn about the organizer driving collaboration between global banks, fintech innovators, and financial institutions."
+  "home": {
+    "title": "Ostim Global – Industrial Zone & Investment Hub in Uzbekistan",
+    "description": "Discover Ostim Global, a modern industrial zone in Uzbekistan with ready infrastructure, logistics access, and long-term opportunities for investors."
   },
   "about": {
-    "title": "About the Global Fintech Experience",
-    "description": "Learn about the event uniting banks, fintech leaders, policymakers, and innovators to shape the future of digital finance worldwide."
+    "title": "About Ostim Global – Industrial Development & Expertise",
+    "description": "Learn how Ostim Global applies decades of industrial expertise to build a competitive, investment-ready industrial zone in Uzbekistan."
   },
-  "events": {
-    "title": "Events & Fintech Sessions",
-    "description": "Discover expert-led events, keynotes, and panels covering digital payments, AI finance, cybersecurity, sustainability, and financial innovation."
+  "investors": {
+    "title": "Invest in Ostim Global – Industrial Opportunities in Uzbekistan",
+    "description": "Explore investment opportunities at Ostim Global, offering scalable production spaces, ready infrastructure, and long-term growth in Uzbekistan."
   },
-  "participants": {
-    "title": "Participants & Global Banking Directory",
-    "description": "Browse international banks, fintech companies, and institutions. Explore profiles, services, and partnership opportunities."
+  "faq": {
+    "title": "Ostim Global FAQ – Industrial Zone & Investment Details",
+    "description": "Find answers about infrastructure, investment process, services, partnerships, and development plans within Ostim Global’s industrial zone in Uzbekistan."
   },
-  "speakers": {
-    "title": "Speakers & Global Fintech Thought Leaders",
-    "description": "Meet world-class speakers—bank executives, data scientists, innovators, and policymakers sharing insights into modern finance."
+  "news": {
+    "title": "Ostim Global News – Industrial Zone Updates & Growth",
+    "description": "Read the latest updates on development progress, partnerships, infrastructure milestones, and investment activity at Ostim Global in Uzbekistan."
   },
-  "partners": {
-    "title": "Partners & Global Finance Collaborators",
-    "description": "Explore partners from banks to fintech providers supporting innovation, collaboration, and global financial development."
+  "contacts": {
+    "title": "Contact Ostim Global – Industrial Investment Inquiries",
+    "description": "Reach out to Ostim Global for investment inquiries, partnership opportunities, or project information related to our industrial zone in Uzbekistan."
   },
-  "sponsors": {
-    "title": "Sponsors & Supporters of Financial Innovation",
-    "description": "Meet official sponsors: global fintech companies, institutions, and brands empowering financial innovation and digital transformation."
+  "project": {
+    "title": "Ostim Global Masterplan – Industrial & Social Zones",
+    "description": "Explore the interactive masterplan to navigate industrial blocks, hangars, and social facilities within Ostim Global’s integrated development in Uzbekistan"
   },
-  "media": {
-    "title": "Media & News Updates",
-    "description": "Stay updated with news, articles, highlights, and photo coverage showcasing global fintech trends and industry developments."
+  "privacy": {
+    "title": "Privacy Policy – Ostim Global",
+    "description": "Read how Ostim Global collects, uses, and protects personal data related to our website, industrial zone services, and investment inquiries."
   },
   "terms": {
-    "title": "Terms of Service",
-    "description": "Review the Terms of Service, including website usage rules, intellectual property rights, liability limits, and governing policies."
-  },
-  "policy": {
-    "title": "Privacy Policy & Data Protection",
-    "description": "Understand how data is collected, stored, and protected. Read details about privacy practices, information use, and user rights."
-  },
-  "not-found": {
-    "title": "Page Not Found",
-    "description": "The page you’re looking for may have moved or no longer exists. Explore other sections to continue your TIFW experience."
-  },
-  "accreditation": {
-    "title": "Media Accreditation for Journalists",
-    "description": "Apply for official media accreditation. Review requirements, deadlines, and access rules for local and international journalists."
+    "title": "Terms of Service – Ostim Global",
+    "description": "Review the terms governing use of Ostim Global’s website, digital masterplan, and related services within our industrial development platform."
   }
 }

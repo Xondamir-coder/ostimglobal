@@ -181,6 +181,8 @@ const cards = computed(() =>
 const goUp = () => {
   $lenis.scrollTo(0);
 };
+
+usePageSEO('home');
 </script>
 
 <style lang="scss" scoped>

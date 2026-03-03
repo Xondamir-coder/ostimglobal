@@ -79,6 +79,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
   document.removeEventListener('click', hideAccordions);
 });
+
+usePageSEO('faq');
 </script>
 
 <style lang="scss" scoped>

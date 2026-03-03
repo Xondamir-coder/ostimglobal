@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/i18n', '@nuxt/eslint', '@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/i18n', '@nuxt/eslint', '@nuxtjs/google-fonts', '@nuxtjs/seo'],
   vite: {
     css: {
       preprocessorOptions: {
@@ -18,7 +18,14 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss'],
   app: {
     head: {
-      title: 'Ostim Global'
+      title: 'Ostim Global',
+      link: [
+        {
+          rel: 'icon',
+          type: 'image/png',
+          href: '/favicon.png'
+        }
+      ]
     }
   },
   i18n: {
@@ -41,6 +48,12 @@ export default defineNuxtConfig({
       'Zen Maru Gothic': [300, 400, 500, 700, 900],
       'Inter Tight': [400, 700],
       Unbounded: [300]
+    }
+  },
+  seo: {
+    meta: {
+      author: 'https://spacelabs.studio',
+      publisher: 'Spacelabs'
     }
   }
 });

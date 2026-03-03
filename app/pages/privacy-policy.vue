@@ -2,6 +2,8 @@
   <div>Policy</div>
 </template>
 
-<script setup></script>
+<script setup>
+usePageSEO('privacy');
+</script>
 
 <style lang="scss" scoped></style>

@@ -53,7 +53,9 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+usePageSEO('contacts');
+</script>
 
 <style lang="scss" scopedc>
 .contacts {

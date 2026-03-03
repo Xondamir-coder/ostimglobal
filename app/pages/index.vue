@@ -52,6 +52,8 @@ const handleBack = () => {
 definePageMeta({
   layout: false
 });
+
+usePageSEO('project');
 </script>
 
 <style lang="scss" scoped>

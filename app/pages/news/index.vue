@@ -26,7 +26,9 @@
   </main>
 </template>
 
-<script setup></script>
+<script setup>
+usePageSEO('news');
+</script>
 
 <style lang="scss" scoped>
 .news {
@@ -35,6 +37,7 @@
   flex-direction: column;
   gap: max(10rem, 50px);
   position: relative;
+  overflow: hidden;
   & > *:not(.news__container) {
     z-index: 1;
   }
