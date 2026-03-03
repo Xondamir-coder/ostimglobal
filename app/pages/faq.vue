@@ -126,6 +126,7 @@ usePageSEO('faq');
       position: relative;
       width: 16px;
       height: 16px;
+      flex-shrink: 0;
 
       &::before,
       &::after {
@@ -157,7 +158,7 @@ usePageSEO('faq');
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
+      gap: 16px;
     }
     &-question {
       font-size: 18px;
