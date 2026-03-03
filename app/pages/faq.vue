@@ -93,6 +93,7 @@ usePageSEO('faq');
   &__item {
     display: flex;
     animation: slide-from-bottom-20 0.5s backwards;
+
     &.active {
       .accordions__item-button {
         gap: max(2.4rem, 10px);
@@ -112,9 +113,14 @@ usePageSEO('faq');
       flex: 1;
       padding: 24px;
       border-radius: 16px;
-      background: rgba(255, 255, 255, 0.03);
       text-align: start;
-      transition: gap 0.6s;
+      transition:
+        gap 0.4s,
+        background 0.4s;
+      background-color: rgba(255, 255, 255, 0.03);
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
     }
     &-icon {
       position: relative;
@@ -126,7 +132,7 @@ usePageSEO('faq');
         content: '';
         position: absolute;
         background-color: rgba(255, 255, 255, 0.8);
-        transition: all 0.6s;
+        transition: all 0.4s;
       }
 
       /* horizontal line */
@@ -164,7 +170,7 @@ usePageSEO('faq');
       align-self: flex-start;
       overflow: hidden;
       height: 0;
-      transition: all 0.6s;
+      transition: all 0.4s;
     }
   }
 }
@@ -175,7 +181,6 @@ usePageSEO('faq');
   gap: max(10rem, 50px);
   &__button {
     border-radius: 4px;
-    background: rgba(255, 255, 255, 0.03);
     align-self: center;
     display: flex;
     padding: 8px 12px 8px 12px;

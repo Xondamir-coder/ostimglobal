@@ -190,6 +190,7 @@ watch(
     &.hidden {
       opacity: 0;
       pointer-events: none;
+      translate: 0 10px;
     }
   }
   &__items {
@@ -226,7 +227,9 @@ watch(
     height: max(7.1rem, 57px);
     transition: all 0.4s;
     border: 1px solid transparent;
-
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+    }
     &.active {
       border-color: rgba(255, 255, 255, 0.15);
     }
@@ -236,6 +239,9 @@ watch(
     @include mix.flex-center;
     flex-shrink: 0;
     width: max(6.3rem, 50px);
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+    }
 
     &-icon {
       width: 40%;
@@ -276,6 +282,10 @@ watch(
       border: 1px solid rgba(255, 255, 255, 0.15);
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(15px);
+      transition: background 0.4s;
+      &:hover {
+        background: rgba(255, 255, 255, 0.15);
+      }
     }
   }
 }

@@ -184,13 +184,37 @@ onBeforeUnmount(() => {
     width: max(14.3rem, 143px);
     height: max(3.2rem, 32px);
     border-radius: 30px;
-    background: #34c759;
-
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    transition: scale 0.4s;
+    &:hover {
+      scale: 1.02;
+      &::before {
+        transform: translate3d(100%, 0, 0);
+      }
+      span {
+        color: #34c759;
+      }
+    }
+    &::before {
+      content: '';
+      background: #34c759;
+      width: 120%;
+      height: 100%;
+      transform: skew(30deg);
+      transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+      position: absolute;
+      top: 0;
+      left: -10%;
+    }
     span {
+      z-index: 2;
       font-weight: 900;
       font-size: max(1.6rem, 16px);
       color: #fff;
       margin-bottom: 0.2em;
+      transition: color 0.4s;
     }
   }
 }

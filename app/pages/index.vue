@@ -14,6 +14,7 @@
     <button class="project__back" :class="{ hidden: !route.query?.zone }" @click="handleBack">
       <div class="project__back-iconbox">
         <IconsLongArrowLeft class="project__back-icon" />
+        <IconsLongArrowLeft class="project__back-icon" />
       </div>
       <span>{{ $t('back') }}</span>
     </button>
@@ -80,7 +81,22 @@ usePageSEO('project');
     height: max(4.4rem, 35px);
     padding-inline: 11px;
     border-radius: 30px;
-    transition: opacity 0.3s;
+    transition:
+      opacity 0.3s,
+      background 0.4s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+      .project__back-icon:first-child {
+        translate: -150%;
+        scale: 1 0.25;
+        opacity: 0;
+      }
+      .project__back-icon:last-child {
+        translate: 0;
+        scale: 1;
+        opacity: 1;
+      }
+    }
     &.hidden {
       opacity: 0;
     }
@@ -101,9 +117,19 @@ usePageSEO('project');
       height: max(2.6rem, 20px);
       border-radius: 50%;
       background-color: #ffcd01;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
     }
     &-icon {
+      grid-area: 1/1/2/2;
       width: 58%;
+      transition: all 0.4s;
+      &:last-child {
+        translate: 150%;
+        scale: 1 0.25;
+        opacity: 0;
+      }
     }
   }
   &__hangar {

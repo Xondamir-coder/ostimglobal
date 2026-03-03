@@ -213,7 +213,24 @@ onMounted(() => {
     }
 
     &-link {
+      position: relative;
       transition: color 0.3s;
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #fc0;
+        scale: 0 1;
+        transform-origin: right;
+        transition: scale 0.4s;
+      }
+      &:hover::after {
+        transform-origin: left;
+        scale: 1;
+      }
       &.active {
         color: #fc0;
       }

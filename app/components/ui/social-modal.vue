@@ -15,6 +15,7 @@
               @click="handleSlide(label)"
             >
               <IconsArrowRight class="modal__top-arrow-icon" />
+              <IconsArrowRight class="modal__top-arrow-icon" />
             </button>
             <UiPicture
               v-for="i in imagesLength"
@@ -132,18 +133,38 @@ const handleBook = () => {
       width: 143px;
       height: 41px;
       border-radius: 30px;
-      background: #34c759;
+      background: #fff;
       font-size: 16px;
       font-weight: 900;
-      transition: all 0.4s;
+      position: relative;
+      overflow: hidden;
+      transition:
+        color 0.4s,
+        scale 0.4s;
+      &:hover {
+        color: #34c759;
+        scale: 1.02;
+        &::before {
+          transform: translate3d(100%, 0, 0);
+        }
+      }
       @media screen and (max-width: vars.$bp-sm) {
         place-self: center;
       }
-      &:hover {
-        opacity: 0.6;
+      &::before {
+        content: '';
+        background: #34c759;
+        width: 120%;
+        height: 100%;
+        transform: skew(30deg);
+        transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+        position: absolute;
+        top: 0;
+        left: -10%;
       }
       span {
         margin-bottom: 0.25em;
+        z-index: 1;
       }
     }
     &-text {
@@ -184,21 +205,45 @@ const handleBook = () => {
       z-index: 2;
       top: 50%;
       translate: 0 -50%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      transition: background 0.4s;
+      &:not(:disabled):hover {
+        background: rgba(255, 255, 255, 0.25);
+        .modal__top-arrow-icon {
+          &:first-child {
+            translate: 125%;
+            scale: 1 0.25;
+            opacity: 0;
+          }
+          &:last-child {
+            translate: 0;
+            scale: 1;
+            opacity: 1;
+          }
+        }
+      }
       &:disabled {
         opacity: 0.75;
       }
       &:first-of-type {
         left: max(2.1rem, 10px);
-        & > * {
-          rotate: 180deg;
-        }
+        rotate: 180deg;
       }
       &:last-of-type {
         right: max(2.1rem, 10px);
       }
       &-icon {
+        grid-area: 1/1/2/2;
         width: 50%;
         fill: #fff;
+        transition: all 0.4s;
+        &:last-child {
+          translate: -125%;
+          scale: 1 0.25;
+          opacity: 0;
+        }
       }
     }
     &-container {

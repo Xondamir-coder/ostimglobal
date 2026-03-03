@@ -175,11 +175,27 @@ const boxes = computed(() => [
       flex-direction: column;
       gap: 10px;
     }
-    &-link[href*='spacelabs'] {
-      font-weight: 700;
-    }
     &-link.active {
       font-weight: 700;
+    }
+    &-link {
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 5px);
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background-color: #fc0;
+        scale: 0 1;
+        transform-origin: right;
+        transition: scale 0.3s;
+      }
+      &:hover::after {
+        scale: 1;
+        transform-origin: left;
+      }
     }
     &-title {
       font-size: max(2rem, 17px);
@@ -263,6 +279,10 @@ const boxes = computed(() => [
       gap: max(3.5rem, 30px);
       & > * {
         text-decoration-line: underline;
+        transition: color 0.3s;
+        &:hover {
+          color: #fff;
+        }
       }
     }
     p {

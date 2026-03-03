@@ -130,6 +130,10 @@ const submitForm = async () => {
     letter-spacing: 1px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     padding-bottom: 10px;
+    transition: border-color 0.3s;
+    &:focus {
+      border-color: #fff;
+    }
     &::placeholder {
       text-transform: uppercase;
       color: rgba(255, 255, 255, 0.7);

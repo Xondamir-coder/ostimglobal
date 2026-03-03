@@ -4,6 +4,14 @@
       <UiPicture src="ball-menu.png" alt="ball" class="menu__ball" />
       <nav class="menu__nav">
         <NuxtLink
+          :to="$localePath('/')"
+          class="menu__nav-link"
+          active-class="active"
+          @click="showMenu = !showMenu"
+        >
+          <span>{{ $t('project')[0].toUpperCase() + $t('project').slice(1) }}</span>
+        </NuxtLink>
+        <NuxtLink
           v-for="link in links"
           :key="link.to"
           :to="$localePath(link.to)"
@@ -24,7 +32,7 @@
 </template>
 
 <script setup>
-const linkTos = ['/home', '/about', '/for-investors', '/faq', '/news', '/contacts'];
+const linkTos = ['/home', '/about', '/for-investors', '/faq', '/news', '/contacts', '/'];
 
 const links = computed(() =>
   useMapRt('header.links')?.map((el, i) => ({
