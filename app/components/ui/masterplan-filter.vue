@@ -88,7 +88,7 @@
 const route = useRoute();
 
 const zonesID = ['industrial', 'social'];
-const searchItems = genplanData.filter(el => el.zone.includes('industrial'));
+const searchItems = genplanData.filter(el => el.zone?.includes('industrial'));
 
 const zones = computed(() =>
   useMapRt('genplan.zones')?.map((el, i) => ({
@@ -107,7 +107,7 @@ const industrialHangars = computed(() =>
 );
 const searchResults = computed(() =>
   searchItems
-    .filter(s => s.id.includes(query.value.toUpperCase()))
+    .filter(s => s.id?.includes(query.value.toUpperCase()))
     .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
 );
 const selectedPlaceID = computed(() => route.query?.place);

@@ -40,7 +40,7 @@
         <nav class="footer__box-list">
           <div v-for="link in box.links" :key="link.label" class="footer__box-item">
             <a
-              v-if="link.link.includes('https')"
+              v-if="link.link?.includes('https')"
               class="footer__box-link"
               :href="link.link"
               target="_blank"
@@ -246,7 +246,7 @@ const boxes = computed(() => [
     color: #9c9c9c;
     display: flex;
     flex-wrap: wrap;
-    gap: 47px;
+    gap: 25px;
     justify-content: space-between;
     align-items: center;
     padding-inline: max(5.4rem, 20px);

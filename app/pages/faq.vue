@@ -157,6 +157,7 @@ usePageSEO('faq');
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 15px;
     }
     &-question {
       font-size: 18px;

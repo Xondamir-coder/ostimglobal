@@ -61,7 +61,7 @@ const showMenu = useState('showMenu', () => false);
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 43%;
+    width: 43% !important;
     pointer-events: none;
   }
   &__bottom {
