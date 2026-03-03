@@ -35,7 +35,7 @@ const showDropdown = ref(false);
 
 const pdfMap = {
   en: 'Catalog OSTIM Global 2026',
-  tr: 'OSTIM Global 2026 Kataloğu',
+  tr: 'OSTIM Global 2026 Kataloğu',
   ru: 'Каталог OSTIM Global 2026',
   uz: 'OSTIM Global 2026 katalogi'
 };
