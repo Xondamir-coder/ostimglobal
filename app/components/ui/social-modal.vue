@@ -18,8 +18,8 @@
               <IconsArrowRight class="modal__top-arrow-icon" />
             </button>
             <UiPicture
-              v-for="(image, i) in currentPlace.images"
-              :key="image"
+              v-for="(image, i) in currentPlace?.images"
+              :key="i"
               :class="{
                 current: i === currentSlide,
                 next: i > currentSlide,

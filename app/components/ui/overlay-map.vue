@@ -12,6 +12,7 @@
         >
           <path
             v-for="(item, index) in genplanData"
+            :id="item.id"
             :key="index"
             :d="item.path"
             :data-zone="item.zone"
@@ -263,6 +264,31 @@ onUnmounted(() => {
     root.value.style.overflow = '';
     root.value.style.touchAction = '';
   }
+});
+
+const focusZone = id => {
+  const path = document.querySelector(`.overlay__container-path#${id}`);
+  if (!path) return;
+
+  const bbox = path.getBBox();
+
+  const cx = bbox.x + bbox.width / 2;
+  const cy = bbox.y + bbox.height / 2;
+
+  const scaledX = cx * state.scale;
+  const scaledY = cy * state.scale;
+
+  if (!state.desktop) {
+    wrapper.value.scrollTo({
+      left: scaledX - state.vw / 2,
+      top: scaledY - state.vh / 2,
+      behavior: 'smooth'
+    });
+  }
+};
+
+defineExpose({
+  focusZone
 });
 </script>
 

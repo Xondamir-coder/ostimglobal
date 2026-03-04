@@ -3,8 +3,8 @@
     <UiPreloader />
     <LayoutHeader class="project__header" />
     <LayoutMenu />
-    <UiOverlayMap />
-    <UiMasterplanFilter />
+    <UiOverlayMap ref="mapOverlay" />
+    <UiMasterplanFilter @click-path="handleClick" />
     <button class="project__hangar" @click="showHangarModal = true">
       <span>{{ $t('about-hangars') }}</span>
       <span>{{ $t('hangars') }}</span>
@@ -32,6 +32,8 @@ const route = useRoute();
 const showHangarModal = useState('showHangarModal', () => false);
 useState('showSocialModal', () => false);
 
+const mapOverlay = ref();
+
 const handleBack = () => {
   if (route.query?.hangar) {
     replacePath({
@@ -49,6 +51,9 @@ const handleBack = () => {
   } else {
     replacePath();
   }
+};
+const handleClick = id => {
+  mapOverlay.value.focusZone(id);
 };
 
 definePageMeta({

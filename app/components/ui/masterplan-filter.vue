@@ -121,6 +121,8 @@ const query = ref('');
 
 const showSocialModal = useState('showSocialModal');
 
+const emits = defineEmits(['click-path']);
+
 const selectResult = res => {
   replacePath({
     zone: res.zone,
@@ -131,12 +133,15 @@ const selectResult = res => {
 const selectSocial = id => {
   replacePath({ zone: 'social', place: id });
   showSocialModal.value = true;
+  emits('click-path', id);
 };
 const selectBlock = id => {
   replacePath({ zone: 'industrial-hangars', block: id });
+  emits('click-path', id);
 };
 const selectHangar = hangar => {
   replacePath({ zone: 'industrial-hangars', block: hangar.block, hangar: hangar.id });
+  emits('click-path', hangar.id);
 };
 
 watch(
