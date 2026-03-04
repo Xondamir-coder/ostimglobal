@@ -110,6 +110,7 @@ usePageSEO('faq');
       gap: 0;
       display: flex;
       flex-direction: column;
+      align-items: stretch;
       flex: 1;
       padding: 24px;
       border-radius: 16px;
@@ -156,8 +157,8 @@ usePageSEO('faq');
     }
     &-top {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       gap: 16px;
     }
     &-question {
@@ -185,6 +186,7 @@ usePageSEO('faq');
     border-radius: 4px;
     align-self: center;
     display: flex;
+    align-items: center;
     padding: 8px 12px 8px 12px;
     gap: 13px;
     font-size: 14px;

@@ -3,8 +3,33 @@
     <div v-if="showHangarModal" class="container" @click.self="showHangarModal = false">
       <div class="modal" data-lenis-prevent>
         <div class="modal__top">
-          <UiPicture src="hangars.jpg" alt="hangars" class="modal__top-banner" />
-          <UiModalCloseButton class="modal__top-button" @click="showHangarModal = false" />
+          <div class="modal__top-container">
+            <button
+              v-for="label in ['prev', 'next']"
+              :key="label"
+              :disabled="
+                (label === 'prev' && currentSlide === 1) || (label === 'next' && currentSlide === 3)
+              "
+              class="modal__top-arrow"
+              @click="handleSlide(label)"
+            >
+              <IconsArrowRight class="modal__top-arrow-icon" />
+              <IconsArrowRight class="modal__top-arrow-icon" />
+            </button>
+            <UiPicture
+              v-for="i in 3"
+              :key="i"
+              :class="{
+                current: i === currentSlide,
+                next: i > currentSlide,
+                prev: i < currentSlide
+              }"
+              src="hangars.jpg"
+              alt="place banner"
+              class="modal__top-banner"
+            />
+          </div>
+          <UiModalCloseButton class="modal__top-button" @click="showSocialModal = false" />
         </div>
         <div class="modal__content">
           <div class="modal__content-header">
@@ -54,6 +79,25 @@ import { IconsBulb, IconsFlame, IconsMagnet, IconsPipe, IconsWifi } from '#compo
 const showHangarModal = useState('showHangarModal');
 
 const icons = [IconsFlame, IconsBulb, IconsMagnet, IconsWifi, IconsPipe];
+
+const currentSlide = ref(1);
+const isAnimating = ref(false);
+
+const handleSlide = dir => {
+  if (isAnimating.value) return;
+
+  if (dir === 'prev' && currentSlide.value > 1) {
+    currentSlide.value--;
+  } else if (dir === 'next' && currentSlide.value < 3) {
+    currentSlide.value++;
+  }
+
+  isAnimating.value = true;
+
+  setTimeout(() => {
+    isAnimating.value = false;
+  }, 700);
+};
 </script>
 
 <style lang="scss" scoped>
@@ -83,6 +127,79 @@ const icons = [IconsFlame, IconsBulb, IconsMagnet, IconsWifi, IconsPipe];
     position: relative;
     overflow: hidden;
     display: flex;
+    &-arrow {
+      border-radius: 50%;
+      position: absolute;
+      width: max(4rem, 35px);
+      height: max(4rem, 35px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(15px);
+      z-index: 2;
+      top: 50%;
+      translate: 0 -50%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      transition: background 0.4s;
+      &:not(:disabled):hover {
+        background: rgba(255, 255, 255, 0.25);
+        .modal__top-arrow-icon {
+          &:first-child {
+            translate: 125%;
+            scale: 1 0.25;
+            opacity: 0;
+          }
+          &:last-child {
+            translate: 0;
+            scale: 1;
+            opacity: 1;
+          }
+        }
+      }
+      &:disabled {
+        opacity: 0.75;
+      }
+      &:first-of-type {
+        left: max(2.1rem, 10px);
+        rotate: 180deg;
+      }
+      &:last-of-type {
+        right: max(2.1rem, 10px);
+      }
+      &-icon {
+        grid-area: 1/1/2/2;
+        width: 50%;
+        fill: #fff;
+        transition: all 0.4s;
+        &:last-child {
+          translate: -125%;
+          scale: 1 0.25;
+          opacity: 0;
+        }
+      }
+    }
+    &-container {
+      position: relative;
+      display: grid;
+    }
+    &-banner {
+      --gap: max(1.4rem, 10px);
+      grid-area: 1/1/2/2;
+      transition: translate 0.8s;
+      &.prev {
+        translate: calc(-100% - var(--gap));
+      }
+      &.next {
+        translate: calc(100% + var(--gap));
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+    }
     &-button {
       position: absolute;
       right: 10px;

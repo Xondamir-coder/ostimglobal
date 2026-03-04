@@ -1,50 +1,38 @@
 {
-  "index": {
-    "title": "Global Bank Innovatsiyalari va Raqamli Moliya Haftaligi",
-    "description": "Banklar va fintech yetakchilari yangi texnologiyalarni taqdim etadigan global platforma. Raqamli moliyaning kelajagini kashf eting."
+  "home": {
+    "title": "Ostim Global – O‘zbekistondagi sanoat zonasi va investitsiya markazi",
+    "description": "Ostim Global bilan tanishing — O‘zbekistondagi zamonaviy sanoat zonasi bo‘lib, tayyor infratuzilma, logistika va investorlar uchun uzoq muddatli imkoniyatlarni taklif etadi."
   },
   "about": {
-    "title": "Global Fintech Ekotizimi Haqida",
-    "description": "Banklar, fintech mutaxassislari va innovatorlarni raqamli moliyaning kelajagini muhokama qilish uchun birlashtiruvchi yirik tadbir."
+    "title": "Ostim Global haqida – Sanoat rivoji va tajriba",
+    "description": "Ostim Global qanday qilib ko‘p yillik sanoat tajribasiga tayangan holda O‘zbekistonda raqobatbardosh investitsiya sanoat zonasini rivojlantirayotganini bilib oling."
   },
-  "events": {
-    "title": "Tadbirlar va Fintech Sessiyalari",
-    "description": "Raqamli to‘lovlar, sun’iy intellekt, xavfsizlik va global moliya innovatsiyalari bo‘yicha ma’ruzalar va panel muhokamalari."
+  "investors": {
+    "title": "Ostim Globalga investitsiya – O‘zbekistondagi sanoat imkoniyatlari",
+    "description": "Ostim Globaldagi investitsiya imkoniyatlarini o‘rganing: kengaytiriladigan ishlab chiqarish maydonlari, tayyor infratuzilma va uzoq muddatli o‘sish."
   },
-  "participants": {
-    "title": "Ishtirokchilar va Banklar Katalogi",
-    "description": "Ishtirok etayotgan banklar va fintech kompaniyalarini ko‘ring. Xizmatlar va hamkorlik imkoniyatlari bilan tanishing."
+  "faq": {
+    "title": "Ostim Global FAQ – Sanoat zonasi va investitsiya ma’lumotlari",
+    "description": "Ostim Global sanoat zonasi infratuzilmasi, investitsiya jarayoni, xizmatlar, hamkorlik va rivojlanish rejalari haqida javoblarni toping."
   },
-  "speakers": {
-    "title": "Spikerlar va Fintech Yetakchilari",
-    "description": "Bank rahbarlari, innovatorlar va ekspertlar raqamli moliyaning rivojlanish yo‘nalishlari bo‘yicha o‘z bilimlarini o‘rtoqlashadi."
+  "news": {
+    "title": "Ostim Global yangiliklari – Sanoat zonasi rivoji",
+    "description": "Ostim Global loyihasidagi rivojlanish jarayonlari, hamkorliklar, infratuzilma bosqichlari va investitsiya yangiliklari bilan tanishing."
   },
-  "partners": {
-    "title": "Hamkorlar va Moliya Tashkilotlari",
-    "description": "Banklar, fintech kompaniyalari va moliyaviy institutlar bilan tanishing. Ular innovatsiyalarni qo‘llab-quvvatlaydi."
+  "contacts": {
+    "title": "Ostim Global aloqa – Investitsiya so‘rovlari",
+    "description": "Investitsiya, hamkorlik yoki sanoat zonasi haqida ma’lumot olish uchun Ostim Global bilan bog‘laning."
   },
-  "sponsors": {
-    "title": "Homiylar va Moliya Qo‘llab-quvvatlovchilari",
-    "description": "Global brendlar va kompaniyalar moliyaviy innovatsiyalarni rivojlantirishga hissa qo‘shmoqda."
+  "project": {
+    "title": "Ostim Global bosh rejasi – Sanoat va ijtimoiy zonalar",
+    "description": "Interaktiv bosh reja orqali sanoat bloklari, angarlar va ijtimoiy obyektlarni ko‘rib chiqing va tanlang."
   },
-  "media": {
-    "title": "Media va Yangiliklar",
-    "description": "Yangiliklar, maqolalar va fotojamlamalarni kuzating. Global fintech tendensiyalari va tadbir tafsilotlari bilan tanishing."
+  "privacy": {
+    "title": "Maxfiylik siyosati – Ostim Global",
+    "description": "Ostim Global veb-sayti, sanoat zonasi xizmatlari va investitsiya so‘rovlari bilan bog‘liq shaxsiy ma’lumotlarni qanday yig‘ishi va himoya qilishini bilib oling."
   },
   "terms": {
-    "title": "Foydalanish Shartlari",
-    "description": "Saytdan foydalanish qoidalari, mualliflik huquqlari, mas’uliyat chegaralari va huquqiy siyosat bilan tanishing."
-  },
-  "policy": {
-    "title": "Maxfiylik Siyosati",
-    "description": "Ma’lumotlar qanday yig‘ilishi va himoya qilinishi haqida o‘qing. Maxfiylik tamoyillari va sizning huquqlaringiz bayoni."
-  },
-  "not-found": {
-    "title": "Sahifa topilmadi",
-    "description": "Izlagan sahifangiz ko‘chirilgan yoki o‘chirib tashlangan bo‘lishi mumkin. TIFW bo‘limlarini ko‘rib chiqishni davom eting."
-  },
-  "accreditation": {
-    "title": "OAV akkreditatsiyasi uchun ariza",
-    "description": "Rasmiy OAV akkreditatsiyasiga murojaat qiling. Talablar, muddati va jurnalistlar uchun kirish qoidalari bilan tanishing."
+    "title": "Foydalanish shartlari – Ostim Global",
+    "description": "Ostim Global veb-sayti, interaktiv bosh reja va loyiha xizmatlaridan foydalanish shartlari bilan tanishing."
   }
 }

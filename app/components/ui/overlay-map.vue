@@ -8,7 +8,7 @@
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1440 812"
           preserveAspectRatio="xMidYMid slice"
-          :class="selectedZoneID"
+          :class="[selectedZoneID, { selected: selectedZoneID }]"
         >
           <path
             v-for="(item, index) in genplanData"
@@ -272,7 +272,7 @@ onUnmounted(() => {
   position: fixed;
   inset: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100dvh;
   overflow: hidden; // toggled by JS
   z-index: 0;
 
@@ -381,17 +381,29 @@ onUnmounted(() => {
     z-index: 20;
     pointer-events: auto;
 
-    &.social > *[data-zone='social'],
-    &.industrial > *[data-zone='industrial'],
     &.industrial-hangars > *[data-zone='industrial-hangars'] {
       cursor: pointer;
-      pointer-events: auto;
+      pointer-events: all;
     }
+
+    &.selected {
+      &:not(.social) > *[data-zone='social'] {
+        pointer-events: none;
+      }
+      &:not(.industrial) > *[data-zone='industrial'] {
+        pointer-events: none;
+      }
+    }
+
     &-path {
       --fill-opacity: 0.25;
       transition: fill 160ms ease;
       fill: transparent;
-      pointer-events: none;
+      cursor: pointer;
+
+      &[data-zone='industrial-hangars'] {
+        pointer-events: none;
+      }
       &:hover,
       &.active {
         fill: rgba(255, 255, 255, var(--fill-opacity));

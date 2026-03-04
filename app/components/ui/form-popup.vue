@@ -124,9 +124,11 @@ const submitForm = async () => {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 14px;
+  padding: max(1.4rem, 10px);
   transition: all 0.5s;
+  margin-inline: 20px;
   &__input {
+    font-size: max(2rem, 18px);
     letter-spacing: 1px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     padding-bottom: 10px;
@@ -140,7 +142,7 @@ const submitForm = async () => {
     }
   }
   &__title {
-    font-size: 38px;
+    font-size: max(3.8rem, 30px);
     font-weight: 500;
     line-height: 131%;
     letter-spacing: -1.9px;
@@ -165,9 +167,9 @@ const submitForm = async () => {
     }
   }
   &__text {
-    font-size: 16px;
+    font-size: max(1.6rem, 12px);
     line-height: 150%;
-    margin-top: calc(70px - 40px);
+    margin-top: calc(7rem - 4rem);
     text-align: center;
     align-self: center;
     display: flex;
@@ -176,17 +178,18 @@ const submitForm = async () => {
   &__form {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    padding-inline: calc(50px - 14px);
-    padding-bottom: calc(29px - 14px);
+    gap: max(4rem, 30px);
+    padding-inline: calc(max(5rem, 12px) - max(1.4rem, 10px));
+    padding-bottom: calc(max(2.9rem, 23px) - max(1.4rem, 10px));
   }
   &__button {
     margin-top: calc(55px - 40px);
     border-radius: 99px;
     background: #34c759;
     font-weight: 900;
-    height: 70px;
+    height: max(7rem, 49px);
     transition: all 0.4s;
+    font-size: max(2rem, 18px);
     &:hover {
       background: #1d7e45;
       box-shadow: 0 0 20px #1d7e45;

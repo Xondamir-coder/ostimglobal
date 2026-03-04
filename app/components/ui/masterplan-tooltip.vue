@@ -152,7 +152,8 @@ onBeforeUnmount(() => {
 
   transition:
     opacity 0.3s,
-    transform 0.3s;
+    transform 0.3s,
+    backdrop-filter 0.3s;
 
   opacity: 0;
   pointer-events: none;
@@ -211,7 +212,7 @@ onBeforeUnmount(() => {
     span {
       z-index: 2;
       font-weight: 900;
-      font-size: max(1.6rem, 16px);
+      font-size: max(1.4rem, 14px);
       color: #fff;
       margin-bottom: 0.2em;
       transition: color 0.4s;

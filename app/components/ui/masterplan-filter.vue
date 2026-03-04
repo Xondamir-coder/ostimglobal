@@ -25,7 +25,7 @@
       <!-- Show no answer if no results -->
       <div v-else-if="query && !searchResults.length" class="filter__items" data-lenis-prevent>
         <button class="filter__item">
-          <span>no result</span>
+          <span>{{ $t('no-result') }}</span>
         </button>
       </div>
 
@@ -214,13 +214,12 @@ watch(
       min-height: 40px;
     }
   }
-
   &__item {
     @include mix.flex-center;
     scroll-snap-align: start;
     flex-shrink: 0;
     color: #fff;
-    font-size: max(3rem, 20px);
+    font-size: max(2.3rem, 20px);
     font-weight: 500;
     letter-spacing: -1.5px;
     border-radius: 15px;

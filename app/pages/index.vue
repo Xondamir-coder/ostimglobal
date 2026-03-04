@@ -1,5 +1,6 @@
 <template>
   <div class="project">
+    <UiPreloader />
     <LayoutHeader class="project__header" />
     <LayoutMenu />
     <UiOverlayMap />
@@ -62,11 +63,20 @@ usePageSEO('project');
   position: relative;
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
-  &:has(path:hover) > *:nth-child(3) > * {
-    backdrop-filter: blur(15px) opacity(0);
-    pointer-events: none;
+  height: 100dvh;
+  @media screen and (min-width: vars.$bp-xl) {
+    &:has(path:hover) {
+      & > *:nth-child(4) > * {
+        backdrop-filter: blur(15px) opacity(0.5);
+        pointer-events: none;
+      }
+      & > *:nth-child(7) {
+        backdrop-filter: blur(15px) opacity(0.5);
+        pointer-events: none;
+      }
+    }
   }
+
   &__back {
     position: absolute;
     left: var(--spacing-inline);
@@ -81,9 +91,8 @@ usePageSEO('project');
     height: max(4.4rem, 35px);
     padding-inline: 11px;
     border-radius: 30px;
-    transition:
-      opacity 0.3s,
-      background 0.4s;
+    transition: all 0.4s;
+
     &:hover {
       background-color: rgba(255, 255, 255, 0.25);
       .project__back-icon:first-child {
@@ -191,6 +200,10 @@ usePageSEO('project');
     color: #fff;
     background-color: transparent;
     backdrop-filter: none;
+    pointer-events: none;
+    > * {
+      pointer-events: all;
+    }
   }
 }
 </style>

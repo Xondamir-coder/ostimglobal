@@ -1,50 +1,38 @@
 {
-  "index": {
-    "title": "Глобальные инновации в банковской сфере и финтехе",
-    "description": "Ведущая площадка, где банки и финтех-компании представляют цифровые решения, технологии будущего и финансовые разработки."
+  "home": {
+    "title": "Ostim Global – Özbekistan’da Sanayi Bölgesi ve Yatırım Merkezi",
+    "description": "Ostim Global’i keşfedin — Özbekistan’da hazır altyapı, lojistik erişimi ve yatırımcılar için uzun vadeli fırsatlar sunan modern bir sanayi bölgesi."
   },
   "about": {
-    "title": "О глобальной финтех-экосистеме",
-    "description": "Крупнейшее событие, объединяющее банкиров, финтех-лидеров и экспертов для обсуждения будущего цифровых финансов."
+    "title": "Ostim Global Hakkında – Sanayi Gelişimi ve Deneyim",
+    "description": "Ostim Global’in onlarca yıllık sanayi deneyimiyle Özbekistan’da rekabetçi ve yatırım odaklı bir sanayi bölgesi geliştirdiğini keşfedin."
   },
-  "events": {
-    "title": "События и финтех-сессии",
-    "description": "Лекции и панельные обсуждения по цифровым платежам, ИИ, кибербезопасности и мировым финансовым трендам."
+  "investors": {
+    "title": "Ostim Global’e Yatırım – Özbekistan’da Sanayi Fırsatları",
+    "description": "Ostim Global’de yatırım fırsatlarını keşfedin: ölçeklenebilir üretim alanları, hazır altyapı ve uzun vadeli büyüme imkânları."
   },
-  "participants": {
-    "title": "Участники и международный каталог банков",
-    "description": "Международные банки, финтех-компании и организации. Узнайте услуги, профили и возможности сотрудничества."
+  "faq": {
+    "title": "Ostim Global SSS – Sanayi Bölgesi ve Yatırım Bilgileri",
+    "description": "Ostim Global sanayi bölgesinin altyapısı, yatırım süreci, hizmetler ve gelişim planları hakkında sık sorulan soruların cevaplarını bulun."
   },
-  "speakers": {
-    "title": "Спикеры и мировые лидеры финтех-индустрии",
-    "description": "Руководители банков, ученые, технологи и эксперты, формирующие будущее цифровых финансов."
+  "news": {
+    "title": "Ostim Global Haberleri – Sanayi Bölgesi Gelişmeleri",
+    "description": "Ostim Global’deki proje gelişmeleri, ortaklıklar, altyapı ilerlemeleri ve yatırım faaliyetleri hakkında en son haberleri okuyun."
   },
-  "partners": {
-    "title": "Партнеры и международные финансовые организации",
-    "description": "Банки, финтех-компании и институты, поддерживающие инновации и развитие финансовой отрасли."
+  "contacts": {
+    "title": "Ostim Global İletişim – Yatırım Başvuruları",
+    "description": "Yatırım, iş ortaklığı veya proje hakkında bilgi almak için Ostim Global ile iletişime geçin."
   },
-  "sponsors": {
-    "title": "Спонсоры и официальные поддерживающие",
-    "description": "Бренды и компании, инвестирующие в цифровые преобразования и международные финансовые инициативы."
+  "project": {
+    "title": "Ostim Global Masterplan – Sanayi ve Sosyal Alanlar",
+    "description": "Etkileşimli masterplan üzerinden sanayi bloklarını, hangarları ve sosyal tesisleri keşfedin."
   },
-  "media": {
-    "title": "Медиа и новости",
-    "description": "Обзоры, репортажи, фото и статьи о мировых трендах, технологиях и событиях в сфере финтеха."
+  "privacy": {
+    "title": "Gizlilik Politikası – Ostim Global",
+    "description": "Ostim Global’in web sitesi, sanayi bölgesi hizmetleri ve yatırım başvurularına ilişkin kişisel verileri nasıl topladığını ve koruduğunu öğrenin."
   },
   "terms": {
-    "title": "Условия использования",
-    "description": "Правила использования, авторские права, ответственность и юридические положения, регулирующие работу сайта."
-  },
-  "policy": {
-    "title": "Политика конфиденциальности",
-    "description": "Как собираются, хранятся и защищаются ваши данные. Принципы конфиденциальности и ваши пользовательские права."
-  },
-  "not-found": {
-    "title": "Страница не найдена",
-    "description": "Страница могла быть перемещена или удалена. Перейдите в другие разделы, чтобы продолжить навигацию по сайту."
-  },
-  "accreditation": {
-    "title": "Аккредитация СМИ для журналистов",
-    "description": "Подайте заявку на официальную аккредитацию. Узнайте требования, сроки и правила доступа для местных и зарубежных журналистов."
+    "title": "Kullanım Şartları – Ostim Global",
+    "description": "Ostim Global web sitesi, dijital masterplan ve proje hizmetlerinin kullanımına ilişkin şartları inceleyin."
   }
 }

@@ -257,6 +257,7 @@ const boxes = computed(() => [
       padding-top: 0;
     }
     @media screen and (max-width: vars.$bp-sm) {
+      flex-direction: column;
       justify-content: center;
     }
     &-text {

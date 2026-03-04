@@ -8,8 +8,8 @@
               v-for="label in ['prev', 'next']"
               :key="label"
               :disabled="
-                (label === 'prev' && currentSlide === 1) ||
-                (label === 'next' && currentSlide === imagesLength)
+                (label === 'prev' && currentSlide === 0) ||
+                (label === 'next' && currentSlide === currentPlace?.images.length - 1)
               "
               class="modal__top-arrow"
               @click="handleSlide(label)"
@@ -18,15 +18,15 @@
               <IconsArrowRight class="modal__top-arrow-icon" />
             </button>
             <UiPicture
-              v-for="i in imagesLength"
-              :key="i"
+              v-for="(image, i) in currentPlace.images"
+              :key="image"
               :class="{
                 current: i === currentSlide,
                 next: i > currentSlide,
                 prev: i < currentSlide
               }"
-              :src="`${currentPlace.id}.jpg`"
-              alt="sports complex"
+              :src="image"
+              alt="place banner"
               class="modal__top-banner"
             />
           </div>
@@ -60,8 +60,7 @@ const showFormPopup = useState('showFormPopup');
 
 const route = useRoute();
 
-const imagesLength = 3;
-const currentSlide = ref(1);
+const currentSlide = ref(0);
 const isAnimating = ref(false);
 
 const place = computed(() => route.query?.place);
@@ -71,9 +70,9 @@ const currentPlace = computed(() => socialPlaces.value.find(el => el.id === plac
 const handleSlide = dir => {
   if (isAnimating.value) return;
 
-  if (dir === 'prev' && currentSlide.value > 1) {
+  if (dir === 'prev' && currentSlide.value > 0) {
     currentSlide.value--;
-  } else if (dir === 'next' && currentSlide.value < imagesLength) {
+  } else if (dir === 'next' && currentSlide.value < currentPlace.value?.images.length) {
     currentSlide.value++;
   }
 
@@ -194,7 +193,6 @@ const handleBook = () => {
     overflow: hidden;
     display: flex;
     &-arrow {
-      @include mix.flex-center;
       border-radius: 50%;
       position: absolute;
       width: max(4rem, 35px);

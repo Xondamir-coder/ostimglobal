@@ -18,7 +18,8 @@ export default defineNuxtConfig({
   css: ['~/assets/scss/main.scss'],
   app: {
     head: {
-      title: 'Ostim Global',
+      titleTemplate: '%s',
+      title: 'OSTIM Global',
       link: [
         {
           rel: 'icon',

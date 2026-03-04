@@ -28,6 +28,7 @@
   "book": "Bron qilish",
   "sent": "Yuborildi",
   "back": "orqaga",
+  "no-result": "Natija topilmadi",
 
   "header": {
     "links": [
@@ -316,6 +317,7 @@
     "social-places": [
       {
         "id": "sport",
+        "images": ["sport.jpg", "sport.jpg", "sport.jpg"],
         "title": "Sport majmuasi",
         "text": "Sport majmuasi OSTIM Global hududida zamonaviy va ko‘p funksiyali obyekt sifatida loyihalashtirilgan bo‘lib, faol ish va dam olish muhiti yaratadi.",
         "areas": [
@@ -326,6 +328,7 @@
       },
       {
         "id": "admin",
+        "images": ["admin.jpg", "admin.jpg", "admin.jpg"],
         "title": "Ma’muriy ofis",
         "text": "Zamonaviy boshqaruv va biznes jarayonlari uchun mo‘ljallangan ma’muriy bino OSTIM Global hududida samarali ish muhiti yaratadi.",
         "areas": [
@@ -336,6 +339,7 @@
       },
       {
         "id": "hotel",
+        "images": ["hotel.jpg", "hotel.jpg", "hotel.jpg"],
         "title": "Mehmonxona",
         "text": "Mehmonxona investorlar va tashrif buyuruvchilar uchun qulay joylashuv va zamonaviy xizmatlarni taqdim etadi.",
         "areas": [
@@ -346,6 +350,7 @@
       },
       {
         "id": "mall",
+        "images": ["mall.jpg", "mall-2.jpg", "mall.jpg"],
         "title": "Savdo markazi",
         "text": "Savdo markazi hudud rezidentlari va mehmonlari uchun savdo va xizmatlar infratuzilmasini ta’minlaydi.",
         "areas": [
@@ -356,6 +361,7 @@
       },
       {
         "id": "expo",
+        "images": ["expo.jpg", "expo-2.jpg", "expo.jpg"],
         "title": "Ko‘rgazma markazi",
         "text": "Ko‘rgazma markazi sanoat yutuqlari, forumlar va biznes tadbirlarini o‘tkazish uchun mo‘ljallangan.",
         "areas": [
@@ -366,6 +372,7 @@
       },
       {
         "id": "kindergarten",
+        "images": ["kindergarten.jpg", "kindergarten.jpg", "kindergarten.jpg"],
         "title": "Bolalar bog‘chasi",
         "text": "Bolalar bog‘chasi hudud xodimlarining farzandlari uchun zamonaviy ta’lim va tarbiya muhitini yaratadi.",
         "areas": [
@@ -376,6 +383,7 @@
       },
       {
         "id": "school",
+        "images": ["school.jpg", "school.jpg", "school.jpg"],
         "title": "Maktab",
         "text": "Maktab hudud rezidentlari uchun zamonaviy va sifatli ta’lim imkoniyatlarini taqdim etadi.",
         "areas": [
@@ -386,6 +394,7 @@
       },
       {
         "id": "university",
+        "images": ["university.jpg", "university.jpg", "university.jpg"],
         "title": "Universitet",
         "text": "Universitet sanoat va ta’lim integratsiyasini ta’minlab, malakali kadrlar tayyorlaydi.",
         "areas": [
@@ -396,6 +405,7 @@
       },
       {
         "id": "clinic",
+        "images": ["clinic.jpg", "clinic.jpg", "clinic.jpg"],
         "title": "Klinika",
         "text": "Klinika hudud rezidentlari uchun zamonaviy tibbiy xizmatlarni taqdim etadi.",
         "areas": [
@@ -406,6 +416,7 @@
       },
       {
         "id": "business",
+        "images": ["business.jpg", "business.jpg", "business.jpg"],
         "title": "Biznes markazi",
         "text": "Biznes markazi kompaniyalar uchun zamonaviy ofis maydonlari va ishbilarmonlik muhitini taqdim etadi.",
         "areas": [
