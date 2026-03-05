@@ -1,6 +1,6 @@
 <template>
   <Transition name="slide">
-    <div v-if="showSocialModal" class="container" @click.self="showSocialModal = false">
+    <div v-if="showSocialModal" class="container" @click.self="closeModal">
       <div class="modal">
         <div class="modal__top">
           <div class="modal__top-container">
@@ -30,7 +30,7 @@
               class="modal__top-banner"
             />
           </div>
-          <UiModalCloseButton class="modal__top-button" @click="showSocialModal = false" />
+          <UiModalCloseButton class="modal__top-button" @click="closeModal" />
         </div>
         <div class="modal__content">
           <h2 class="modal__content-title">
@@ -67,6 +67,10 @@ const place = computed(() => route.query?.place);
 const socialPlaces = computed(() => useMapRt('genplan.social-places'));
 const currentPlace = computed(() => socialPlaces.value.find(el => el.id === place.value));
 
+const closeModal = () => {
+  showSocialModal.value = false;
+  currentSlide.value = 0;
+};
 const handleSlide = dir => {
   if (isAnimating.value) return;
 
@@ -245,6 +249,7 @@ const handleBook = () => {
       }
     }
     &-container {
+      flex: 1;
       position: relative;
       display: grid;
     }

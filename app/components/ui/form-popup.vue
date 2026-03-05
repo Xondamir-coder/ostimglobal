@@ -115,7 +115,9 @@ const submitForm = async () => {
 }
 
 .form-popup {
-  width: max(42rem, 500px);
+  max-width: max(42rem, 500px);
+  width: 100%;
+  // width: max(42rem, 400px);
   border-radius: 15px;
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(255, 255, 255, 0.05);
@@ -126,13 +128,14 @@ const submitForm = async () => {
   gap: 10px;
   padding: max(1.4rem, 10px);
   transition: all 0.5s;
-  margin-inline: 20px;
+
   &__input {
     font-size: max(2rem, 18px);
     letter-spacing: 1px;
     border-bottom: 2px solid rgba(255, 255, 255, 0.4);
     padding-bottom: 10px;
     transition: border-color 0.3s;
+    border-radius: 0;
     &:focus {
       border-color: #fff;
     }
@@ -235,6 +238,9 @@ const submitForm = async () => {
   position: fixed;
   inset: 0;
   z-index: 100;
+  @media screen and (max-width: vars.$bp-sm) {
+    padding-inline: 20px;
+  }
 }
 .appear-enter-active,
 .appear-leave-active {

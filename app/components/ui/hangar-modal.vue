@@ -29,7 +29,7 @@
               class="modal__top-banner"
             />
           </div>
-          <UiModalCloseButton class="modal__top-button" @click="showSocialModal = false" />
+          <UiModalCloseButton class="modal__top-button" @click="showHangarModal = false" />
         </div>
         <div class="modal__content">
           <div class="modal__content-header">
