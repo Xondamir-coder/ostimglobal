@@ -168,6 +168,10 @@
 
 <script setup>
 usePageSEO('about');
+
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {});
 </script>
 
 <style lang="scss" scoped>
@@ -510,6 +514,7 @@ usePageSEO('about');
   gap: max(5rem, 20px);
   margin-top: calc(max(12rem, 83px) - 26px);
   h1 {
+    animation: slide-from-bottom-20 0.6s;
     max-width: 20ch;
   }
   &__texts {
@@ -524,6 +529,12 @@ usePageSEO('about');
     p {
       display: flex;
       flex-direction: column;
+      animation: slide-from-bottom-20 0.6s backwards;
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
       &:first-child {
         @media screen and (max-width: vars.$bp-md) {
           border-bottom: 1px solid #fff;

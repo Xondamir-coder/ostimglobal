@@ -183,6 +183,55 @@ const goUp = () => {
 };
 
 usePageSEO('home');
+
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {
+  $gsap.from('section.industrial>*', {
+    opacity: 0,
+    y: 25,
+    stagger: 0.1,
+    scrollTrigger: getDefaultScrollTrigger('.industrial')
+  });
+
+  $gsap.from('.revolution__top>*', {
+    opacity: 0,
+    y: 50,
+    stagger: 0.1,
+    scrollTrigger: getDefaultScrollTrigger('.revolution__top')
+  });
+
+  $gsap.from('.revolution__card', {
+    stagger: 0.15,
+    y: 35,
+    opacity: 0,
+    duration: 0.7,
+    scrollTrigger: getDefaultScrollTrigger('.revolution__bottom')
+  });
+
+  $gsap.from('.overview__label', {
+    opacity: 0,
+    scale: 0.95,
+    stagger: 0.1,
+    scrollTrigger: getDefaultScrollTrigger('.overview__labels')
+  });
+  $gsap.from('.overview__texts p', {
+    opacity: 0,
+    y: 25,
+    stagger: 0.1,
+    scrollTrigger: getDefaultScrollTrigger('.overview__texts')
+  });
+
+  $gsap.utils.toArray('.network__card').forEach((el, i) => {
+    $gsap.from(el, {
+      opacity: 0,
+      scale: 0.85,
+      y: i % 2 ? 15 : -15,
+      rotate: i % 2 ? 4 : -4,
+      scrollTrigger: getDefaultScrollTrigger(el)
+    });
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -368,6 +417,7 @@ usePageSEO('home');
   display: flex;
   flex-direction: column;
   gap: 5px;
+
   &__label {
     --bg-clr: #fff;
     --text-clr: #fff;
@@ -769,7 +819,7 @@ usePageSEO('home');
     max-width: 15ch;
     padding-bottom: 4.4rem;
     padding-left: 2.8rem;
-
+    animation: slide-from-bottom-20 0.5s backwards;
     @media screen and (max-width: vars.$bp-md) {
       padding-left: 0;
       padding-bottom: 0;
@@ -783,6 +833,7 @@ usePageSEO('home');
   flex-direction: column;
   gap: max(14rem, 100px);
   overflow: hidden;
+
   &__up {
     @include mix.flex-center;
     width: 55px;

@@ -27,107 +27,70 @@ const showFormPopup = useState('showFormPopup');
 
 const coords = ref({ x: 0, y: 0 });
 
-const GAP = 12;
-const VIEWPORT_PADDING = 12;
-
 const handleBook = () => {
   showFormPopup.value = true;
 };
 
-const getActivePath = () => {
-  return document.querySelector('.overlay__container-path.active[data-block]');
+const clampTooltipToViewport = () => {
+  const tooltip = tooltipRef.value;
+  if (!tooltip) return;
+
+  const rect = tooltip.getBoundingClientRect();
+
+  let dx = 0;
+  let dy = 0;
+
+  if (rect.right > window.innerWidth) {
+    dx = window.innerWidth - rect.right - 12;
+  }
+
+  if (rect.left < 0) {
+    dx = -rect.left + 12;
+  }
+
+  if (rect.top < 0) {
+    dy = -rect.top + 12;
+  }
+
+  if (rect.bottom > window.innerHeight) {
+    dy = window.innerHeight - rect.bottom - 12;
+  }
+
+  coords.value.x += dx;
+  coords.value.y += dy;
 };
+const updateTooltipPosition = async () => {
+  const path = document.querySelector(`.overlay__container-path.active#${hangar.value}`);
 
-const updateCoords = () => {
-  const path = getActivePath();
-  const popup = tooltipRef.value;
-  if (!path || !popup) return;
+  const layer = document.querySelector('.overlay__layer');
 
-  // 🔹 1. point in SVG space
-  const length = path.getTotalLength();
-  const svgPoint = path.getPointAtLength(length / 2);
+  if (!path || !layer || !tooltipRef.value) return;
 
-  // 🔹 2. SVG → screen space
-  const ctm = path.getScreenCTM();
+  const pathRect = path.getBoundingClientRect();
+  const layerRect = layer.getBoundingClientRect();
 
-  const screenX = svgPoint.x * ctm.a + ctm.e;
-  const screenY = svgPoint.y * ctm.d + ctm.f;
+  const offsetX = pathRect.right - layerRect.left;
+  const offsetY = pathRect.top - layerRect.top;
 
-  // 🔹 3. measure popup
-  const popupRect = popup.getBoundingClientRect();
-
-  const vw = window.innerWidth;
-  const vh = window.innerHeight;
-
-  // 🔹 4. preferred position = top-right
-  let x = screenX + GAP + popupRect.width * 0.05;
-  let y = screenY - popupRect.height - GAP;
-
-  // flip horizontally if needed
-  if (x + popupRect.width > vw - VIEWPORT_PADDING) {
-    x = screenX - popupRect.width;
-  }
-
-  // clamp left
-  if (x < VIEWPORT_PADDING) {
-    x = VIEWPORT_PADDING;
-  }
-
-  // flip vertically if no space above
-  if (y < VIEWPORT_PADDING) {
-    y = screenY + GAP;
-  }
-
-  // clamp bottom
-  if (y + popupRect.height > vh - VIEWPORT_PADDING) {
-    y = vh - popupRect.height - VIEWPORT_PADDING;
-  }
-
-  coords.value = { x, y };
-};
-
-let rafId = null;
-
-const startTracking = () => {
-  if (rafId) return;
-
-  const loop = () => {
-    updateCoords();
-    rafId = requestAnimationFrame(loop);
+  coords.value = {
+    x: offsetX,
+    y: offsetY - tooltipRef.value.offsetHeight
   };
 
-  rafId = requestAnimationFrame(loop);
+  await nextTick();
+  clampTooltipToViewport();
 };
 
-const stopTracking = () => {
-  cancelAnimationFrame(rafId);
-  rafId = null;
-};
+watch(hangar, updateTooltipPosition);
 
-watch(hangar, async val => {
+onMounted(async () => {
   await nextTick();
 
-  if (val) {
-    updateCoords();
-    startTracking();
-  } else {
-    stopTracking();
-  }
-});
+  requestAnimationFrame(() => {
+    updateTooltipPosition();
+  });
 
-onMounted(() => {
-  if (hangar.value) {
-    updateCoords();
-    startTracking();
-  }
-
-  window.addEventListener('resize', updateCoords);
-  window.addEventListener('scroll', updateCoords, true);
-});
-
-onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateCoords);
-  window.removeEventListener('scroll', updateCoords, true);
+  window.addEventListener('resize', updateTooltipPosition);
 });
 </script>
 
@@ -185,37 +148,25 @@ onBeforeUnmount(() => {
     width: max(14.3rem, 143px);
     height: max(3.2rem, 32px);
     border-radius: 30px;
-    background: #fff;
+    background: #34c759;
+    color: #fff;
     position: relative;
     overflow: hidden;
-    transition: scale 0.4s;
+    transition:
+      scale 0.4s,
+      background 0.4s,
+      color 0.4s;
     &:hover {
       scale: 1.02;
-      &::before {
-        transform: translate3d(100%, 0, 0);
-      }
-      span {
-        color: #34c759;
-      }
+      background-color: #fff;
+      color: #34c759;
     }
-    &::before {
-      content: '';
-      background: #34c759;
-      width: 120%;
-      height: 100%;
-      transform: skew(30deg);
-      transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
-      position: absolute;
-      top: 0;
-      left: -10%;
-    }
+
     span {
       z-index: 2;
       font-weight: 900;
       font-size: max(1.4rem, 14px);
-      color: #fff;
       margin-bottom: 0.2em;
-      transition: color 0.4s;
     }
   }
 }

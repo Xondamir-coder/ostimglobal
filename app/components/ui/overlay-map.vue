@@ -40,12 +40,14 @@
         >
           <path :d="spotlight.path" fill="black" fill-opacity="0.6" />
         </svg>
+        <UiMasterplanTooltip />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+import genplanData from '~/assets/data/genplan.json';
 import gsap from 'gsap';
 
 const spotlights = [
@@ -357,7 +359,10 @@ defineExpose({
     will-change: transform;
     pointer-events: auto;
     z-index: 10;
-
+    &:has(path:hover) > *:last-child {
+      backdrop-filter: blur(15px) opacity(0.5);
+      pointer-events: none;
+    }
     @media screen and (max-width: 1279px) {
       position: relative;
       left: auto;

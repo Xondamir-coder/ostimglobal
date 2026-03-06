@@ -180,6 +180,7 @@ const handleSlide = dir => {
       }
     }
     &-container {
+      flex: 1;
       position: relative;
       display: grid;
     }

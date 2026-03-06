@@ -15,6 +15,17 @@
 
 <script setup>
 const showFormPopup = useState('showFormPopup');
+
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {
+  $gsap.from('.cta', {
+    duration: 0.6,
+    y: 25,
+    opacity: 0,
+    scrollTrigger: getDefaultScrollTrigger('.cta')
+  });
+});
 </script>
 
 <style lang="scss" scoped>

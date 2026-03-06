@@ -19,7 +19,6 @@
       </div>
       <span>{{ $t('back') }}</span>
     </button>
-    <UiMasterplanTooltip />
     <UiSocialModal />
     <UiHangarModal />
     <UiFormPopup />
@@ -72,10 +71,6 @@ usePageSEO('project');
   @media screen and (min-width: vars.$bp-xl) {
     &:has(path:hover) {
       & > *:nth-child(4) > * {
-        backdrop-filter: blur(15px) opacity(0.5);
-        pointer-events: none;
-      }
-      & > *:nth-child(7) {
         backdrop-filter: blur(15px) opacity(0.5);
         pointer-events: none;
       }

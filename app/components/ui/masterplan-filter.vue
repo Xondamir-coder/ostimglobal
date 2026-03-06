@@ -85,6 +85,8 @@
 </template>
 
 <script setup>
+import genplanData from '~/assets/data/genplan.json';
+
 const route = useRoute();
 
 const zonesID = ['industrial', 'social'];
@@ -262,7 +264,7 @@ watch(
       padding-inline: 10px;
       margin-bottom: 0.2em;
       color: #fff;
-      font-size: max(3rem, 20px);
+      font-size: max(2.3rem, 20px);
       font-weight: 500;
       letter-spacing: -1.5px;
 
