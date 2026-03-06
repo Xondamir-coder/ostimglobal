@@ -171,7 +171,30 @@ usePageSEO('about');
 
 const { $gsap } = useNuxtApp();
 
-onMounted(() => {});
+onMounted(() => {
+  $gsap.utils.toArray('.social__row').forEach(el => {
+    $gsap.from(el.children, {
+      opacity: 0,
+      y: 50,
+      stagger: 0.15,
+      scrollTrigger: getDefaultScrollTrigger(el)
+    });
+  });
+
+  $gsap.from('.partners__item', {
+    scale: 0.85,
+    opacity: 0,
+    stagger: 0.1,
+    scrollTrigger: getDefaultScrollTrigger('.partners__list')
+  });
+
+  $gsap.from('.info__card', {
+    opacity: 0,
+    y: 50,
+    stagger: 0.1,
+    scrollTrigger: getDefaultScrollTrigger('.info__cards')
+  });
+});
 </script>
 
 <style lang="scss" scoped>

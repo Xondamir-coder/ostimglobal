@@ -62,9 +62,11 @@
       <h3 class="other__label">
         {{ $t('news.other') }}
       </h3>
-      <div class="other__list">
-        <UiNewsCard v-for="item in useMapRt('news.items')" :key="item.title" :data="item" />
-      </div>
+      <ul class="other__list">
+        <li v-for="item in useMapRt('news.items')" :key="item.title">
+          <UiNewsCard :data="item" />
+        </li>
+      </ul>
     </section>
     <UiSectionCta />
   </main>
@@ -74,6 +76,19 @@
 const route = useRoute();
 
 const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id);
+
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {
+  $gsap.utils.toArray('.other__list>*').forEach(el => {
+    $gsap.from(el, {
+      opacity: 0,
+      y: 20,
+      duration: 0.7,
+      scrollTrigger: getDefaultScrollTrigger(el)
+    });
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -116,6 +131,7 @@ const currentItem = useMapRt('news.items').find(el => el.id === +route.params.id
   flex-direction: column;
   gap: max(4rem, 30px);
   position: relative;
+  animation: slide-from-bottom-50 1s;
 
   @media screen and (max-width: vars.$bp-md) {
     padding-inline: 0;

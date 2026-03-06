@@ -68,6 +68,14 @@ usePageSEO('news');
     display: flex;
     flex-direction: column;
     gap: max(6rem, 60px);
+    & > * {
+      animation: slide-from-bottom-30 0.7s;
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
   }
   &__header {
     display: flex;
@@ -78,6 +86,14 @@ usePageSEO('news');
     margin-inline: var(--spacing-inline);
     gap: max(5rem, 20px);
     justify-content: space-between;
+    & > * {
+      animation: slide-from-bottom-20 0.6s backwards;
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
     h1 {
       max-width: 17ch;
     }

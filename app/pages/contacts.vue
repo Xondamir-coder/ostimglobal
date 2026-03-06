@@ -68,6 +68,14 @@ usePageSEO('contacts');
     display: grid;
     grid-template-columns: 1fr 1.2fr;
     gap: 5px;
+    & > * {
+      animation: slide-from-bottom-30 0.7s backwards;
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
     @media screen and (max-width: vars.$bp-lg) {
       grid-template-columns: 1fr;
       margin-inline: var(--spacing-inline);
@@ -122,6 +130,14 @@ usePageSEO('contacts');
     border-bottom: 2px solid #fff;
     padding-bottom: max(6rem, 50px);
     justify-content: space-between;
+    & > * {
+      animation: slide-from-bottom-30 0.7s backwards;
+      @for $i from 1 through 2 {
+        &:nth-child(#{$i}) {
+          animation-delay: $i * 0.1s;
+        }
+      }
+    }
     h1 {
       max-width: 15ch;
     }

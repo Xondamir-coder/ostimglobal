@@ -121,6 +121,37 @@ const heroCards = computed(() =>
 );
 
 usePageSEO('investors');
+
+const { $gsap } = useNuxtApp();
+
+onMounted(() => {
+  $gsap.to('.future', {
+    opacity: 1,
+    y: 0,
+    scrollTrigger: getDefaultScrollTrigger('.future')
+  });
+
+  $gsap.from('.numbers>*', {
+    clipPath: 'inset(0% 100% 0% 0%)',
+    duration: 1,
+    stagger: 0.08,
+    scrollTrigger: getDefaultScrollTrigger('.numbers')
+  });
+
+  $gsap.from('.overview__texts>*', {
+    y: 30,
+    stagger: 0.1,
+    opacity: 0,
+    scrollTrigger: getDefaultScrollTrigger('.overview__container')
+  });
+  $gsap.from('.overview__label', {
+    y: 30,
+    scale: 0.95,
+    stagger: 0.1,
+    opacity: 0,
+    scrollTrigger: getDefaultScrollTrigger('.overview__labels')
+  });
+});
 </script>
 
 <style lang="scss" scoped>
@@ -339,6 +370,8 @@ usePageSEO('investors');
   grid-auto-columns: 1fr;
   row-gap: 9.6rem;
   position: relative;
+  opacity: 0;
+  translate: 0 30px;
 
   @media screen and (max-width: vars.$bp-xl) {
     row-gap: 25px;
@@ -423,6 +456,14 @@ usePageSEO('investors');
     'big card-2 card-3'
     'big card-2 card-4'
     '. . card-4';
+  @keyframes unveil {
+    from {
+      clip-path: inset(0% 0% 100% 0%);
+    }
+    to {
+      clip-path: inset(0%);
+    }
+  }
   @media screen and (max-width: vars.$bp-lg) {
     grid-auto-rows: 338px 207px 207px 207px 207px;
     grid-auto-columns: 1fr;
@@ -433,8 +474,18 @@ usePageSEO('investors');
       'card-2'
       'card-4';
   }
+  & > * {
+    animation: unveil 1s backwards;
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: $i * 0.07s;
+      }
+    }
+  }
+
   &__card {
     $bg-colors: #222, #4800e2, #cf2025, #fff;
+
     border-radius: max(3rem, 20px);
     color: #fff;
     padding: max(4rem, 20px);
