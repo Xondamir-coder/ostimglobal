@@ -3,6 +3,9 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   modules: ['@nuxtjs/i18n', '@nuxt/eslint', '@nuxtjs/google-fonts', '@nuxtjs/seo'],
+  devServer: {
+    port: 4000
+  },
   vite: {
     css: {
       preprocessorOptions: {

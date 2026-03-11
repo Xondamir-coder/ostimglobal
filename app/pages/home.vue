@@ -231,6 +231,15 @@ onMounted(() => {
       scrollTrigger: getDefaultScrollTrigger(el)
     });
   });
+
+  $gsap.from('.home__up', {
+    opacity: 0,
+    scrollTrigger: {
+      trigger: '.home',
+      start: 'top top',
+      toggleActions: 'play none none reverse'
+    }
+  });
 });
 </script>
 
@@ -836,19 +845,19 @@ onMounted(() => {
 
   &__up {
     @include mix.flex-center;
+    position: fixed;
+    right: 34px;
+    bottom: 34px;
+    z-index: 5;
     width: 55px;
     height: 55px;
     border-radius: 50%;
     border: 2px solid #000;
     background: #fc0;
-    align-self: flex-end;
-    margin-right: var(--spacing-inline);
-    transition: opacity 0.4s;
-    margin-top: calc((max(14rem, 100px) - 57px) * -1);
-    margin-bottom: calc((max(3.4rem, 34px) - 37px) * -1);
     fill: none;
+    transition: background 0.4s;
     &:hover {
-      opacity: 0.5;
+      background: #fff;
     }
   }
 }

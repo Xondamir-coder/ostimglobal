@@ -145,7 +145,7 @@
       "cards": [
         "Flexible Industrial Spaces",
         "Modern Engineering Infrastructure",
-        "Turkey Infrastructure",
+        "Turnkey Infrastructures",
         "Full Project Cycle"
       ]
     },
@@ -191,8 +191,8 @@
   "faq": {
     "see-all": "See All FAQs",
     "hero": {
-      "title": "Innovative AI Developer Team",
-      "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. "
+      "title": "Innovative industrial zone",
+      "text": "Find answers to the most common questions about the OSTIM Global industrial zone, including project details, investment opportunities, and infrastructure."
     },
     "accordions": [
       {
@@ -302,7 +302,7 @@
 
   "section-cta": {
     "title": "Industrial power built on experience",
-    "text": "OSTIM Global creates an integrated industrial environment where infrastructure, management and international cooperation enable efficient production and sustainable growth."
+    "text": "Explore the OSTIM Global industrial ecosystem. Contact us for further details."
   },
 
   "genplan": {
