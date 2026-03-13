@@ -563,6 +563,7 @@ onMounted(() => {
     flex-direction: column;
     justify-content: space-between;
     padding: max(4rem, 15px);
+    z-index: 2;
     @media screen and (min-width: vars.$bp-md) {
       height: 77%;
     }
