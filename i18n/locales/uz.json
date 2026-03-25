@@ -249,7 +249,7 @@
     "title": "Innovatsion AI dasturchilar jamoasi",
     "text": "Bizning tajribali dasturchi va muhandislar jamoamiz mashinaviy o‘rganish, tabiiy tilni qayta ishlash, kompyuter ko‘rishi va robototexnika kabi ilg‘or texnologiyalar bo‘yicha chuqur bilimga ega.",
     "address-1": "Bizning ofis /endline/ Ostim Global /endline/ Toshkent shahri, Furqat ko‘chasi 5A",
-    "address-2": "pochta indeksi 100 123"
+    "address-2": "pochta indeksi: 100 000"
   },
 
   "news": {
@@ -290,7 +290,7 @@
     "navigation": "Navigatsiya",
     "social-media": "Ijtimoiy tarmoqlar",
     "address-1": "Zangiota tumani, Bag‘zor ko‘chasi, Do‘stlik ko‘chasi, 2-bino, Toshkent, O‘zbekiston",
-    "address-2": "pochta indeksi 100 123",
+    "address-2": "pochta indeksi: 100 000",
     "links": ["Maxfiylik siyosati", "Foydalanish shartlari"]
   },
 
@@ -316,113 +316,121 @@
     "zones": ["Sanoat zonasi", "Ijtimoiy zona"],
     "social-places": [
       {
+        "id": "admin",
+        "images": ["admin.jpg", "admin.jpg", "admin.jpg"],
+        "title": "Ma'muriy ofis",
+        "labels": {
+          "title": "Mijozlarga xizmat ko‘rsatish bo‘yicha ma'muriy bo‘lim",
+          "items": [
+            "Hujjatlar boshqaruvi",
+            "Shartnomalar va tijorat jarayonlari",
+            "Davlat xizmatlari platformasi",
+            "Loyihalash va qurilish"
+          ]
+        }
+      },
+      {
         "id": "sport",
         "images": ["sport.jpg", "sport.jpg", "sport.jpg"],
         "title": "Sport majmuasi",
-        "text": "Sport majmuasi OSTIM Global hududida zamonaviy va ko‘p funksiyali obyekt sifatida loyihalashtirilgan bo‘lib, faol ish va dam olish muhiti yaratadi.",
+        "text": "Sport majmuasi zamonaviy ko‘p funksiyali obyekt sifatida loyihalashtirilgan. OSTIM Global hududida dinamik ish muhitini ta’minlaydi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
-        ]
-      },
-      {
-        "id": "admin",
-        "images": ["admin.jpg", "admin.jpg", "admin.jpg"],
-        "title": "Ma’muriy ofis",
-        "text": "Zamonaviy boshqaruv va biznes jarayonlari uchun mo‘ljallangan ma’muriy bino OSTIM Global hududida samarali ish muhiti yaratadi.",
-        "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "6060 m²" },
+          { "label": "Qurilish maydoni", "text": "945 m²" }
         ]
       },
       {
         "id": "hotel",
         "images": ["hotel.jpg", "hotel.jpg", "hotel.jpg"],
         "title": "Mehmonxona",
-        "text": "Mehmonxona investorlar va tashrif buyuruvchilar uchun qulay joylashuv va zamonaviy xizmatlarni taqdim etadi.",
+        "text": "OSTIM Global sanoat hududida faoliyat yuritayotgan biznes tashrif buyuruvchilar, investorlar va mutaxassislar uchun mo‘ljallangan zamonaviy mehmonxona.",
         "areas": [
           { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Qurilish maydoni", "text": "6,288 m²" },
+          { "label": "Sig‘im", "text": "120 o‘rin" }
         ]
       },
       {
         "id": "mall",
         "images": ["mall.jpg", "mall-2.jpg", "mall.jpg"],
         "title": "Savdo markazi",
-        "text": "Savdo markazi hudud rezidentlari va mehmonlari uchun savdo va xizmatlar infratuzilmasini ta’minlaydi.",
+        "text": "OSTIM Global sanoat hududi xodimlari, aholisi va tashrif buyuruvchilari uchun kundalik xizmatlar va qulayliklarni taqdim etuvchi savdo va xizmat ko‘rsatish markazi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "5,782 m²" },
+          { "label": "Qurilish maydoni", "text": "7,300 m²" }
         ]
       },
       {
         "id": "expo",
         "images": ["expo.jpg", "expo-2.jpg", "expo.jpg"],
-        "title": "Ko‘rgazma markazi",
-        "text": "Ko‘rgazma markazi sanoat yutuqlari, forumlar va biznes tadbirlarini o‘tkazish uchun mo‘ljallangan.",
+        "title": "Ekspo markazi",
+        "text": "Sport majmuasi zamonaviy ko‘p funksiyali obyekt sifatida loyihalashtirilgan. OSTIM Global hududida dinamik ish muhitini ta’minlaydi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "6,680 m²" },
+          { "label": "Qurilish maydoni", "text": "4,800 m²" }
         ]
       },
       {
         "id": "kindergarten",
         "images": ["kindergarten.jpg", "kindergarten.jpg", "kindergarten.jpg"],
         "title": "Bolalar bog‘chasi",
-        "text": "Bolalar bog‘chasi hudud xodimlarining farzandlari uchun zamonaviy ta’lim va tarbiya muhitini yaratadi.",
+        "text": "OSTIM Global sanoat hududida ishlovchi xodimlar farzandlari uchun xavfsiz va qo‘llab-quvvatlovchi muhitni ta’minlovchi zamonaviy bolalar bog‘chasi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "4,376 m²" },
+          { "label": "Qurilish maydoni", "text": "1,435 m²" },
+          { "label": "Sig‘im", "text": "240 o‘rin" }
         ]
       },
       {
         "id": "school",
         "images": ["school.jpg", "school.jpg", "school.jpg"],
         "title": "Maktab",
-        "text": "Maktab hudud rezidentlari uchun zamonaviy va sifatli ta’lim imkoniyatlarini taqdim etadi.",
+        "text": "OSTIM Global sanoat hamjamiyatida ishlovchi oilalarni qo‘llab-quvvatlovchi ta’lim muassasasi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "6,616 m²" },
+          { "label": "Qurilish maydoni", "text": "4,704 m²" },
+          { "label": "Sig‘im", "text": "660 o‘rin" }
         ]
       },
       {
         "id": "university",
         "images": ["university.jpg", "university.jpg", "university.jpg"],
         "title": "Universitet",
-        "text": "Universitet sanoat va ta’lim integratsiyasini ta’minlab, malakali kadrlar tayyorlaydi.",
+        "text": "Sanoat va innovatsiya sohalari uchun kelajak mutaxassislarini tayyorlovchi ta’lim va tadqiqot markazi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "6,928 m²" },
+          { "label": "Qurilish maydoni", "text": "4,704 m²" },
+          { "label": "Foydalanish sig‘imi", "text": "840 o‘rin" }
         ]
       },
       {
         "id": "clinic",
         "images": ["clinic.jpg", "clinic.jpg", "clinic.jpg"],
         "title": "Klinika",
-        "text": "Klinika hudud rezidentlari uchun zamonaviy tibbiy xizmatlarni taqdim etadi.",
+        "text": "OSTIM Global sanoat hamjamiyatining salomatligini qo‘llab-quvvatlovchi tibbiyot markazi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "3,424 m²" },
+          { "label": "Qurilish maydoni", "text": "2,445 m²" }
         ]
       },
       {
         "id": "business",
         "images": ["business.jpg", "business.jpg", "business.jpg"],
         "title": "Biznes markazi",
-        "text": "Biznes markazi kompaniyalar uchun zamonaviy ofis maydonlari va ishbilarmonlik muhitini taqdim etadi.",
+        "text": "OSTIM Global sanoat hududida faoliyat yurituvchi kompaniyalar uchun ofis maydonlari va xizmatlarni taklif etuvchi biznes markazi.",
         "areas": [
-          { "label": "Umumiy maydon", "text": "7,653 m²" },
-          { "label": "Qurilish maydoni", "text": "1,538 m²" },
-          { "label": "Foydali maydon", "text": "6,115 m²" }
+          { "label": "Umumiy maydon", "text": "5,782 m²" },
+          { "label": "Qurilish maydoni", "text": "7,300 m²" }
+        ]
+      },
+      {
+        "id": "park",
+        "images": ["park.jpg", "park.jpg", "park.jpg"],
+        "title": "Texnologiya parki",
+        "text": "OSTIM Global hududida innovatsiya, tadqiqot va texnologiyaga asoslangan ishlab chiqarish markazi.",
+        "areas": [
+          { "label": "Umumiy maydon", "text": "7,033 m²" },
+          { "label": "Qurilish maydoni", "text": "4,650 m²" }
         ]
       }
     ]
@@ -430,7 +438,7 @@
 
   "hangar": {
     "title": "Angarlar",
-    "text": "Tayyor angarlar muhandislik kommunikatsiyalari va infratuzilma bilan to‘liq jihozlangan. Beton konstruksiya: temir-beton. Tom: sendvich panellar. Devor to‘siqlari: sendvich panellar. Pol: beton stiajka.",
+    "text": "Istakka ko‘ra angarlarni birlashtirib, hajmini oshirishingiz mumkin.",
     "subtitle": "Infratuzilma va kommunikatsiyalar:",
     "utils": [
       "Avtomobillar uchun yo‘llar",

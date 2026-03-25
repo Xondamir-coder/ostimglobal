@@ -1,6 +1,6 @@
 <template>
   <footer class="footer">
-    <UiPicture src="footer-banner.jpg" alt="banner" class="footer__banner" />
+    <UiPicture src="revolution-banner.jpg" alt="banner" class="footer__banner" />
     <div class="footer__top">
       <span>/ {{ new Date().getFullYear() }}</span>
       <span>/ Ostim Global</span>

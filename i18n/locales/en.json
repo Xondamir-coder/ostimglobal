@@ -242,7 +242,7 @@
     "title": "Innovative AI Developer Team",
     "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. ",
     "address-1": "Our Office /endline/ Ostim Global /endline/ Tashkent city, Furqat st. 5A",
-    "address-2": "post office 100 123"
+    "address-2": "post office: 100 000"
   },
 
   "news": {
@@ -283,7 +283,7 @@
     "navigation": "Navigation",
     "social-media": "Social Media",
     "address-1": "Zangiota District, Bagzor Street, Dostlik Street, Building 2, Tashkent, Uzbekistan",
-    "address-2": "post office 100 123",
+    "address-2": "post office: 100 000",
     "links": ["Privacy Policy", "Terms Of Service"]
   },
 
@@ -309,6 +309,20 @@
     "zones": ["Industrial zone", "Social zone"],
     "social-places": [
       {
+        "id": "admin",
+        "images": ["admin.jpg", "admin.jpg", "admin.jpg"],
+        "title": "Administrative office",
+        "labels": {
+          "title": "Administrative unit for customer service",
+          "items": [
+            "Document management",
+            "Contracts and commercial processes",
+            "Government service platform",
+            "Design and construction"
+          ]
+        }
+      },
+      {
         "id": "sport",
         "images": ["sport.jpg", "sport.jpg", "sport.jpg"],
         "title": "Sport complex",
@@ -316,35 +330,11 @@
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "6060 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
-          }
-        ]
-      },
-      {
-        "id": "admin",
-        "images": ["admin.jpg", "admin.jpg", "admin.jpg"],
-        "title": "Administrative office",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
-        "areas": [
-          {
-            "label": "Total area",
-            "text": "7,653 m²"
-          },
-          {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Construction Area",
+            "text": "945 m²"
           }
         ]
       },
@@ -352,19 +342,19 @@
         "id": "hotel",
         "images": ["hotel.jpg", "hotel.jpg", "hotel.jpg"],
         "title": "Hotel",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "A modern hotel designed to accommodate business visitors, investors, and specialists working within the OSTIM Global industrial zone.",
         "areas": [
           {
             "label": "Total area",
             "text": "7,653 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
+            "label": "Construction area",
+            "text": "6,288 m²"
           },
           {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Capacity",
+            "text": "120 places"
           }
         ]
       },
@@ -372,19 +362,15 @@
         "id": "mall",
         "images": ["mall.jpg", "mall-2.jpg", "mall.jpg"],
         "title": "The mall",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "A retail and service center providing everyday amenities for employees, residents, and visitors of the OSTIM Global industrial zone.",
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "5,782 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Construction area",
+            "text": "7,300 m²"
           }
         ]
       },
@@ -396,15 +382,11 @@
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "6,680 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Construction area",
+            "text": "4,800 m²"
           }
         ]
       },
@@ -412,19 +394,19 @@
         "id": "kindergarten",
         "images": ["kindergarten.jpg", "kindergarten.jpg", "kindergarten.jpg"],
         "title": "Kindergarten",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "A modern kindergarten providing a safe and supportive environment for the children of employees working in the OSTIM Global industrial zone.",
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "4,376 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
+            "label": "Construction area",
+            "text": "1,435 m²"
           },
           {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Capacity",
+            "text": "240 places"
           }
         ]
       },
@@ -432,19 +414,19 @@
         "id": "school",
         "images": ["school.jpg", "school.jpg", "school.jpg"],
         "title": "School",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "An educational facility supporting families working within the OSTIM Global industrial community.",
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "6,616 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
+            "label": "Construction area",
+            "text": "4,704 m²"
           },
           {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Capacity",
+            "text": "660 places"
           }
         ]
       },
@@ -452,19 +434,19 @@
         "id": "university",
         "images": ["university.jpg", "university.jpg", "university.jpg"],
         "title": "University",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "An educational and research center preparing future professionals for industry and innovation.",
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "6,928 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
+            "label": "Construction area",
+            "text": "4,704 m²"
           },
           {
             "label": "Usable area",
-            "text": "6,115 m²"
+            "text": "840 places"
           }
         ]
       },
@@ -472,19 +454,15 @@
         "id": "clinic",
         "images": ["clinic.jpg", "clinic.jpg", "clinic.jpg"],
         "title": "Clinic",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "A healthcare center supporting the well-being of the OSTIM Global industrial community.",
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "3,424 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
-          },
-          {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Construction area",
+            "text": "2,445 m²"
           }
         ]
       },
@@ -492,19 +470,31 @@
         "id": "business",
         "images": ["business.jpg", "business.jpg", "business.jpg"],
         "title": "Business",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "A business hub offering office spaces and services for companies working in the OSTIM Global industrial zone.",
         "areas": [
           {
             "label": "Total area",
-            "text": "7,653 m²"
+            "text": "5,782 m²"
           },
           {
-            "label": "Buildable area",
-            "text": "1,538 m²"
+            "label": "Construction area",
+            "text": "7,300 m²"
+          }
+        ]
+      },
+      {
+        "id": "park",
+        "images": ["park.jpg", "park.jpg", "park.jpg"],
+        "title": "Technology Park",
+        "text": "A hub for innovation, research, and technology-driven manufacturing within the OSTIM Global industrial zone.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "7,033 m²"
           },
           {
-            "label": "Usable area",
-            "text": "6,115 m²"
+            "label": "Construction area",
+            "text": "4,650 m²"
           }
         ]
       }
@@ -513,7 +503,7 @@
 
   "hangar": {
     "title": "Hangars",
-    "text": "Ready-made hangars, fully equipped with engineering utilities and infrastructure. Concrete structure: reinforced concrete. Roof: sandwich panels. Wall partitions: sandwich panels. Floor: screed.",
+    "text": "If desired, you can combine the hangars and increase the volume.",
     "subtitle": "Infrastructure and Utilities:",
     "utils": [
       "Roads for vehicles",

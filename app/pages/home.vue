@@ -145,7 +145,7 @@
         <p>{{ $t('home.network.coop') }}</p>
       </div>
       <div class="network__card">
-        <UiPicture src="map.jpg" alt="map" class="network__card-banner" />
+        <UiPicture src="map.png" alt="map" class="network__card-banner" />
         <div class="network__card-box">
           <span>{{ $t('neural-networks') }}</span>
           <IconsStar class="network__card-box-icon" />
@@ -161,15 +161,10 @@
       </div>
     </section>
     <UiSectionCta />
-    <button class="home__up" @click="goUp">
-      <IconsArrowUpShort />
-    </button>
   </main>
 </template>
 
 <script setup>
-const { $lenis } = useNuxtApp();
-
 const queries = ['industrial', 'social'];
 const cards = computed(() =>
   useMapRt('home.hero.cards')?.map((el, i) => ({
@@ -177,10 +172,6 @@ const cards = computed(() =>
     query: queries[i]
   }))
 );
-
-const goUp = () => {
-  $lenis.scrollTo(0);
-};
 
 usePageSEO('home');
 
@@ -230,15 +221,6 @@ onMounted(() => {
       rotate: i % 2 ? 4 : -4,
       scrollTrigger: getDefaultScrollTrigger(el)
     });
-  });
-
-  $gsap.from('.home__up', {
-    opacity: 0,
-    scrollTrigger: {
-      trigger: '.home',
-      start: 'top top',
-      toggleActions: 'play none none reverse'
-    }
   });
 });
 </script>
@@ -312,12 +294,6 @@ onMounted(() => {
     &-banner {
       position: absolute;
       inset: 0;
-      &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: rgba(0, 0, 0, 0.4);
-      }
     }
     &-box {
       align-self: flex-end;
@@ -843,23 +819,5 @@ onMounted(() => {
   flex-direction: column;
   gap: max(14rem, 100px);
   overflow: hidden;
-
-  &__up {
-    @include mix.flex-center;
-    position: fixed;
-    right: 34px;
-    bottom: 34px;
-    z-index: 5;
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    border: 2px solid #000;
-    background: #fc0;
-    fill: none;
-    transition: background 0.4s;
-    &:hover {
-      background: #fff;
-    }
-  }
 }
 </style>

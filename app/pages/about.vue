@@ -308,10 +308,11 @@ onMounted(() => {
     }
     &-label {
       @include mix.flex-center;
+      align-self: flex-start;
       font-size: 16px;
       font-weight: 900;
       flex-shrink: 0;
-      width: 86px;
+      padding-inline: max(2.4rem, 20px);
       height: 41px;
       border-radius: max(5rem, 30px);
       @media screen and (max-width: vars.$bp-md) {
@@ -507,6 +508,7 @@ onMounted(() => {
     &-label {
       @include mix.flex-center;
       width: max(13.5rem, 85px);
+      padding-inline: 2.5rem;
       height: 41px;
       border-radius: max(5rem, 30px);
       background: var(--white, #fff);

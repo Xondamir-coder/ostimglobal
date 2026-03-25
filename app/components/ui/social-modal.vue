@@ -36,10 +36,20 @@
           <h2 class="modal__content-title">
             {{ currentPlace.title }}
           </h2>
-          <p class="modal__content-text">
+          <p v-if="currentPlace.text" class="modal__content-text">
             {{ currentPlace.text }}
           </p>
-          <ul class="modal__content-list">
+          <div v-if="currentPlace.labels" class="modal__content-labels">
+            <span class="modal__content-labels-title"> {{ currentPlace.labels.title }}: </span>
+            <span
+              v-for="label in currentPlace.labels.items"
+              :key="label"
+              class="modal__content-label"
+            >
+              {{ label }}
+            </span>
+          </div>
+          <ul v-if="currentPlace.areas" class="modal__content-list">
             <li v-for="area in currentPlace.areas" :key="area.label" class="modal__content-item">
               <strong>{{ area.label }}</strong>
               <span>{{ area.text }}</span>
@@ -107,6 +117,7 @@ const handleBook = () => {
   gap: 30px;
   margin: max(1rem, 5px);
   transition: all 0.7s;
+
   @media screen and (max-width: vars.$bp-sm) {
     margin: 0;
   }
@@ -116,18 +127,38 @@ const handleBook = () => {
     color: #fff;
     display: grid;
     justify-content: space-between;
-    grid-auto-columns: 0.7fr max-content max-content;
+    grid-auto-columns: 0.85fr max-content max-content;
     grid-template-areas:
       'title title title'
       'text list button';
     row-gap: 20px;
     @media screen and (max-width: vars.$bp-sm) {
       padding-right: calc(51px - 12px);
-      grid-auto-columns: 0.9fr max-content;
+      grid-auto-columns: 1fr max-content;
+      gap: 20px;
       grid-template-areas:
         'title title'
         'text list'
         'button button';
+    }
+    &-labels {
+      display: flex;
+      flex-direction: column;
+      font-size: max(1.8rem, 10px);
+      @media screen and (min-width: vars.$bp-xl) {
+        padding-bottom: 40px;
+      }
+
+      &-title {
+        font-weight: bold;
+      }
+    }
+    &-label {
+      display: flex;
+      gap: 8px;
+      &::before {
+        content: '*';
+      }
     }
     &-button {
       @include mix.flex-center;
@@ -171,6 +202,7 @@ const handleBook = () => {
       }
     }
     &-text {
+      font-size: max(1.8rem, 10px);
       padding-bottom: 3rem;
       grid-area: text;
     }

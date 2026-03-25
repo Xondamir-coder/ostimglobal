@@ -242,7 +242,7 @@
     "title": "Yenilikçi AI geliştirici ekibi",
     "text": "Deneyimli geliştirici ve mühendislerden oluşan ekibimiz; makine öğrenimi, doğal dil işleme, bilgisayarlı görü ve robotik gibi ileri teknolojilerde uzmanlığa sahiptir.",
     "address-1": "Ofisimiz /endline/ Ostim Global /endline/ Taşkent şehri, Furkat caddesi 5A",
-    "address-2": "posta kodu 100 123"
+    "address-2": "posta kodu: 100 000"
   },
 
   "news": {
@@ -283,7 +283,7 @@
     "navigation": "Navigasyon",
     "social-media": "Sosyal medya",
     "address-1": "Zangiota Bölgesi, Bagzor Caddesi, Dostlik Caddesi, 2. Bina, Taşkent, Özbekistan",
-    "address-2": "posta kodu 100 123",
+    "address-2": "posta kodu: 100 000",
     "links": ["Gizlilik politikası", "Kullanım şartları"]
   },
 
@@ -309,113 +309,193 @@
     "zones": ["Sanayi bölgesi", "Sosyal alan"],
     "social-places": [
       {
-        "id": "sport",
-        "images": ["sport.jpg", "sport.jpg", "sport.jpg"],
-        "title": "Spor kompleksi",
-        "text": "Spor kompleksi, OSTIM Global bölgesinde modern ve çok işlevli bir tesis olarak tasarlanmış olup aktif çalışma ve dinlenme ortamı oluşturur.",
-        "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
-        ]
-      },
-      {
         "id": "admin",
         "images": ["admin.jpg", "admin.jpg", "admin.jpg"],
-        "title": "İdari ofis",
-        "text": "Modern yönetim ve iş süreçleri için tasarlanan idari bina, OSTIM Global bölgesinde verimli bir çalışma ortamı sağlar.",
+        "title": "İdari Ofis",
+        "labels": {
+          "title": "Müşteri hizmetleri için idari birim",
+          "items": [
+            "Belge yönetimi",
+            "Sözleşmeler ve ticari süreçler",
+            "Devlet hizmetleri platformu",
+            "Tasarım ve inşaat"
+          ]
+        }
+      },
+      {
+        "id": "sport",
+        "images": ["sport.jpg", "sport.jpg", "sport.jpg"],
+        "title": "Spor Kompleksi",
+        "text": "Spor Kompleksi modern çok fonksiyonlu bir tesis olarak tasarlanmıştır. OSTIM Global bölgesi içerisinde dinamik bir çalışma ortamı sunar.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "6060 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "945 m²"
+          }
         ]
       },
       {
         "id": "hotel",
         "images": ["hotel.jpg", "hotel.jpg", "hotel.jpg"],
         "title": "Otel",
-        "text": "Otel, yatırımcılar ve ziyaretçiler için uygun konum ve modern hizmetler sunar.",
+        "text": "OSTIM Global sanayi bölgesinde çalışan iş ziyaretçileri, yatırımcılar ve uzmanlar için tasarlanmış modern bir otel.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "7,653 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "6,288 m²"
+          },
+          {
+            "label": "Kapasite",
+            "text": "120 kişi"
+          }
         ]
       },
       {
         "id": "mall",
         "images": ["mall.jpg", "mall-2.jpg", "mall.jpg"],
-        "title": "Alışveriş merkezi",
-        "text": "Alışveriş merkezi, bölge sakinleri ve ziyaretçiler için ticaret ve hizmet altyapısı sağlar.",
+        "title": "Alışveriş Merkezi",
+        "text": "OSTIM Global sanayi bölgesinin çalışanları, sakinleri ve ziyaretçileri için günlük ihtiyaçlara yönelik hizmet ve olanaklar sunan perakende ve hizmet merkezi.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "5,782 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "7,300 m²"
+          }
         ]
       },
       {
         "id": "expo",
         "images": ["expo.jpg", "expo-2.jpg", "expo.jpg"],
-        "title": "Fuar merkezi",
-        "text": "Fuar merkezi, sanayi başarıları, forumlar ve iş etkinlikleri için tasarlanmıştır.",
+        "title": "Fuar Merkezi",
+        "text": "Spor Kompleksi modern çok fonksiyonlu bir tesis olarak tasarlanmıştır. OSTIM Global bölgesi içerisinde dinamik bir çalışma ortamı sunar.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "6,680 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "4,800 m²"
+          }
         ]
       },
       {
         "id": "kindergarten",
         "images": ["kindergarten.jpg", "kindergarten.jpg", "kindergarten.jpg"],
         "title": "Anaokulu",
-        "text": "Anaokulu, bölge çalışanlarının çocukları için modern eğitim ve gelişim ortamı sunar.",
+        "text": "OSTIM Global sanayi bölgesinde çalışan personelin çocukları için güvenli ve destekleyici bir ortam sunan modern bir anaokulu.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "4,376 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "1,435 m²"
+          },
+          {
+            "label": "Kapasite",
+            "text": "240 kişi"
+          }
         ]
       },
       {
         "id": "school",
         "images": ["school.jpg", "school.jpg", "school.jpg"],
         "title": "Okul",
-        "text": "Okul, bölge sakinleri için modern ve kaliteli eğitim imkânları sağlar.",
+        "text": "OSTIM Global sanayi topluluğunda çalışan aileleri destekleyen bir eğitim tesisi.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "6,616 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "4,704 m²"
+          },
+          {
+            "label": "Kapasite",
+            "text": "660 kişi"
+          }
         ]
       },
       {
         "id": "university",
         "images": ["university.jpg", "university.jpg", "university.jpg"],
         "title": "Üniversite",
-        "text": "Üniversite, sanayi ve eğitimi entegre ederek nitelikli insan kaynağı yetiştirir.",
+        "text": "Sanayi ve inovasyon alanları için geleceğin profesyonellerini yetiştiren eğitim ve araştırma merkezi.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "6,928 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "4,704 m²"
+          },
+          {
+            "label": "Kullanım kapasitesi",
+            "text": "840 kişi"
+          }
         ]
       },
       {
         "id": "clinic",
         "images": ["clinic.jpg", "clinic.jpg", "clinic.jpg"],
         "title": "Klinik",
-        "text": "Klinik, bölge sakinleri için modern sağlık hizmetleri sunar.",
+        "text": "OSTIM Global sanayi topluluğunun sağlığını ve refahını destekleyen bir sağlık merkezi.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "3,424 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "2,445 m²"
+          }
         ]
       },
       {
         "id": "business",
         "images": ["business.jpg", "business.jpg", "business.jpg"],
-        "title": "İş merkezi",
-        "text": "İş merkezi, şirketler için modern ofis alanları ve profesyonel bir iş ortamı sunar.",
+        "title": "İş Merkezi",
+        "text": "OSTIM Global sanayi bölgesinde faaliyet gösteren şirketler için ofis alanları ve hizmetler sunan bir iş merkezi.",
         "areas": [
-          { "label": "Toplam alan", "text": "7,653 m²" },
-          { "label": "İnşaat alanı", "text": "1,538 m²" },
-          { "label": "Kullanılabilir alan", "text": "6,115 m²" }
+          {
+            "label": "Toplam alan",
+            "text": "5,782 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "7,300 m²"
+          }
+        ]
+      },
+      {
+        "id": "park",
+        "images": ["park.jpg", "park.jpg", "park.jpg"],
+        "title": "Teknoloji Parkı",
+        "text": "OSTIM Global sanayi bölgesi içerisinde inovasyon, araştırma ve teknoloji odaklı üretim için bir merkez.",
+        "areas": [
+          {
+            "label": "Toplam alan",
+            "text": "7,033 m²"
+          },
+          {
+            "label": "İnşaat alanı",
+            "text": "4,650 m²"
+          }
         ]
       }
     ]
@@ -423,7 +503,7 @@
 
   "hangar": {
     "title": "Hangarlar",
-    "text": "Hazır hangarlar mühendislik altyapısı ve teknik hizmetlerle tam donanımlıdır. Beton yapı: betonarme. Çatı: sandviç paneller. Duvar bölmeleri: sandviç paneller. Zemin: şap.",
+    "text": "İsteğe bağlı olarak hangarları birleştirip hacmi artırabilirsiniz.",
     "subtitle": "Altyapı ve teknik hizmetler:",
     "utils": [
       "Araç yolları",

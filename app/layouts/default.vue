@@ -5,6 +5,7 @@
     <slot />
     <LayoutFooter />
     <UiFormPopup />
+    <UiUpButton />
   </div>
 </template>
 
