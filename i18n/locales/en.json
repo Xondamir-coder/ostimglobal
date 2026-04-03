@@ -239,10 +239,10 @@
   },
 
   "contacts": {
-    "title": "Innovative AI Developer Team",
-    "text": "Our team of skilled developers and engineers has expertise in a variety of cutting-edge technologies, including machine learning, natural language processing, computer vision, and robotics. ",
-    "address-1": "Our Office /endline/ Ostim Global /endline/ Tashkent city, Furqat st. 5A",
-    "address-2": "post office: 100 000"
+    "title": "Get in touch",
+    "text": "Contact our team for investment inquiries, project details, and partnership opportunities at OSTIM Global.",
+    "address-1": "Zangiota District, Bagzor Street, Dostlik Street, Building 2, /endline/ Tashkent, Uzbekistan /endline/ tel: +998 55 055 10 10",
+    "address-2": "post office 100 000"
   },
 
   "news": {
@@ -276,7 +276,7 @@
 
   "footer": {
     "title": "Contact information",
-    "partners": "Hamkorlarimiz",
+    "partners": "Partners",
     "copyright": "Copyright © {year} Ostim Global. All rights reserved.",
     "dev": "Developed by",
     "office": "Our Office",
@@ -378,7 +378,7 @@
         "id": "expo",
         "images": ["expo.jpg", "expo-2.jpg", "expo.jpg"],
         "title": "Expo center",
-        "text": "The Sport Complex serves as a modern multi-functional facility designed. Dynamic working environment within the OSTIM Global zone.",
+        "text": "A modern exhibition space for showcasing industrial innovations, products, and business opportunities within OSTIM Global.",
         "areas": [
           {
             "label": "Total area",
@@ -495,6 +495,30 @@
           {
             "label": "Construction area",
             "text": "4,650 m²"
+          }
+        ]
+      },
+      {
+        "id": "logistic",
+        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
+        "title": "Logistic center",
+        "text": "A modern logistics hub ensuring efficient transportation, storage, and supply chain management for resident companies.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "11,246 m²"
+          }
+        ]
+      },
+      {
+        "id": "petrol",
+        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
+        "title": "Petrol",
+        "text": "On-site fueling infrastructure ensuring uninterrupted operations for transport and industrial activities.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "4,126 m²"
           }
         ]
       }

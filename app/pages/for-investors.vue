@@ -195,8 +195,8 @@ onMounted(() => {
     gap: 5.7rem;
     align-items: center;
     justify-content: space-between;
+    height: max(8rem, 40px);
     padding-inline: max(3rem, 18px);
-    padding-block: max(0.75rem, 8px);
     fill: #fff;
     border-radius: max(10rem, 50px);
     border: 1px solid #fff;
@@ -204,7 +204,6 @@ onMounted(() => {
       flex: 1;
     }
     span {
-      margin-bottom: 0.25em;
     }
     &-icon {
       width: max(2.9rem, 13px);
@@ -263,6 +262,9 @@ onMounted(() => {
         margin-bottom: -150px;
       }
     }
+    &:nth-child(3) {
+      gap: 10px;
+    }
     &:first-child {
       @media screen and (min-width: vars.$bp-lg) {
         justify-content: space-between;
@@ -315,6 +317,7 @@ onMounted(() => {
       font-size: max(5.5rem, 36px);
       font-weight: 400;
       line-height: 100%;
+      max-width: 10ch;
       letter-spacing: min(-0.22rem, -1.44px);
       @media screen and (max-width: vars.$bp-md) {
         order: -1;
@@ -335,7 +338,7 @@ onMounted(() => {
       letter-spacing: -1.8px;
     }
     &-title {
-      font-size: max(9.6rem, 64px);
+      font-size: max(8rem, 50px);
       font-weight: 300;
       letter-spacing: min(-0.384rem, -2.56px);
       line-height: 90%;
@@ -403,10 +406,8 @@ onMounted(() => {
     padding-block: 9px;
     padding-inline: 21px;
     font-size: 16px;
-    font-weight: 900;
-    span {
-      margin-bottom: 0.15em;
-    }
+    font-weight: 500;
+
     &-icon {
       width: 13px;
       fill: #fff;
@@ -433,6 +434,7 @@ onMounted(() => {
     }
   }
   p {
+    line-height: 1.5;
     @media screen and (min-width: vars.$bp-xl) {
       max-width: 90%;
       &:last-child {
@@ -541,15 +543,12 @@ onMounted(() => {
     &-label {
       @include mix.flex-center;
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 500;
       color: #fff;
       border-radius: max(3rem, 20px);
       background: var(--black, #111);
       width: 137px;
       height: 41px;
-    }
-    &-text {
-      font-weight: 500;
     }
     &-title {
       font-size: max(5.5rem, 36px);

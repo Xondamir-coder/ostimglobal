@@ -114,7 +114,7 @@ onBeforeUnmount(() => {
       align-items: center;
       height: max(4.1rem, 41px);
       padding-inline: max(1.7rem, 17px);
-      font-weight: 900;
+      font-weight: 500;
       font-size: max(1.6rem, 16px);
       border-radius: max(5rem, 50px);
       border: 1px solid transparent;
@@ -143,7 +143,7 @@ onBeforeUnmount(() => {
     span {
       transition: width 0.4s;
       width: 0;
-      font-weight: 900;
+      font-weight: 500;
       font-size: max(1.6rem, 16px);
       overflow: hidden;
     }

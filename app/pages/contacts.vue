@@ -95,8 +95,9 @@ usePageSEO('contacts');
     &-texts {
       display: flex;
       flex-direction: column;
-      font-weight: 500;
+      font-weight: 400;
       max-width: 30ch;
+      font-size: max(1.8rem, 18px);
     }
     &-label {
       @include mix.flex-center;
@@ -107,7 +108,7 @@ usePageSEO('contacts');
       font-size: 16px;
       width: max(13.5rem, 111px);
       height: 41px;
-      font-weight: 900;
+      font-weight: 500;
     }
     &-icon {
       width: max(5.7rem, 41px);

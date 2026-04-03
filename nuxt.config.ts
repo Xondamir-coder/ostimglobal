@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   },
   googleFonts: {
     families: {
-      'Zen Maru Gothic': [300, 400, 500, 700, 900],
+      'Google Sans': [400, 500, 600, 700],
       'Inter Tight': [400, 700],
       Unbounded: [300]
     }

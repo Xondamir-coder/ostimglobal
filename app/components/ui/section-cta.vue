@@ -42,17 +42,17 @@ onMounted(() => {
     padding-bottom: 0;
   }
   h2 {
-    max-width: 16ch;
+    max-width: 13ch;
   }
   p {
-    max-width: 50ch;
+    max-width: 35ch;
   }
   &__button {
     margin-left: auto;
     border-radius: 50px;
     background: #fff;
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 500;
     color: #000;
     padding-block: max(1.4rem, 10px);
     padding-inline: max(2.4rem, 20px);

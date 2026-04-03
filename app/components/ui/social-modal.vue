@@ -51,11 +51,15 @@
           </div>
           <ul v-if="currentPlace.areas" class="modal__content-list">
             <li v-for="area in currentPlace.areas" :key="area.label" class="modal__content-item">
-              <strong>{{ area.label }}</strong>
+              <span>{{ area.label }}</span>
               <span>{{ area.text }}</span>
             </li>
           </ul>
-          <button class="modal__content-button" @click="handleBook">
+          <button
+            v-if="currentPlace.id !== 'admin'"
+            class="modal__content-button"
+            @click="handleBook"
+          >
             <span>{{ $t('book') }}</span>
           </button>
         </div>
@@ -118,24 +122,29 @@ const handleBook = () => {
   margin: max(1rem, 5px);
   transition: all 0.7s;
 
+  @media screen and (min-width: vars.$bp-xl) {
+    min-height: min(84vh, max(65rem, 650px));
+  }
   @media screen and (max-width: vars.$bp-sm) {
     margin: 0;
   }
   &__content {
+    flex: 1;
     padding-left: calc(max(4.6rem, 24px) - 12px);
     font-size: max(2rem, 12px);
     color: #fff;
     display: grid;
     justify-content: space-between;
+    grid-auto-rows: max-content 1fr;
     grid-auto-columns: 0.85fr max-content max-content;
     grid-template-areas:
       'title title title'
       'text list button';
-    row-gap: 20px;
+    row-gap: 25px;
     @media screen and (max-width: vars.$bp-sm) {
-      padding-right: calc(51px - 12px);
+      padding-right: calc(21px - 12px);
       grid-auto-columns: 1fr max-content;
-      gap: 20px;
+      column-gap: 35px;
       grid-template-areas:
         'title title'
         'text list'
@@ -145,12 +154,13 @@ const handleBook = () => {
       display: flex;
       flex-direction: column;
       font-size: max(1.8rem, 10px);
+      line-height: 1.5;
       @media screen and (min-width: vars.$bp-xl) {
         padding-bottom: 40px;
       }
 
       &-title {
-        font-weight: bold;
+        font-weight: 500;
       }
     }
     &-label {
@@ -169,7 +179,7 @@ const handleBook = () => {
       border-radius: 30px;
       background: #fff;
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 500;
       position: relative;
       overflow: hidden;
       transition:
@@ -197,30 +207,42 @@ const handleBook = () => {
         left: -10%;
       }
       span {
-        margin-bottom: 0.25em;
         z-index: 1;
       }
     }
     &-text {
-      font-size: max(1.8rem, 10px);
       padding-bottom: 3rem;
+      font-size: max(1.6rem, 12px);
+      line-height: 1.5;
       grid-area: text;
+      @media screen and (max-width: vars.$bp-sm) {
+        padding-bottom: 0;
+      }
     }
     &-item {
       display: flex;
       flex-direction: column;
+      font-size: max(1.6rem, 12px);
+      line-height: 1.5;
+      span:first-child {
+        font-weight: 600;
+      }
     }
     &-list {
       padding-bottom: 3rem;
       grid-area: list;
       display: flex;
       flex-direction: column;
+      gap: 5px;
+      @media screen and (max-width: vars.$bp-sm) {
+        padding-bottom: 0;
+      }
     }
     &-title {
       grid-area: title;
       line-height: 1;
       font-size: max(5rem, 36px);
-      font-weight: 500;
+      font-weight: 400;
     }
   }
   &__top {

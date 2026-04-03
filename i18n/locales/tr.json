@@ -239,10 +239,10 @@
   },
 
   "contacts": {
-    "title": "Yenilikçi AI geliştirici ekibi",
-    "text": "Deneyimli geliştirici ve mühendislerden oluşan ekibimiz; makine öğrenimi, doğal dil işleme, bilgisayarlı görü ve robotik gibi ileri teknolojilerde uzmanlığa sahiptir.",
-    "address-1": "Ofisimiz /endline/ Ostim Global /endline/ Taşkent şehri, Furkat caddesi 5A",
-    "address-2": "posta kodu: 100 000"
+    "title": "İletişime geçin",
+    "text": "OSTİM Global kapsamında yatırım talepleri, proje detayları ve iş birliği fırsatları için ekibimizle iletişime geçin.",
+    "address-1": "Zangiota İlçesi, Bagzor Caddesi, Dostlik Caddesi, Bina 2, /endline/ Taşkent, Özbekistan /endline/ tel: +998 55 055 10 10",
+    "address-2": "posta kodu 100 000"
   },
 
   "news": {
@@ -378,7 +378,7 @@
         "id": "expo",
         "images": ["expo.jpg", "expo-2.jpg", "expo.jpg"],
         "title": "Fuar Merkezi",
-        "text": "Spor Kompleksi modern çok fonksiyonlu bir tesis olarak tasarlanmıştır. OSTIM Global bölgesi içerisinde dinamik bir çalışma ortamı sunar.",
+        "text": "OSTİM Global bünyesinde endüstriyel yenilikleri, ürünleri ve iş fırsatlarını sergilemek için modern bir fuar alanı.",
         "areas": [
           {
             "label": "Toplam alan",
@@ -495,6 +495,30 @@
           {
             "label": "İnşaat alanı",
             "text": "4,650 m²"
+          }
+        ]
+      },
+      {
+        "id": "logistic",
+        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
+        "title": "Lojistik merkez",
+        "text": "Yerleşik şirketler için verimli taşımacılık, depolama ve tedarik zinciri yönetimini sağlayan modern bir lojistik merkez.",
+        "areas": [
+          {
+            "label": "Toplam alan",
+            "text": "11,246 m²"
+          }
+        ]
+      },
+      {
+        "id": "petrol",
+        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
+        "title": "Akaryakıt istasyonu",
+        "text": "Ulaşım ve endüstriyel faaliyetler için kesintisiz operasyon sağlayan yerinde yakıt altyapısı.",
+        "areas": [
+          {
+            "label": "Toplam alan",
+            "text": "4,126 m²"
           }
         ]
       }

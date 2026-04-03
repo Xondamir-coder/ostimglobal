@@ -15,7 +15,7 @@
     <section class="social">
       <UiPicture src="ball.png" alt="ball" class="social__ball" />
       <div class="social__row">
-        <UiPicture src="footer-banner.jpg" alt="banner" class="social__banner" />
+        <UiPicture src="about-banner.jpg" alt="banner" class="social__banner" />
         <div class="social__card">
           <svg
             class="social__card-icon"
@@ -310,7 +310,7 @@ onMounted(() => {
       @include mix.flex-center;
       align-self: flex-start;
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 500;
       flex-shrink: 0;
       padding-inline: max(2.4rem, 20px);
       height: 41px;
@@ -353,10 +353,10 @@ onMounted(() => {
       border-bottom: none;
     }
     h2 {
-      max-width: 20ch;
+      max-width: 15ch;
     }
     p {
-      max-width: 40ch;
+      max-width: 30ch;
     }
   }
 }
@@ -393,7 +393,7 @@ onMounted(() => {
     gap: 24px;
     justify-content: space-between;
     p {
-      max-width: 50ch;
+      max-width: 40ch;
     }
   }
 }
@@ -507,26 +507,24 @@ onMounted(() => {
     }
     &-label {
       @include mix.flex-center;
-      width: max(13.5rem, 85px);
-      padding-inline: 2.5rem;
+      align-self: flex-start;
+      padding-inline: max(3.5rem, 20px);
       height: 41px;
       border-radius: max(5rem, 30px);
       background: var(--white, #fff);
       color: #000;
       font-size: 16px;
-      font-weight: 900;
+      font-weight: 500;
     }
     &-desc {
       margin-top: auto;
       padding-left: calc(max(4rem, 20px) - 15px);
       font-size: 16px;
-      font-weight: 500;
+      line-height: 1.4;
     }
     &-title {
       padding-left: calc(max(4rem, 20px) - 15px);
-      font-family: 'Zen Maru Gothic';
       font-size: 36px;
-      font-weight: 400;
       line-height: 138%;
       letter-spacing: -1.8px;
     }
@@ -554,6 +552,7 @@ onMounted(() => {
     p {
       display: flex;
       flex-direction: column;
+      line-height: 1.5;
       animation: slide-from-bottom-20 0.6s backwards;
       @for $i from 1 through 2 {
         &:nth-child(#{$i}) {

@@ -115,7 +115,7 @@ usePageSEO('project');
     }
     span {
       margin-inline: auto;
-      margin-bottom: 0.2em;
+
       font-size: max(1.5rem, 14px);
       font-weight: 500;
       color: #fff;
@@ -168,7 +168,7 @@ usePageSEO('project');
       font-size: max(1.6rem, 10px);
       font-weight: 500;
       margin-inline: auto;
-      margin-bottom: 0.2em;
+
       &:last-of-type {
         @media screen and (min-width: vars.$bp-md) {
           display: none;

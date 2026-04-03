@@ -105,19 +105,19 @@ const boxes = computed(() => [
     links: [
       {
         label: 'Facebook',
-        link: 'https://www.facebook.com'
+        link: 'https://www.facebook.com/share/1BvJpRUsq7/?mibextid=wwXIfr'
       },
       {
         label: 'Instagram',
-        link: 'https://www.instagram.com'
+        link: 'https://www.instagram.com/ostimglobal?igsh=MXR5MmZzbXE1OXhmeg=='
       },
       {
-        label: 'Linkedin',
-        link: 'https://www.linkedin.com'
+        label: 'Youtube',
+        link: 'https://youtube.com/@ostimglobal?si=f17Enm4Vs34btBMs'
       },
       {
         label: 'Telegram',
-        link: 'https://telegram.org/'
+        link: 'https://t.me/ostimglobal_uz'
       }
     ]
   }
@@ -349,7 +349,7 @@ const boxes = computed(() => [
     line-height: 100%;
     letter-spacing: -1.76px;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 </style>

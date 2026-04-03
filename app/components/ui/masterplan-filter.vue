@@ -92,25 +92,29 @@ const route = useRoute();
 const zonesID = ['industrial', 'social'];
 const searchItems = genplanData.filter(el => el.zone?.includes('industrial'));
 
+const sortAlphabetically = (a, b) => a.id.localeCompare(b.id, undefined, { numeric: true });
+
 const zones = computed(() =>
   useMapRt('genplan.zones')?.map((el, i) => ({
     label: el,
     id: zonesID[i]
   }))
 );
-const socialPlaces = computed(() => useMapRt('genplan.social-places'));
+const socialPlaces = computed(() =>
+  useMapRt('genplan.social-places').sort((a, b) =>
+    a.id.localeCompare(b.id, undefined, { numeric: true })
+  )
+);
 const industrialBlocks = genplanData
   .filter(el => el.zone === 'industrial' && !el.block)
-  .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
+  .sort(sortAlphabetically);
 const industrialHangars = computed(() =>
   genplanData
     .filter(el => el.zone === 'industrial-hangars' && el.block === route.query?.block)
-    .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
+    .sort(sortAlphabetically)
 );
 const searchResults = computed(() =>
-  searchItems
-    .filter(s => s.id?.includes(query.value.toUpperCase()))
-    .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
+  searchItems.filter(s => s.id?.includes(query.value.toUpperCase())).sort(sortAlphabetically)
 );
 const selectedPlaceID = computed(() => route.query?.place);
 const selectedHangarID = computed(() => route.query?.hangar);
@@ -227,7 +231,6 @@ watch(
     flex-shrink: 0;
     color: #fff;
     font-size: max(2.3rem, 20px);
-    font-weight: 500;
     letter-spacing: -1.5px;
     border-radius: 15px;
     height: max(7.1rem, 57px);
@@ -262,10 +265,9 @@ watch(
     &-input {
       width: 100%;
       padding-inline: 10px;
-      margin-bottom: 0.2em;
+
       color: #fff;
       font-size: max(2.3rem, 20px);
-      font-weight: 500;
       letter-spacing: -1.5px;
 
       &::placeholder {

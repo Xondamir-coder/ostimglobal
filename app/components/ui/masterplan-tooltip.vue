@@ -164,9 +164,8 @@ onMounted(async () => {
 
     span {
       z-index: 2;
-      font-weight: 900;
+      font-weight: 500;
       font-size: max(1.4rem, 14px);
-      margin-bottom: 0.2em;
     }
   }
 }

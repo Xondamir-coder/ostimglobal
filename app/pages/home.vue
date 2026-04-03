@@ -312,9 +312,7 @@ onMounted(() => {
       @media screen and (max-width: vars.$bp-md) {
         display: none;
       }
-      span {
-        margin-bottom: 0.3em;
-      }
+
       &-icon {
         width: 13px;
       }
@@ -363,6 +361,7 @@ onMounted(() => {
     font-size: max(3.6rem, 16px);
     font-weight: 400;
     display: flex;
+    height: max(8rem, 40px);
     gap: 5.7rem;
     align-items: center;
     justify-content: space-between;
@@ -375,7 +374,6 @@ onMounted(() => {
       flex: 1;
     }
     span {
-      margin-bottom: 0.25em;
     }
     &-icon {
       width: max(2.9rem, 13px);
@@ -408,7 +406,7 @@ onMounted(() => {
     --text-clr: #fff;
     padding-block: max(0.9rem, 7px);
     font-size: max(1.6rem, 14px);
-    font-weight: 900;
+    font-weight: 500;
     padding-inline: max(2.1rem, 21px);
     border-radius: 50px;
     background-color: var(--bg-clr);
@@ -705,7 +703,7 @@ onMounted(() => {
   }
   &__box {
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 500;
     display: inline-flex;
     justify-content: space-between;
     align-items: center;
@@ -713,10 +711,10 @@ onMounted(() => {
     border: 1px solid #fff;
     padding-block: 5px;
     padding-right: 12px;
+    height: max(4rem, 40px);
     span {
       flex: 1;
       text-align: center;
-      margin-bottom: 0.2em;
     }
     &-icon {
       width: 13px;
@@ -792,7 +790,7 @@ onMounted(() => {
           max-width: 35.6rem;
         }
         &:last-child {
-          max-width: 23.6rem;
+          max-width: 27rem;
         }
       }
     }

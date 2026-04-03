@@ -95,10 +95,10 @@ usePageSEO('news');
       }
     }
     h1 {
-      max-width: 17ch;
+      max-width: 15ch;
     }
     p {
-      max-width: 60ch;
+      max-width: 45ch;
     }
   }
 }

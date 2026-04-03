@@ -73,7 +73,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .header {
   font-size: max(1.6rem, 14px);
-  font-weight: 900;
+  font-weight: 600;
   padding-inline: var(--spacing-inline);
   padding-top: 4.2rem;
   position: relative;
@@ -104,9 +104,7 @@ onMounted(() => {
     color: #111;
     width: 70px;
     height: 30px;
-    span {
-      margin-bottom: 0.2em;
-    }
+
     @media screen and (min-width: vars.$bp-lg) {
       display: none;
     }
@@ -125,9 +123,7 @@ onMounted(() => {
       background-color: #111;
       color: #fff;
     }
-    span {
-      margin-bottom: 0.3em;
-    }
+
     @media screen and (max-width: vars.$bp-lg) {
       display: none;
     }
@@ -176,13 +172,10 @@ onMounted(() => {
       }
       & > * {
         @include mix.flex-center;
-        padding-block: 4px;
+        padding-block: calc(13px / 2);
         transition: color 0.3s;
         &:hover {
           color: #fc0;
-        }
-        span {
-          margin-bottom: 0.3em;
         }
       }
     }
@@ -198,9 +191,6 @@ onMounted(() => {
       &:hover {
         background-color: #fff;
         color: #111;
-      }
-      span {
-        margin-bottom: 0.3em;
       }
     }
   }

@@ -246,10 +246,10 @@
   },
 
   "contacts": {
-    "title": "Innovatsion AI dasturchilar jamoasi",
-    "text": "Bizning tajribali dasturchi va muhandislar jamoamiz mashinaviy o‘rganish, tabiiy tilni qayta ishlash, kompyuter ko‘rishi va robototexnika kabi ilg‘or texnologiyalar bo‘yicha chuqur bilimga ega.",
-    "address-1": "Bizning ofis /endline/ Ostim Global /endline/ Toshkent shahri, Furqat ko‘chasi 5A",
-    "address-2": "pochta indeksi: 100 000"
+    "title": "Bog‘lanish",
+    "text": "OSTIM Global doirasida investitsiya savollari, loyiha tafsilotlari va hamkorlik imkoniyatlari bo‘yicha jamoamiz bilan bog‘laning.",
+    "address-1": "Zangiota tumani, Bag‘zor ko‘chasi, Do‘stlik ko‘chasi, 2-bino, /endline/ Toshkent, O‘zbekiston /endline/ tel: +998 55 055 10 10",
+    "address-2": "pochta indeksi 100 000"
   },
 
   "news": {
@@ -364,7 +364,7 @@
         "id": "expo",
         "images": ["expo.jpg", "expo-2.jpg", "expo.jpg"],
         "title": "Ekspo markazi",
-        "text": "Sport majmuasi zamonaviy ko‘p funksiyali obyekt sifatida loyihalashtirilgan. OSTIM Global hududida dinamik ish muhitini ta’minlaydi.",
+        "text": "OSTIM Global doirasida sanoat innovatsiyalari, mahsulotlar va biznes imkoniyatlarini namoyish etish uchun zamonaviy ko‘rgazma maydoni.",
         "areas": [
           { "label": "Umumiy maydon", "text": "6,680 m²" },
           { "label": "Qurilish maydoni", "text": "4,800 m²" }
@@ -431,6 +431,30 @@
         "areas": [
           { "label": "Umumiy maydon", "text": "7,033 m²" },
           { "label": "Qurilish maydoni", "text": "4,650 m²" }
+        ]
+      },
+      {
+        "id": "logistic",
+        "title": "Logistika markazi",
+        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
+        "text": "Rezident kompaniyalar uchun samarali transport, saqlash va ta’minot zanjiri boshqaruvini ta’minlovchi zamonaviy logistika markazi.",
+        "areas": [
+          {
+            "label": "Umumiy maydon",
+            "text": "11,246 m²"
+          }
+        ]
+      },
+      {
+        "id": "petrol",
+        "title": "Yoqilg‘i quyish shoxobchasi",
+        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
+        "text": "Transport va sanoat faoliyatining uzluksiz ishlashini ta’minlovchi hudud ichidagi yoqilg‘i infratuzilmasi.",
+        "areas": [
+          {
+            "label": "Umumiy maydon",
+            "text": "4,126 m²"
+          }
         ]
       }
     ]

@@ -155,7 +155,8 @@ onMounted(() => {
     flex-direction: column;
     gap: max(4rem, 30px);
     p {
-      font-size: max(2rem, 14px);
+      font-size: max(1.8rem, 14px);
+      line-height: 1.5;
     }
     @media screen and (max-width: vars.$bp-lg) {
       padding-inline: max(7rem, 20px);

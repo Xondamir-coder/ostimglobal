@@ -146,7 +146,7 @@ const submitForm = async () => {
   }
   &__title {
     font-size: max(3.8rem, 30px);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 131%;
     letter-spacing: -1.9px;
     text-transform: uppercase;
@@ -189,7 +189,7 @@ const submitForm = async () => {
     margin-top: calc(55px - 40px);
     border-radius: 99px;
     background: #34c759;
-    font-weight: 900;
+    font-weight: 500;
     height: max(7rem, 49px);
     transition: all 0.4s;
     font-size: max(2rem, 18px);
