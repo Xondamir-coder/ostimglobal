@@ -61,7 +61,9 @@ const placesMap = {
   school: 'Школа',
   university: 'Университет',
   clinic: 'Клиника',
-  business: 'Бизнес-центр'
+  business: 'Бизнес-центр',
+  logistic: 'Логистический центр',
+  petrol: 'Заправочная станция'
 };
 
 const prependPhone = () => {
