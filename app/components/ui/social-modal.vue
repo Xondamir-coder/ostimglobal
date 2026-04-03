@@ -34,29 +34,29 @@
         </div>
         <div class="modal__content">
           <h2 class="modal__content-title">
-            {{ currentPlace.title }}
+            {{ currentPlace?.title }}
           </h2>
-          <p v-if="currentPlace.text" class="modal__content-text">
-            {{ currentPlace.text }}
+          <p v-if="currentPlace?.text" class="modal__content-text">
+            {{ currentPlace?.text }}
           </p>
-          <div v-if="currentPlace.labels" class="modal__content-labels">
-            <span class="modal__content-labels-title"> {{ currentPlace.labels.title }}: </span>
+          <div v-if="currentPlace?.labels" class="modal__content-labels">
+            <span class="modal__content-labels-title"> {{ currentPlace?.labels.title }}: </span>
             <span
-              v-for="label in currentPlace.labels.items"
+              v-for="label in currentPlace?.labels.items"
               :key="label"
               class="modal__content-label"
             >
               {{ label }}
             </span>
           </div>
-          <ul v-if="currentPlace.areas" class="modal__content-list">
-            <li v-for="area in currentPlace.areas" :key="area.label" class="modal__content-item">
+          <ul v-if="currentPlace?.areas" class="modal__content-list">
+            <li v-for="area in currentPlace?.areas" :key="area.label" class="modal__content-item">
               <span>{{ area.label }}</span>
               <span>{{ area.text }}</span>
             </li>
           </ul>
           <button
-            v-if="currentPlace.id !== 'admin'"
+            v-if="currentPlace?.id !== 'admin'"
             class="modal__content-button"
             @click="handleBook"
           >
@@ -78,8 +78,9 @@ const currentSlide = ref(0);
 const isAnimating = ref(false);
 
 const place = computed(() => route.query?.place);
-const socialPlaces = computed(() => useMapRt('genplan.social-places'));
-const currentPlace = computed(() => socialPlaces.value.find(el => el.id === place.value));
+const zone = computed(() => route.query?.zone);
+const places = computed(() => useMapRt(`genplan.${zone.value}-places`));
+const currentPlace = computed(() => places.value.find(el => el.id === place.value));
 
 const closeModal = () => {
   showSocialModal.value = false;
@@ -90,7 +91,7 @@ const handleSlide = dir => {
 
   if (dir === 'prev' && currentSlide.value > 0) {
     currentSlide.value--;
-  } else if (dir === 'next' && currentSlide.value < currentPlace.value?.images.length) {
+  } else if (dir === 'next' && currentSlide.value < currentPlace?.value?.images.length) {
     currentSlide.value++;
   }
 

@@ -306,7 +306,33 @@
   },
 
   "genplan": {
-    "zones": ["Industrial zone", "Social zone"],
+    "zones": ["Industrial zone", "Social zone", "Technical service"],
+    "technical-places": [
+      {
+        "id": "logistic",
+        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
+        "title": "Logistic center",
+        "text": "A modern logistics hub ensuring efficient transportation, storage, and supply chain management for resident companies.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "11,246 m²"
+          }
+        ]
+      },
+      {
+        "id": "petrol",
+        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
+        "title": "Petrol",
+        "text": "On-site fueling infrastructure ensuring uninterrupted operations for transport and industrial activities.",
+        "areas": [
+          {
+            "label": "Total area",
+            "text": "4,126 m²"
+          }
+        ]
+      }
+    ],
     "social-places": [
       {
         "id": "admin",
@@ -495,30 +521,6 @@
           {
             "label": "Construction area",
             "text": "4,650 m²"
-          }
-        ]
-      },
-      {
-        "id": "logistic",
-        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
-        "title": "Logistic center",
-        "text": "A modern logistics hub ensuring efficient transportation, storage, and supply chain management for resident companies.",
-        "areas": [
-          {
-            "label": "Total area",
-            "text": "11,246 m²"
-          }
-        ]
-      },
-      {
-        "id": "petrol",
-        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
-        "title": "Petrol",
-        "text": "On-site fueling infrastructure ensuring uninterrupted operations for transport and industrial activities.",
-        "areas": [
-          {
-            "label": "Total area",
-            "text": "4,126 m²"
           }
         ]
       }

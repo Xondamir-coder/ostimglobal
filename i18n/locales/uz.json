@@ -313,7 +313,33 @@
   },
 
   "genplan": {
-    "zones": ["Sanoat zonasi", "Ijtimoiy zona"],
+    "zones": ["Sanoat zonasi", "Ijtimoiy zona", "Texnik xizmat"],
+    "technical-places": [
+      {
+        "id": "logistic",
+        "title": "Logistika markazi",
+        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
+        "text": "Rezident kompaniyalar uchun samarali transport, saqlash va ta’minot zanjiri boshqaruvini ta’minlovchi zamonaviy logistika markazi.",
+        "areas": [
+          {
+            "label": "Umumiy maydon",
+            "text": "11,246 m²"
+          }
+        ]
+      },
+      {
+        "id": "petrol",
+        "title": "Yoqilg‘i quyish shoxobchasi",
+        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
+        "text": "Transport va sanoat faoliyatining uzluksiz ishlashini ta’minlovchi hudud ichidagi yoqilg‘i infratuzilmasi.",
+        "areas": [
+          {
+            "label": "Umumiy maydon",
+            "text": "4,126 m²"
+          }
+        ]
+      }
+    ],
     "social-places": [
       {
         "id": "admin",
@@ -431,30 +457,6 @@
         "areas": [
           { "label": "Umumiy maydon", "text": "7,033 m²" },
           { "label": "Qurilish maydoni", "text": "4,650 m²" }
-        ]
-      },
-      {
-        "id": "logistic",
-        "title": "Logistika markazi",
-        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
-        "text": "Rezident kompaniyalar uchun samarali transport, saqlash va ta’minot zanjiri boshqaruvini ta’minlovchi zamonaviy logistika markazi.",
-        "areas": [
-          {
-            "label": "Umumiy maydon",
-            "text": "11,246 m²"
-          }
-        ]
-      },
-      {
-        "id": "petrol",
-        "title": "Yoqilg‘i quyish shoxobchasi",
-        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
-        "text": "Transport va sanoat faoliyatining uzluksiz ishlashini ta’minlovchi hudud ichidagi yoqilg‘i infratuzilmasi.",
-        "areas": [
-          {
-            "label": "Umumiy maydon",
-            "text": "4,126 m²"
-          }
         ]
       }
     ]

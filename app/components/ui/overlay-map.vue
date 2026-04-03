@@ -58,6 +58,10 @@ const spotlights = [
   {
     path: 'M1440 812H0V0H1440V812ZM562.5 515L670.5 681.5L1145.5 515L1008.5 365.5L562.5 515Z',
     id: 'social'
+  },
+  {
+    path: 'M0 0H1440L992.5 168.494L903 91.5L874 71L704 85.5L841.5 215L992.5 168.494L1310.5 450L1209.5 489.5L1226.5 514.5L1293.5 508.5H1368.5L1310.5 450L992.5 168.494L1440 0V812H0V0Z',
+    id: 'technical'
   }
 ];
 
@@ -76,9 +80,9 @@ const selectedZoneID = computed(() => route.query?.zone);
 const selectedBlockID = computed(() => route.query?.block);
 
 const handlePathClick = item => {
-  if (item.zone === 'social') {
+  if (item.zone === 'social' || item.zone === 'technical') {
     showSocialModal.value = true;
-    replacePath({ zone: 'social', place: item.id });
+    replacePath({ zone: item.zone, place: item.id });
   } else if (item.zone === 'industrial') {
     replacePath({ zone: 'industrial-hangars', block: item.id });
   } else {

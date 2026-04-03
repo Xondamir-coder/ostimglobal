@@ -45,7 +45,7 @@ const handleBack = () => {
     });
   } else if (route.query?.place) {
     replacePath({
-      zone: 'social'
+      zone: route.query?.zone
     });
   } else {
     replacePath();

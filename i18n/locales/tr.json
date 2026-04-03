@@ -306,7 +306,33 @@
   },
 
   "genplan": {
-    "zones": ["Sanayi bölgesi", "Sosyal alan"],
+    "zones": ["Endüstriyel alan", "Sosyal alan", "Teknik hizmet"],
+    "technical-places": [
+      {
+        "id": "logistic",
+        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
+        "title": "Lojistik merkez",
+        "text": "Yerleşik şirketler için verimli taşımacılık, depolama ve tedarik zinciri yönetimini sağlayan modern bir lojistik merkez.",
+        "areas": [
+          {
+            "label": "Toplam alan",
+            "text": "11,246 m²"
+          }
+        ]
+      },
+      {
+        "id": "petrol",
+        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
+        "title": "Akaryakıt istasyonu",
+        "text": "Ulaşım ve endüstriyel faaliyetler için kesintisiz operasyon sağlayan yerinde yakıt altyapısı.",
+        "areas": [
+          {
+            "label": "Toplam alan",
+            "text": "4,126 m²"
+          }
+        ]
+      }
+    ],
     "social-places": [
       {
         "id": "admin",
@@ -495,30 +521,6 @@
           {
             "label": "İnşaat alanı",
             "text": "4,650 m²"
-          }
-        ]
-      },
-      {
-        "id": "logistic",
-        "images": ["logistic.jpg", "logistic.jpg", "logistic.jpg"],
-        "title": "Lojistik merkez",
-        "text": "Yerleşik şirketler için verimli taşımacılık, depolama ve tedarik zinciri yönetimini sağlayan modern bir lojistik merkez.",
-        "areas": [
-          {
-            "label": "Toplam alan",
-            "text": "11,246 m²"
-          }
-        ]
-      },
-      {
-        "id": "petrol",
-        "images": ["petrol.jpg", "petrol.jpg", "petrol.jpg"],
-        "title": "Akaryakıt istasyonu",
-        "text": "Ulaşım ve endüstriyel faaliyetler için kesintisiz operasyon sağlayan yerinde yakıt altyapısı.",
-        "areas": [
-          {
-            "label": "Toplam alan",
-            "text": "4,126 m²"
           }
         ]
       }

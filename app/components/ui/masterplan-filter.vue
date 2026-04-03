@@ -55,6 +55,19 @@
         </button>
       </div>
 
+      <!-- Show technical zone labels -->
+      <div v-else-if="selectedZoneID === 'technical'" class="filter__items" data-lenis-prevent>
+        <button
+          v-for="place in techPlaces"
+          :key="place.id"
+          class="filter__item"
+          :class="{ active: place.id === selectedPlaceID }"
+          @click="selectTech(place.id)"
+        >
+          <span>{{ place.title }}</span>
+        </button>
+      </div>
+
       <!-- Show industrial zone blocks -->
       <div v-else-if="selectedZoneID === 'industrial'" class="filter__items" data-lenis-prevent>
         <button
@@ -89,7 +102,7 @@ import genplanData from '~/assets/data/genplan.json';
 
 const route = useRoute();
 
-const zonesID = ['industrial', 'social'];
+const zonesID = ['industrial', 'social', 'technical'];
 const searchItems = genplanData.filter(el => el.zone?.includes('industrial'));
 
 const sortAlphabetically = (a, b) => a.id.localeCompare(b.id, undefined, { numeric: true });
@@ -100,11 +113,8 @@ const zones = computed(() =>
     id: zonesID[i]
   }))
 );
-const socialPlaces = computed(() =>
-  useMapRt('genplan.social-places').sort((a, b) =>
-    a.id.localeCompare(b.id, undefined, { numeric: true })
-  )
-);
+const socialPlaces = computed(() => useMapRt('genplan.social-places').sort(sortAlphabetically));
+const techPlaces = computed(() => useMapRt('genplan.technical-places').sort(sortAlphabetically));
 const industrialBlocks = genplanData
   .filter(el => el.zone === 'industrial' && !el.block)
   .sort(sortAlphabetically);
@@ -138,6 +148,11 @@ const selectResult = res => {
 };
 const selectSocial = id => {
   replacePath({ zone: 'social', place: id });
+  showSocialModal.value = true;
+  emits('click-path', id);
+};
+const selectTech = id => {
+  replacePath({ zone: 'technical', place: id });
   showSocialModal.value = true;
   emits('click-path', id);
 };
