@@ -102,22 +102,25 @@ import genplanData from '~/assets/data/genplan.json';
 
 const route = useRoute();
 
+const containerRef = ref();
+const showContainer = ref(true);
+const query = ref('');
+
 const zonesID = ['industrial', 'social', 'technical'];
 const searchItems = genplanData.filter(el => el.zone?.includes('industrial'));
 
 const sortAlphabetically = (a, b) => a.id.localeCompare(b.id, undefined, { numeric: true });
 
-const zones = computed(() =>
-  useMapRt('genplan.zones')?.map((el, i) => ({
-    label: el,
-    id: zonesID[i]
-  }))
-);
-const socialPlaces = computed(() => useMapRt('genplan.social-places').sort(sortAlphabetically));
-const techPlaces = computed(() => useMapRt('genplan.technical-places').sort(sortAlphabetically));
+const zones = useMapRt('genplan.zones')?.map((el, i) => ({
+  label: el,
+  id: zonesID[i]
+}));
+const socialPlaces = useMapRt('genplan.social-places').sort(sortAlphabetically);
+const techPlaces = useMapRt('genplan.technical-places').sort(sortAlphabetically);
 const industrialBlocks = genplanData
   .filter(el => el.zone === 'industrial' && !el.block)
   .sort(sortAlphabetically);
+
 const industrialHangars = computed(() =>
   genplanData
     .filter(el => el.zone === 'industrial-hangars' && el.block === route.query?.block)
@@ -130,10 +133,6 @@ const selectedPlaceID = computed(() => route.query?.place);
 const selectedHangarID = computed(() => route.query?.hangar);
 const selectedZoneID = computed(() => route.query?.zone);
 const selectedBlockID = computed(() => route.query?.block);
-
-const containerRef = ref();
-const showContainer = ref(true);
-const query = ref('');
 
 const showSocialModal = useState('showSocialModal');
 

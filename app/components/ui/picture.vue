@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-const props = defineProps({
+const { src } = defineProps({
   src: {
     type: String,
     required: true
@@ -47,7 +47,7 @@ const props = defineProps({
   }
 });
 
-const splittedName = computed(() => props.src.replace(/\.[^/.]+$/, ''));
+const splittedName = src.replace(/\.[^/.]+$/, '');
 </script>
 
 <style lang="scss" scoped>

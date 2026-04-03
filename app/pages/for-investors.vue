@@ -113,13 +113,10 @@ import {
 } from '#components';
 
 const heroLogos = [SvgInvestorsHero1, SvgInvestorsHero2, SvgInvestorsHero3, SvgInvestorsHero4];
-const heroCards = computed(() =>
-  useMapRt('investors.hero.cards')?.map((el, i) => ({
-    text: el,
-    logo: heroLogos[i]
-  }))
-);
-
+const heroCards = useMapRt('investors.hero.cards')?.map((el, i) => ({
+  text: el,
+  logo: heroLogos[i]
+}));
 usePageSEO('investors');
 
 const { $gsap } = useNuxtApp();

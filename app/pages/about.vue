@@ -215,6 +215,9 @@ onMounted(() => {
     border-radius: max(3rem, 20px);
     justify-content: space-between;
     overflow: hidden;
+    @media screen and (max-width: vars.$bp-xl) {
+      aspect-ratio: initial !important;
+    }
     & > *:not(picture) {
       z-index: 1;
     }
@@ -223,38 +226,35 @@ onMounted(() => {
         grid-area: card-#{$i};
       }
     }
-    &:first-child {
-      color: #000;
-      background-color: #ffc700;
+    &:first-child,
+    &:nth-child(2) {
       .info__card-content {
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         align-items: flex-end;
-        p {
-          max-width: 40ch;
+        padding-inline: 13px;
+        @media screen and (max-width: vars.$bp-sm) {
+          grid-template-columns: 1fr;
+          gap: 12px;
         }
         h3 {
           max-width: 10ch;
         }
       }
+    }
+    &:first-child {
+      color: #000;
+      background-color: #ffc700;
+      aspect-ratio: 874 / 352;
+
       .info__card-label {
         color: #fff;
         background-color: #000;
       }
     }
     &:nth-child(2) {
+      aspect-ratio: 874 / 299;
       background-color: #ff383c;
-      .info__card-content {
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-end;
-        p {
-          max-width: 40ch;
-        }
-        h3 {
-          max-width: 10ch;
-        }
-      }
       color: #fff;
       .info__card-label {
         background-color: #000;
@@ -272,6 +272,7 @@ onMounted(() => {
       }
     }
     &:last-child {
+      aspect-ratio: 561 / 422;
       background-color: #ffc700;
       color: #fff;
       .info__card-title {
@@ -285,7 +286,6 @@ onMounted(() => {
     &-title {
       font-size: max(5.6rem, 36px);
       font-weight: 400;
-      letter-spacing: min(-0.28rem, -1.8px);
     }
     &-content {
       display: flex;
@@ -323,7 +323,6 @@ onMounted(() => {
   &__cards {
     display: grid;
     grid-auto-columns: 1.56fr 1fr;
-    grid-auto-rows: 352px 133px 150px 256px;
     grid-template-areas:
       'card-1 card-3'
       'card-2 card-3'
@@ -464,7 +463,9 @@ onMounted(() => {
     &:nth-of-type(2) {
       .social__card {
         background-color: #222;
-        order: -1;
+        @media screen and (max-width: vars.$bp-md) {
+          order: 1;
+        }
       }
     }
     &:last-of-type {

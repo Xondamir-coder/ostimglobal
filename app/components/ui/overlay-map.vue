@@ -20,7 +20,7 @@
             class="overlay__container-path"
             :class="{
               active:
-                item.zone === 'social'
+                item.zone === 'social' || item.zone === 'technical'
                   ? item.id === selectedPlaceID
                   : item.block
                     ? item.id === selectedHangarID

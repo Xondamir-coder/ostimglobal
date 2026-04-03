@@ -166,12 +166,10 @@
 
 <script setup>
 const queries = ['industrial', 'social'];
-const cards = computed(() =>
-  useMapRt('home.hero.cards')?.map((el, i) => ({
-    ...el,
-    query: queries[i]
-  }))
-);
+const cards = useMapRt('home.hero.cards')?.map((el, i) => ({
+  ...el,
+  query: queries[i]
+}));
 
 usePageSEO('home');
 
