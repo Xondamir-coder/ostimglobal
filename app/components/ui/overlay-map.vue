@@ -428,6 +428,9 @@ defineExpose({
       &:not(.industrial) > *[data-zone='industrial'] {
         pointer-events: none;
       }
+      &:not(.technical) > *[data-zone='technical'] {
+        pointer-events: none;
+      }
     }
 
     &-path {
