@@ -34,7 +34,7 @@ export default defineNuxtConfig({
   },
   i18n: {
     defaultLocale: 'en',
-    baseUrl: 'https://www.ostimglobal.com/',
+    baseUrl: 'https://ostimglobal.com/',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
