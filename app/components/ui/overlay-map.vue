@@ -65,7 +65,7 @@ const spotlights = [
   }
 ];
 
-const route = useRoute();
+const { query } = useClientRoute();
 
 const props = defineProps({
   overscale: { type: Number, default: 1.1 },
@@ -74,10 +74,10 @@ const props = defineProps({
 
 const showSocialModal = useState('showSocialModal', () => false);
 
-const selectedPlaceID = computed(() => route.query?.place);
-const selectedHangarID = computed(() => route.query?.hangar);
-const selectedZoneID = computed(() => route.query?.zone);
-const selectedBlockID = computed(() => route.query?.block);
+const selectedPlaceID = computed(() => query.value.place);
+const selectedHangarID = computed(() => query.value.hangar);
+const selectedZoneID = computed(() => query.value.zone);
+const selectedBlockID = computed(() => query.value.block);
 
 const handlePathClick = item => {
   if (item.zone === 'social' || item.zone === 'technical') {

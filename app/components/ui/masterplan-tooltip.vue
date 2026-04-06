@@ -19,8 +19,9 @@
 </template>
 
 <script setup>
-const route = useRoute();
-const hangar = computed(() => route.query?.hangar);
+const { query } = useClientRoute();
+
+const hangar = computed(() => query.value.hangar);
 
 const tooltipRef = ref(null);
 const showFormPopup = useState('showFormPopup');

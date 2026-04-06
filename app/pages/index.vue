@@ -12,7 +12,7 @@
         <IconsPlus class="project__hangar-icon" />
       </div>
     </button>
-    <button class="project__back" :class="{ hidden: !route.query?.zone }" @click="handleBack">
+    <button class="project__back" :class="{ hidden: !query.zone }" @click="handleBack">
       <div class="project__back-iconbox">
         <IconsLongArrowLeft class="project__back-icon" />
         <IconsLongArrowLeft class="project__back-icon" />
@@ -26,7 +26,7 @@
 </template>
 
 <script setup>
-const route = useRoute();
+const { query } = useClientRoute();
 
 const showHangarModal = useState('showHangarModal', () => false);
 useState('showSocialModal', () => false);
@@ -34,18 +34,18 @@ useState('showSocialModal', () => false);
 const mapOverlay = ref();
 
 const handleBack = () => {
-  if (route.query?.hangar) {
+  if (query.value.hangar) {
     replacePath({
       zone: 'industrial',
-      block: route.query.block
+      block: query.value.block
     });
-  } else if (route.query?.block) {
+  } else if (query.value.block) {
     replacePath({
       zone: 'industrial'
     });
-  } else if (route.query?.place) {
+  } else if (query.value.place) {
     replacePath({
-      zone: route.query?.zone
+      zone: query.value.zone
     });
   } else {
     replacePath();

@@ -100,7 +100,7 @@
 <script setup>
 import genplanData from '~/assets/data/genplan.json';
 
-const route = useRoute();
+const { query: routeQuery } = useClientRoute();
 
 const containerRef = ref();
 const showContainer = ref(true);
@@ -123,16 +123,16 @@ const industrialBlocks = genplanData
 
 const industrialHangars = computed(() =>
   genplanData
-    .filter(el => el.zone === 'industrial-hangars' && el.block === route.query?.block)
+    .filter(el => el.zone === 'industrial-hangars' && el.block === routeQuery.value?.block)
     .sort(sortAlphabetically)
 );
 const searchResults = computed(() =>
   searchItems.filter(s => s.id?.includes(query.value.toUpperCase())).sort(sortAlphabetically)
 );
-const selectedPlaceID = computed(() => route.query?.place);
-const selectedHangarID = computed(() => route.query?.hangar);
-const selectedZoneID = computed(() => route.query?.zone);
-const selectedBlockID = computed(() => route.query?.block);
+const selectedPlaceID = computed(() => routeQuery.value?.place);
+const selectedHangarID = computed(() => routeQuery.value?.hangar);
+const selectedZoneID = computed(() => routeQuery.value?.zone);
+const selectedBlockID = computed(() => routeQuery.value?.block);
 
 const showSocialModal = useState('showSocialModal');
 

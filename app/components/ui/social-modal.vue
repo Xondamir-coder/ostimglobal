@@ -72,14 +72,14 @@
 const showSocialModal = useState('showSocialModal');
 const showFormPopup = useState('showFormPopup');
 
-const route = useRoute();
+const { query } = useClientRoute();
 
 const currentSlide = ref(0);
 
 const isAnimating = ref(false);
 
-const place = computed(() => route.query?.place);
-const zone = computed(() => route.query?.zone);
+const place = computed(() => query.value.place);
+const zone = computed(() => query.value.zone);
 
 const socialPlaces = useMapRt('genplan.social-places');
 const technicalPlaces = useMapRt('genplan.technical-places');
