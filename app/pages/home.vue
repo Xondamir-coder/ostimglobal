@@ -426,6 +426,9 @@ onMounted(() => {
       min-height: 250px;
       font-size: 20px;
       margin-top: -46px;
+      &:first-child {
+        margin-top: 0;
+      }
       &:not(:last-child) {
         padding-bottom: 65px;
       }
